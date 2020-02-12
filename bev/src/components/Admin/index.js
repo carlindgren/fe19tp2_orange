@@ -12,7 +12,9 @@ class AdminPage extends Component {
         this.state = {
             loading: false,
             users: [],
+
         };
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount() {
@@ -32,6 +34,7 @@ class AdminPage extends Component {
                 loading: false,
             });
         });
+
     }
 
 
@@ -39,6 +42,12 @@ class AdminPage extends Component {
         this.props.firebase.users().off();
     }
 
+    handleClick() {
+        const { users } = this.state
+        console.log(users)
+        console.log(ROLES.ACCESS)
+        //users.roles.push(ROLES.ACCESS)
+    }
     render() {
         const { users, loading } = this.state;
 
@@ -49,32 +58,54 @@ class AdminPage extends Component {
                     The Admin Page is accessible by every signed in admin user.
                 </p>
                 {loading && <div>Loading ...</div>}
-
-                <UserList users={users} />
+                <ul>
+                    {users.map(user => (
+                        <li key={user.uid}>
+                            <span>
+                                <strong> ID: </strong> {user.uid}
+                            </span>
+                            <span>
+                                <strong> E-Mail: </strong> {user.email}
+                            </span>
+                            <span>
+                                <strong> Username: </strong> {user.username}
+                            </span>
+                            <span>
+                                <strong> Roll: </strong> {user.roles ? user.roles : <button onClick={this.handleClick}>tillåt</button>}
+                            </span>
+                            <hr />
+                        </li>
+                    ))}
+                </ul>
+                {/* <UserList users={users} /> */}
             </div>
         );
     }
 }
 
 
-const UserList = ({ users }) => (
+/* const UserList = ({ users }) => (
 
     <ul>
         {users.map(user => (
             <li key={user.uid}>
                 <span>
-                    <strong>ID:</strong> {user.uid}
+                    <strong> ID: </strong> {user.uid}
                 </span>
                 <span>
-                    <strong>E-Mail:</strong> {user.email}
+                    <strong> E-Mail: </strong> {user.email}
                 </span>
                 <span>
-                    <strong>Username:</strong> {user.username}
+                    <strong> Username: </strong> {user.username}
                 </span>
+                <span>
+                    <strong> Roll: </strong> {user.roles ? user.roles : <button>tillåt</button>}
+                </span>
+                <hr />
             </li>
         ))}
     </ul>
-);
+); */
 
 
 const condition = authUser =>
