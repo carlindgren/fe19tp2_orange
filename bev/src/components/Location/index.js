@@ -5,11 +5,10 @@ import Styled from 'styled-components'
 const StyledDiv = Styled.div`
 display:flex;
 position: absolute;
+left: 50%;
+margin-left: -50px;
 bottom: 5px;
-left: 35%;
-align-content: flex-end;
-justify-content: space-around;
-
+text-align: center;
 `
 class Location extends Component {
     render() {
@@ -19,8 +18,8 @@ class Location extends Component {
             <div>Geolocation is not enabled</div>
         ) : this.props.coords ? (
             <StyledDiv>
-                <div>lat: {this.props.coords.latitude}</div>
-                <div>lnt: {this.props.coords.longitude}</div>
+                <span>lat: {this.props.coords.latitude}</span>
+                <span>lng: {this.props.coords.longitude}</span>
             </StyledDiv>
 
         ) : (
