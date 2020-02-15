@@ -12002,6 +12002,134 @@ export const response = [
     }
 ]
 
+
+// ***************** PER LÄN ********************* //
+
+export const responsePerCounty = [
+    {
+        "administrative_area_level_1": "Blekinge län",
+        "numEvents": 2127
+    },
+    {
+        "administrative_area_level_1": "Dalarnas län",
+        "numEvents": 4891
+    },
+    {
+        "administrative_area_level_1": "Gotlands län",
+        "numEvents": 610
+    },
+    {
+        "administrative_area_level_1": "Gävleborgs län",
+        "numEvents": 3572
+    },
+    {
+        "administrative_area_level_1": "Hallands län",
+        "numEvents": 4772
+    },
+    {
+        "administrative_area_level_1": "Jämtlands län",
+        "numEvents": 8380
+    },
+    {
+        "administrative_area_level_1": "Jönköpings län",
+        "numEvents": 6803
+    },
+    {
+        "administrative_area_level_1": "Kalmar län",
+        "numEvents": 3065
+    },
+    {
+        "administrative_area_level_1": "Kronobergs län",
+        "numEvents": 2622
+    },
+    {
+        "administrative_area_level_1": "Norrbotten County",
+        "numEvents": 1
+    },
+    {
+        "administrative_area_level_1": "Norrbottens län",
+        "numEvents": 11437
+    },
+    {
+        "administrative_area_level_1": "Skåne län",
+        "numEvents": 13278
+    },
+    {
+        "administrative_area_level_1": "Stockholm County",
+        "numEvents": 4
+    },
+    {
+        "administrative_area_level_1": "Stockholms län",
+        "numEvents": 17562
+    },
+    {
+        "administrative_area_level_1": "Södermanlands län",
+        "numEvents": 3676
+    },
+    {
+        "administrative_area_level_1": "Uppsala County",
+        "numEvents": 1
+    },
+    {
+        "administrative_area_level_1": "Uppsala län",
+        "numEvents": 3981
+    },
+    {
+        "administrative_area_level_1": "Värmlands län",
+        "numEvents": 6303
+    },
+    {
+        "administrative_area_level_1": "Västerbottens län",
+        "numEvents": 12154
+    },
+    {
+        "administrative_area_level_1": "Västernorrlands län",
+        "numEvents": 10626
+    },
+    {
+        "administrative_area_level_1": "Västmanlands län",
+        "numEvents": 5784
+    },
+    {
+        "administrative_area_level_1": "Västra Götaland",
+        "numEvents": 1
+    },
+    {
+        "administrative_area_level_1": "Västra Götalands län",
+        "numEvents": 11767
+    },
+    {
+        "administrative_area_level_1": "Örebro län",
+        "numEvents": 6051
+    },
+    {
+        "administrative_area_level_1": "Östergötlands län",
+        "numEvents": 7232
+    }
+]
+
+
+
+// IDÉA -  för varje stad användaren lägger in, lägg till i arrayen och sök!!
+
+
+//använd för att filtrera ut titlar ex. alla trafikrelaterade brott.
+let compareStrings = ['falun', 'järfälla', "Borlänge", "ockelbo"]; //osv ...
+//går in i arrayen med objekt. kollar om vår jämförelse-array ovan har ett indexof() > 0
+//vilket betyder att den finns i arrayen. 
+var res = response.filter(function (el) {
+    return compareStrings.indexOf(el.title_location.toLowerCase()) >= 0;
+});
+console.log(res);
+
+//skapa en array med alla värden på städer. för att kunna visa för användaren.
+//använda denna för sökfiltrering??
+let arrOfCities = response.map(city => {
+    return city.title_location
+})
+console.log(arrOfCities)
+
+
 export const titleTypes = [...new Set(response.map(item => item.title_type))];
 
 //kollar antalet per underrubrik.
@@ -12014,6 +12142,9 @@ const count = function (ary, classifier) {
     }, {})
 };
 
+
+//group by type. tar just nu title_type. räknar hur många av respektive title_type som finns i arraye av objekt.
+//returnerar sedan ex [{trafikolycka: 17}, {dråp: 2}] osv.
 export const groupByType = () => response.reduce((acc, it) => {
     acc[it.title_type] = acc[it.title_type] + 1 || 1;
     return acc;
