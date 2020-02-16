@@ -12132,7 +12132,8 @@ console.log(arrOfCities)
 
 export const titleTypes = [...new Set(response.map(item => item.title_type))];
 
-//kollar antalet per underrubrik.
+//metod för att kolla antalet per underrubrik.
+// ex
 const count = function (ary, classifier) {
     classifier = classifier || String;
     return ary.reduce(function (counter, item) {

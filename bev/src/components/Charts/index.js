@@ -3,7 +3,22 @@ import { withAuthorization } from '../Session'
 
 import { Bar } from 'react-chartjs-2';
 import { groupByType, titleTypes, responsePerCounty } from './data.js'
+import Styled from 'styled-components';
+import DateCard from './DateCard'
 
+const Container = Styled.div`
+display: flex;
+justify-content: space-around;
+flex-direction: row-reverse;
+`
+
+const ChartCard = Styled.div`
+margin-bottom:10px;
+width: 400px;
+height:400px;
+box-shadow: 0px 3px 3px black;
+border: 1px solid black;
+`
 
 //***  antal brott / län i sverige.  ***/
 let obj = responsePerCounty.filter(it => {
@@ -38,7 +53,7 @@ const state1 = {
     labels: area,
     datasets: [
         {
-            label: 'Totala antalet brott / LÄN i sverige',
+            label: '',
             fill: false,
             lineTension: 0.5,
             backgroundColor: 'rgba(50,200,192,1)',
@@ -71,41 +86,53 @@ class Charts extends Component {
     render() {
         return (
             <div>
-                <Bar
-                    data={state2}
-                    width={50}
-                    height={10}
-                    options={{
-                        title: {
-                            display: true,
-                            text: 'Average Rainfall per month',
-                            fontSize: 20,
-                            responsive: true,
-                        },
-                        legend: {
-                            display: true,
-                            position: 'right'
-                        }
-                    }}
-                />
-
-                <Bar
-                    data={state1}
-                    width={50}
-                    height={10}
-                    options={{
-                        title: {
-                            display: true,
-                            text: 'totalt: ' + totalAmountCrimes,
-                            fontSize: 20,
-                            responsive: true,
-                        },
-                        legend: {
-                            display: true,
-                            position: 'right'
-                        }
-                    }}
-                />
+                <Container>
+                    <DateCard date={'dagen'} />
+                    <DateCard date={'veckan'} />
+                    <DateCard date={'månaden'} />
+                </Container>
+                <Container>
+                    <ChartCard>
+                        <Bar
+                            data={state2}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'right'
+                                }
+                            }}
+                        />
+                    </ChartCard>
+                    <ChartCard>
+                        <Bar
+                            data={state1}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'antalet brott/län i sverige sedan 2016-10-14, totalt: ' + totalAmountCrimes,
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'right'
+                                }
+                            }}
+                        />
+                    </ChartCard>
+                </Container>
             </div>
         );
     }
