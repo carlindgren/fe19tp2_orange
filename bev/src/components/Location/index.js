@@ -21,7 +21,6 @@ class Location extends Component {
                 <span>lat: {this.props.coords.latitude}</span>
                 <span>lng: {this.props.coords.longitude}</span>
             </StyledDiv>
-
         ) : (
                         <div>Getting the location data&hellip; </div>
                     );

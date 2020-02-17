@@ -1,4 +1,5 @@
 import { isThisWeek, isThisMonth, isToday, parseISO } from 'date-fns'
+import { findAllByPlaceholderText } from '@testing-library/react';
 
 //import { lan } from './datalan.js'
 export const response = [
@@ -12161,6 +12162,7 @@ console.log(titleCount)
 
 
 /*************räknar antal brott per dag******** */
+//använda för att visa senaste månaden samt veckans brott.
 const countPerDay = count(response, function (item) {
     let date = item.pubdate_iso8601.split('T').shift()
     return date
@@ -12177,18 +12179,14 @@ console.log(areaCount)
 /********************************************** */
 
 
-
-
 //********************************************** */
 // IDÉ -  för varje stad användaren lägger in, lägg till i arrayen och sök!!
-
-
 //använd för att filtrera ut titlar ex. alla trafikrelaterade brott.
 let compareStrings = ['falun', 'järfälla', "Borlänge", "ockelbo"]; //osv ...
 //går in i arrayen med objekt. kollar om vår jämförelse-array ovan har ett indexof() > 0
 //vilket betyder att den finns i arrayen. 
-var res = response.filter(function (el) {
-    return compareStrings.indexOf(el.title_location.toLowerCase()) >= 0;
+var res = response.filter(elem => {
+    return compareStrings.indexOf(elem.title_location.toLowerCase()) >= 0;
 });
 console.log(res);
 
@@ -12200,7 +12198,7 @@ let arrOfCities = response.map(city => {
 
 
 //**********************************************/
-
+//har jag användning av denna? 
 const numDaysBetween = function (d1, d2) {
     var diff = Math.abs(d1 - d2);
     return diff / (1000 * 60 * 60 * 24);
@@ -12214,7 +12212,7 @@ export const lastWeeksCrimes = () => {
     }, 0);
 }
 
-
+/******************************************' */
 //idag.
 export const todaysCrimes = () => {
     let amount = 0;
