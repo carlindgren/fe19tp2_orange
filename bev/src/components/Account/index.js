@@ -3,15 +3,28 @@ import React from 'react';
 import { AuthUserContext, withAuthorization } from '../Session'
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
+import styled, { css } from 'styled-components';
+const Wrapp = styled.div`
+text-align: center;
+display: flex;
+justify-content: center;
 
+
+
+
+
+
+`
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
-            <div>
-                <h1>Account: {authUser.email}</h1>
-                <PasswordForgetForm />
-                <PasswordChangeForm />
-            </div>
+            <Wrapp>
+                <div>
+                    <h1>Account: {authUser.email}</h1>
+                    <PasswordForgetForm />
+                    <PasswordChangeForm />
+                </div>
+            </Wrapp>
         )}
     </AuthUserContext.Consumer>
 );
