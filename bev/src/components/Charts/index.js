@@ -17,7 +17,7 @@ const ChartCard = Styled.div`
 margin-bottom:10px;
 width: 400px;
 height:400px;
-box-shadow: 0px 3px 3px black;
+box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
 border: 1px solid black;
 `
 

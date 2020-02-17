@@ -12140,7 +12140,7 @@ export const groupByType = () => response.reduce((acc, it) => {
 export const trafficRelated = () => {
     const allData = groupByType();
 
-    var typeNames = Object.keys(allData).filter((propertyName) =>
+    let typeNames = Object.keys(allData).filter((propertyName) =>
         (propertyName.toLowerCase().indexOf("olycka") !== -1)
     );
     return Object.keys(allData)
@@ -12170,6 +12170,22 @@ const countPerDay = count(response, function (item) {
 console.log('antal brott per dag')
 console.log(countPerDay)
 
+
+//********************antal brott IDAG********** */
+const crimesPerInterval = (is) => {
+    return response.filter(item => {
+        return is(parseFloat(item.pubdate_unix + '000'))
+    })
+}
+let crimesToday = crimesPerInterval(isToday)
+let crimesThisWeek = crimesPerInterval(isThisWeek)
+let crimesThisMonth = crimesPerInterval(isThisMonth)
+console.log('crimes today:')
+console.log(crimesToday)
+console.log('crimes this week')
+console.log(crimesThisWeek)
+console.log('crimes this month')
+console.log(crimesThisMonth)
 /********************antal brott per stad******* */
 const areaCount = count(response, function (item) {
     return item.title_location
@@ -12185,10 +12201,11 @@ console.log(areaCount)
 let compareStrings = ['falun', 'järfälla', "Borlänge", "ockelbo"]; //osv ...
 //går in i arrayen med objekt. kollar om vår jämförelse-array ovan har ett indexof() > 0
 //vilket betyder att den finns i arrayen. 
-var res = response.filter(elem => {
+let searchResult = response.filter(elem => {
     return compareStrings.indexOf(elem.title_location.toLowerCase()) >= 0;
 });
-console.log(res);
+console.log('sökresultat med array: [falun, järfälla, Borlänge, ockelbo]')
+console.log(searchResult);
 
 //skapa en array med alla värden på städer. för att kunna visa för användaren.
 //använda denna för sökfiltrering??

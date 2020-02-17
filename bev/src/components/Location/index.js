@@ -4,9 +4,9 @@ import Styled from 'styled-components'
 
 const StyledDiv = Styled.div`
 display:flex;
-position: absolute;
-left: 50%;
-margin-left: -50px;
+position: fixed;
+bottom: 1;
+
 bottom: 5px;
 text-align: center;
 `
