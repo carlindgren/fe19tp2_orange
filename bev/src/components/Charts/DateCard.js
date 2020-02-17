@@ -14,8 +14,8 @@ text-align: center;
 const DateCard = (props) => {
     return (
         <StyledDiv>
-            <h1>Senaste {props.date}</h1>
-        </StyledDiv>
+            <h1>Senaste {props.date}: <br /> {props.data}</h1>
+        </StyledDiv >
 
     )
 }

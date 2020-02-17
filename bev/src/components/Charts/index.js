@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
 
 import { Bar } from 'react-chartjs-2';
-import { groupByType, titleTypes, responsePerCounty } from './data.js'
+import { pastMonthsCrimes, pastWeeksCrimes, todaysCrimes, groupByType, responsePerCounty } from './data.js'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
+
 
 const Container = Styled.div`
 display: flex;
@@ -34,7 +35,6 @@ let totalAmountCrimes = 0
 numOfEvents.forEach(num => {
     totalAmountCrimes += num
 })
-console.log(totalAmountCrimes)
 
 let area = []
 obj.filter(it => {
@@ -80,16 +80,25 @@ const state2 = {
 
 class Charts extends Component {
     constructor(props) {
-        super(props)
-
+        super(props);
+        this.todaysCrimes = todaysCrimes();
+        this.pastWeeksCrimes = pastWeeksCrimes();
+        this.pastMonthsCrimes = pastMonthsCrimes()
     }
+
     render() {
         return (
             <div>
                 <Container>
-                    <DateCard date={'dagen'} />
-                    <DateCard date={'veckan'} />
-                    <DateCard date={'månaden'} />
+                    <DateCard
+                        data={this.todaysCrimes}
+                        date={'dagen'} />
+                    <DateCard
+                        data={this.pastWeeksCrimes}
+                        date={'veckan'} />
+                    <DateCard
+                        data={this.pastMonthsCrimes}
+                        date={'månaden'} />
                 </Container>
                 <Container>
                     <ChartCard>

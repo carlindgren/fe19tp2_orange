@@ -5,7 +5,16 @@ import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import { AuthUserContext } from '../Session';
 import * as ROLES from '../../constants/roles';
+import Styled from 'styled-components';
 
+const ContainerUl = Styled.ul`
+display:flex;
+justify-content: space-around;
+    li {
+        margin-left: 10px;
+        list-style-type: none;
+    }
+`
 
 const Navigation = () => (
 
@@ -24,7 +33,7 @@ const Navigation = () => (
 
 const NavigationAuth = ({ authUser }) => (
 
-    <ul>
+    <ContainerUl>
         <li>
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
@@ -44,19 +53,19 @@ const NavigationAuth = ({ authUser }) => (
         <li>
             <SignOutButton />
         </li>
-    </ul>
+    </ContainerUl>
 );
 
 
 const NavigationNonAuth = () => (
-    <ul>
+    <ContainerUl>
         <li>
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
         <li>
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
         </li>
-    </ul>
+    </ContainerUl>
 );
 
 

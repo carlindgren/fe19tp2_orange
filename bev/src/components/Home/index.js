@@ -41,24 +41,24 @@ class HomePage extends Component {
     }
 
     componentDidMount() {
-        /*        const CORS = 'https://cors-anywhere.herokuapp.com/'
-               const PATH_BASE = 'https://brottsplatskartan.se/'
-               //fetch all data from brottplatskartan - save to local storage.
-               axios({
-                   method: 'get',
-                   url: 'https://cors-anywhere.herokuapp.com/https://brottsplatskartan.se/api/events/?limit=200000app=orange'
-                   //url: '${CORS}${PATH_BASE}'
-               })
-                   .then(res => {
-                       //laddar på något vis.
-                       console.log(res)
-                       this.setState({ result: res.data.data })
-                       localStorage.setItem(('crimes', JSON.stringify(res)))
-                       console.log(this.state.result)
-                   })
-                   .catch(err => {
-                       console.log(err)
-                   }) */
+        /*      const CORS = 'https://cors-anywhere.herokuapp.com/'
+             const PATH_BASE = 'https://brottsplatskartan.se/'
+             //fetch all data from brottplatskartan - save to local storage.
+             axios({
+                 method: 'get',
+                 url: 'https://cors-anywhere.herokuapp.com/https://brottsplatskartan.se/api/events/?limit=200000app=orange'
+                 //url: '${CORS}${PATH_BASE}'
+             })
+                 .then(res => {
+                     //laddar på något vis.
+                     console.log(res)
+                     this.setState({ result: res.data.data })
+                     localStorage.setItem(('crimes', JSON.stringify(res)))
+                     console.log(this.state.result)
+                 })
+                 .catch(err => {
+                     console.log(err)
+                 }) */
     }
 
     render() {
