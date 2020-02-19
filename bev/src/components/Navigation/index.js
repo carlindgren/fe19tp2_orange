@@ -14,8 +14,8 @@ const Navigation = () => (
         authUser ? (
           <NavigationAuth authUser={authUser} />
         ) : (
-          <NavigationNonAuth />
-        )
+            <NavigationNonAuth />
+          )
       }
     </AuthUserContext.Consumer>
   </div>
@@ -62,7 +62,7 @@ const NavList = styled.ul`
   li {
     margin-top: 10px;
   }
-  float: right;
+  //float: right;
   margin: 0;
   background: 
   color: black;
