@@ -15,7 +15,7 @@ const Landing = () => (
   </LandingPage>
 );
 
-const LandingPage = styled.body`
+const LandingPage = styled.div`
   background: url("https://images.unsplash.com/photo-1560575193-c2c9e886aefe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
   background-repeat: no-repeat;
   background-size: cover;

@@ -58,19 +58,17 @@ const NavigationNonAuth = () => (
 );
 
 const NavList = styled.ul`
-
-  li {
-    margin-top: 10px;
-  }
   width: 50%;
-
   margin-left: 50%;
   color: black;
   display: flex;
   justify-content: space-around;
   font-size: 15px;
   list-style: none;
-`;
+  li {
+    margin-top: 10px;
+  }
+`
 
 const StyledLink = styled(Link)`
   list-style: none;

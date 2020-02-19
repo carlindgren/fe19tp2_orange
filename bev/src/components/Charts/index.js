@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
 
-import { Bar } from 'react-chartjs-2';
-import { pastMonthsCrimes, pastWeeksCrimes, todaysCrimes, groupByType, responsePerCounty } from './data.js'
+import { Bar, Line } from 'react-chartjs-2';
+import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerDay, countPerHour, groupByType, responsePerCounty } from './objectFunctions'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
 
@@ -25,32 +25,25 @@ border: 1px solid black;
 let obj = responsePerCounty.filter(it => {
     return !(it.numEvents < 5)
 })
-let numOfEvents = []
-obj.filter(it => {
-    return numOfEvents.push(it.numEvents)
-})  // skapar en array för att spara events antal.
+const transferedArray = data =>
+    data.reduce((acc, item) => {
+        acc[item.administrative_area_level_1] = item.numEvents
+        return acc;
+    }, {});
+let transferedObj = transferedArray(obj)
 
-//totala antalet brott.
-let totalAmountCrimes = 0
-numOfEvents.forEach(num => {
-    totalAmountCrimes += num
-})
-
-let area = []
-obj.filter(it => {
-    return area.push(it.administrative_area_level_1)
-}) // skapar en array för att spara plats 
-//***    ***/
-
+//räknar alla values och returnerar totalen.
+let totalAmountCrimes = Object.values(transferedObj).reduce((acc, cur) => {
+    return acc + cur
+}, 0)
 
 const myData = groupByType();
 Object.keys(myData).forEach(key => {
     if (myData[key] <= 2) delete myData[key];
 });
-console.log(myData)
 
 const state1 = {
-    labels: area,
+    labels: Object.keys(transferedObj),
     datasets: [
         {
             label: '',
@@ -59,21 +52,35 @@ const state1 = {
             backgroundColor: 'rgba(50,200,192,1)',
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
-            data: numOfEvents
+            data: Object.values(transferedObj)
         }
     ]
 }
-const state2 = {
-    labels: [...Object.keys(myData)],
+const stateHour = {
+    labels: [...Object.keys(countPerHour)],
     datasets: [
         {
-            label: 'antal brott',
+            label: 'Händelser senaste 24h /h',
             fill: false,
             lineTension: 0.5,
             backgroundColor: 'rgba(75,192,192,1)',
             borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
-            data: [...Object.values(myData)]
+            data: [...Object.values(countPerHour)]
+        }
+    ]
+}
+const stateDay = {
+    labels: [...Object.keys(countPerDay)],
+    datasets: [
+        {
+            label: 'Händelser senaste 7 dagarna / dag',
+            fill: false,
+            lineTension: 0.5,
+            backgroundColor: 'rgba(75,192,192,1)',
+            borderColor: 'rgba(0,0,0,1)',
+            borderWidth: 2,
+            data: [...Object.values(countPerDay)]
         }
     ]
 }
@@ -81,46 +88,25 @@ const state2 = {
 class Charts extends Component {
     constructor(props) {
         super(props);
-        this.todaysCrimes = todaysCrimes();
-        this.pastWeeksCrimes = pastWeeksCrimes();
-        this.pastMonthsCrimes = pastMonthsCrimes()
+        //this.todaysCrimes = todaysCrimes();
+        //this.pastWeeksCrimes = pastWeeksCrimes();
+        //this.pastMonthsCrimes = pastMonthsCrimes()
     }
-
     render() {
         return (
             <div>
                 <Container>
                     <DateCard
-                        data={this.todaysCrimes}
+                        data={accPastDayCrimes}
                         date={'dagen'} />
                     <DateCard
-                        data={this.pastWeeksCrimes}
+                        data={accPastSevenDaysCrimes}
                         date={'veckan'} />
                     <DateCard
-                        data={this.pastMonthsCrimes}
+                        data={accPastThirtyDaysCrimes}
                         date={'månaden'} />
                 </Container>
                 <Container>
-                    <ChartCard>
-                        <Bar
-                            data={state2}
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: true,
-                                    position: 'right'
-                                }
-                            }}
-                        />
-                    </ChartCard>
                     <ChartCard>
                         <Bar
                             data={state1}
@@ -136,12 +122,53 @@ class Charts extends Component {
                                 },
                                 legend: {
                                     display: true,
-                                    position: 'right'
+                                    position: 'top'
+                                }
+                            }}
+                        />
+                    </ChartCard>
+                    <ChartCard>
+                        <Line
+                            data={stateHour}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 24h.',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                }
+                            }}
+                        />
+                    </ChartCard>
+                    <ChartCard>
+                        <Line
+                            data={stateDay}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 7dagarna.',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'top'
                                 }
                             }}
                         />
                     </ChartCard>
                 </Container>
+
             </div>
         );
     }

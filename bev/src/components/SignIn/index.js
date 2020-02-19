@@ -5,9 +5,8 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget'
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 const StylSign = styled.div`
-
 display: flex;
 flex-direction:column;
 text-align: center;
@@ -22,10 +21,7 @@ padding-top: 50px;
 const SignInPage = () => (
     <div>
         <StylSign>
-
-
             <h1>SignIn</h1>
-
             <SignInForm />
             <PasswordForgetLink />
             <SignUpLink />
