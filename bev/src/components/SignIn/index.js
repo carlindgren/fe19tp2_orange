@@ -9,16 +9,16 @@ import styled, { css } from 'styled-components'
 
 const Form = styled.div`
 display: flex;
-flex-direction:column;
 text-align: center;
+justify-content: center;
+
+
 `
 const StylSign = styled.div`
-
 border: 3px solid grey;
-border-sizing:border-box;
 width: 450px;
-margin: 30px auto;
 padding:25px 0;
+margin: 30px auto;
 
 `
 const Sinput = styled.div`
