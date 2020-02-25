@@ -21,15 +21,17 @@ display: flex;
 flex-direction:column;
 
 `
-
 const ChartCard = Styled.div`
 display:flex;
 flex-direction: row;
 margin-bottom:40px;
 width: 400px;
 height:250px;
-border: 3px solid rgba(250,250,250,0.8);
-
+border: 3px solid rgba(230,230,230,0.2);
+border-radius: 2%;
+    &hover: {
+        background-color: black;
+    }
 `
 const lineOptions = {
     elements: {
@@ -60,7 +62,6 @@ const lineOptions = {
     },
     legend: {
         display: false,
-        position: 'top'
     }
 }
 
@@ -69,12 +70,14 @@ const stateLine = (label, interval, bgColor, values) => {
         labels: label,
         datasets: [
             {
+
                 label: ''/* 'händelser senaste' + interval */,
                 fill: true,
                 steppedLine: false,
                 lineTension: 0,
                 backgroundColor: bgColor,
-                borderColor: 'rgba(0,0,0,1)',
+                hoverBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+                borderColor: 'rgba(0,0,0,0)',
                 borderWidth: 0,
                 data: values
             }
