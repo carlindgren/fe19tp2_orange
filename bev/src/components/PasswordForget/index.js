@@ -6,16 +6,16 @@ const Wrapp = styled.form`
 text-align: center;
 display: flex;
 justify-content: center;
-
+width:450px;
+padding: 30px;
+margin: 30px auto;
 `
 
 const StylSign = styled.div`
 padding-top:20px;
 border:3px solid grey;
-margin: 30px auto;
-width:450px;
-padding: 10px;
 `
+
 const PasswordForgetPage = () => (
     <Wrapp>
         <StylSign>
