@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
+import styled, { css } from 'styled-components';
+
+const Wrapp = styled.form`
+display: flex;
+justify-content: center;
+margin: 30px auto;
+border:3px solid grey;
+width:280px;
+padding: 35px;
+
+
+`
+const StylSign = styled.div`
+margin-bottom: 25px;
+width:100%;
+
+
+
+`
 
 
 const INITIAL_STATE = {
@@ -36,27 +55,35 @@ class PasswordChangeForm extends Component {
             passwordOne !== passwordTwo ||
             passwordOne === '';
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="New Password"
-                /><br></br>
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm New Password"
-                /><br></br>
-                <button
-                    disabled={isInvalid}
-                    type="submit">
-                    Reset My Password
+            <Wrapp>
+
+                <form onSubmit={this.onSubmit}>
+                    <StylSign>
+                        <h2 style={{ marginBottom: '30px', fontSize: '28px' }}>Ändra lösenord</h2>
+                        <input
+                            name="passwordOne"
+                            value={passwordOne}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="New Password"
+                        /></StylSign>
+                    <StylSign>
+                        <input
+                            name="passwordTwo"
+                            value={passwordTwo}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="Confirm New Password"
+                        /></StylSign>
+                    <button style={{ width: '85%' }}
+                        disabled={isInvalid}
+                        type="submit">
+                        Update Password
         </button>
-                {error && <p>{error.message}</p>} </form >);
+                    {error && <p>{error.message}</p>}
+                </form >
+            </Wrapp>
+        );
     }
 }
 export default withFirebase(PasswordChangeForm);

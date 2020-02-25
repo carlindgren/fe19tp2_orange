@@ -1,11 +1,32 @@
 import React, { Component } from 'react'; import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase'; import * as ROUTES from '../../constants/routes';
+import styled, { css } from 'styled-components';
+
+const Wrapp = styled.form`
+text-align: center;
+display: flex;
+justify-content: center;
+width:450px;
+padding: 30px;
+margin: 30px auto;
+`
+
+const StylSign = styled.div`
+padding-top:20px;
+border:3px solid grey;
+`
 
 const PasswordForgetPage = () => (
-    <div>
-        <h1>PasswordForget</h1>
-        <PasswordForgetForm />
-    </div>);
+    <Wrapp>
+        <StylSign>
+            <div>
+                <h1>Forgot Password?</h1>
+                <h4>You can reset your password here.</h4>
+                <PasswordForgetForm />
+            </div>
+        </StylSign>
+    </Wrapp >
+);
 
 const INITIAL_STATE = {
     email: '',
@@ -41,25 +62,33 @@ class PasswordForgetFormBase extends Component {
         const isInvalid = email === '';
 
         return (
-            <form
-                onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <button
-                    disabled={isInvalid}
-                    type="submit">
-                    Reset My Password
+            <Wrapp>
+                <form
+                    onSubmit={this.onSubmit}>
+
+                    <input
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Email Address"
+                    />
+                    <button style={{ marginTop: '12px' }}
+                        disabled={isInvalid}
+                        type="submit">
+                        Reset My Password
     </button>
-                {error && <p>{error.message}</p>} </form>);
+                    {error && <p>{error.message}</p>}
+
+                </form>
+
+            </Wrapp >
+        );
     }
 }
 const PasswordForgetLink = () => (
     <p>
+
         <Link to={ROUTES.PASSWORD_FORGET}
         >Forgot Password?</Link>
     </p>

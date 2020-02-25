@@ -5,28 +5,51 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget'
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
-import styled from 'styled-components'
-const StylSign = styled.div`
+import styled, { css } from 'styled-components'
+
+const Form = styled.div`
+
 display: flex;
-flex-direction:column;
 text-align: center;
-padding-top: 20px;
-border: 1px solid black;
-border-sizing:border-box;
-max-width: 350px;
-margin: auto;
-padding-top: 50px;
+justify-content: center;
+
+
+`
+const StylSign = styled.div`
+border: 3px solid grey;
+width: 450px;
+padding:25px 0;
+margin: 30px auto;
+
+`
+const Sinput = styled.div`
+margin: 30px auto;
+height: 35px;
+width:100%;
+padding-bottom:50px;
+font-weight:bold;
+font-size:15px;
+
 `
 
 const SignInPage = () => (
+
     <div>
-        <StylSign>
-            <h1>SignIn</h1>
-            <SignInForm />
-            <PasswordForgetLink />
-            <SignUpLink />
-        </StylSign>
+
+        <Form>
+            <StylSign>
+
+                <h1>Sign In</h1>
+
+                <SignInForm />
+                <PasswordForgetLink />
+                <SignUpLink />
+
+            </StylSign>
+        </Form>
+
     </div>
+
 );
 
 const INITIAL_STATE = {
@@ -66,40 +89,53 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-               
-                    <input
-                        name="email"
-                        value={email}
-                        onChange={this.onChange}
-                        type="text"
-                        placeholder="Email Address"
-                    /><br></br>
-                    <input
-                        name="password"
-                        value={password}
-                        onChange={this.onChange}
-                        type="password"
-                        placeholder="Password"
-                    /><br></br>
-                    <button
-                        disabled={isInvalid}
-                        type="submit">
-                        Sign In
-        
+            <Form>
+
+                <form onSubmit={this.onSubmit}>
+                        <Sinput>
+                            <label>Email Adress:<br></br>
+                                <input
+                                    name="email"
+                                    value={email}
+                                    onChange={this.onChange}
+                                    type="text"
+                                    placeholder="Enter Email"
+
+                                />
+                            </label>
+                        </Sinput>
+
+
+                        <Sinput>
+                            <label>Enter Password: <br></br>
+                                <input
+                                    name="password"
+                                    value={password}
+                                    onChange={this.onChange}
+                                    type="password"
+                                    placeholder="Enter Password"
+                                />
+                            </label>
+                        </Sinput>
+                        <button style={{ marginBottom: '20px' }}
+                            disabled={isInvalid}
+                            type="submit">
+                            Sign In
+    
              </button>
 
-                    {error && <p>{error.message}</p>}
-              
-            </form>
-        );
-    }
-}
-const SignInForm = compose(
-    withRouter,
-    withFirebase,
-)(SignInFormBase)
+                        {error && <p>{error.message}</p>}
 
-export default SignInPage;
-
-export { SignInForm }
+                </form>
+            </Form>
+                );
+            }
+        }
+        const SignInForm = compose(
+            withRouter,
+            withFirebase,
+        )(SignInFormBase)
+        
+        export default SignInPage;
+        
+export {SignInForm}
