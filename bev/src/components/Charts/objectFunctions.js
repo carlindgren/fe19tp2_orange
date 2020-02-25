@@ -59,10 +59,13 @@ export const countPerMonth = count(crimesPerInterval(30), (item => {
 }))
 //antal idag.
 export const accPastDayCrimes = crimesPerInterval(1).length
+export const crimesTwoDaysAgo = crimesPerInterval(2).length - accPastDayCrimes
 //antal senaste veckan
 export const accPastSevenDaysCrimes = crimesPerInterval(7).length
+export const crimesPastFourteen = crimesPerInterval(14).length - accPastSevenDaysCrimes
 //antal senaste månaden
 export const accPastThirtyDaysCrimes = crimesPerInterval(30).length
+export const crimesPastSixty = crimesPerInterval(60) - accPastThirtyDaysCrimes
 
 let compareStrings = ['falun', 'järfälla', "Borlänge", "ockelbo"]; // lägg till i denna vid sök på ort/ stad?
 

@@ -3,6 +3,7 @@ import { withAuthorization } from '../Session'
 import { Line, Doughnut } from 'react-chartjs-2';
 import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, pieChartObjects } from './objectFunctions'
 import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
+import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty } from './objectFunctions'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
 import TabContainer from '../Tabs/TabContainer'
@@ -16,7 +17,6 @@ justify-content: space-around;
 `
 
 const IntervalContainer = Styled.div`
-border: 3px solid rgba(250,250,250,0.8);
 display: flex;
 flex-direction:column;
 
@@ -28,8 +28,41 @@ flex-direction: row;
 margin-bottom:40px;
 width: 400px;
 height:250px;
+border: 3px solid rgba(250,250,250,0.8);
 
 `
+const lineOptions = {
+    elements: {
+        point: {
+            radius: 0,
+        },
+    },
+    scales: {
+        yAxes: [{
+            display: false,
+            gridLines: {
+                color: 'rgba(0,0,0,0)',
+            },
+        }],
+        xAxes: [{
+            display: false,
+            gridLines: {
+                color: 'rgba(0,0,0,0)',
+            },
+        }]
+    },
+    maintainAspectRatio: false,
+    title: {
+        display: false,
+        text: 'Brott senaste 24h.',
+        fontSize: 20,
+        responsive: true,
+    },
+    legend: {
+        display: false,
+        position: 'top'
+    }
+}
 
 const stateLine = (label, interval, bgColor, values) => {
     return {
@@ -75,6 +108,7 @@ class Charts extends Component {
 
                     <IntervalContainer>
                         <DateCard
+                            pastData={crimesTwoDaysAgo}
                             data={accPastDayCrimes}
                             date={'24h'} />
                         <ChartCard>
@@ -84,33 +118,7 @@ class Charts extends Component {
                                 }
                                 width={50}
                                 height={50}
-                                options={{
-                                    scales: {
-                                        yAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }],
-                                        xAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }]
-                                    },
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                        text: 'Brott senaste 24h.',
-                                        fontSize: 20,
-                                        responsive: true,
-                                    },
-                                    legend: {
-                                        display: false,
-                                        position: 'top'
-                                    }
-                                }}
+                                options={lineOptions}
                             />
                         </ChartCard>
                         <ChartCard>
@@ -142,6 +150,7 @@ class Charts extends Component {
                     {/*lägg in chart och doghnut för 1 dag*/}
                     <IntervalContainer>
                         <DateCard
+                            pastdata={crimesPastFourteen}
                             data={accPastSevenDaysCrimes}
                             date={'7 dagarna'} />
                         <ChartCard>
@@ -151,33 +160,7 @@ class Charts extends Component {
                                 }
                                 width={50}
                                 height={50}
-                                options={{
-                                    scales: {
-                                        yAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }],
-                                        xAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }]
-                                    },
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                        text: 'Brott senaste 7dagarna.',
-                                        fontSize: 20,
-                                        responsive: true,
-                                    },
-                                    legend: {
-                                        display: false,
-                                        position: 'top'
-                                    }
-                                }}
+                                options={lineOptions}
                             />
                         </ChartCard>
                         <ChartCard>
@@ -209,6 +192,7 @@ class Charts extends Component {
                     {/*lägg in chart och doghnut för a v*/}
                     <IntervalContainer>
                         <DateCard
+                            pastData={crimesPastSixty}
                             data={accPastThirtyDaysCrimes}
                             date={'30 dagarna'} />
                         {/*lägg in chart och doghnut för 30 dagar*/}
@@ -220,33 +204,7 @@ class Charts extends Component {
                                 }
                                 width={50}
                                 height={50}
-                                options={{
-                                    scales: {
-                                        yAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }],
-                                        xAxes: [{
-                                            display: false,
-                                            gridLines: {
-                                                color: 'rgba(0,0,0,0)',
-                                            },
-                                        }]
-                                    },
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                        text: 'Brott senaste 30dagarna / dag',
-                                        fontSize: 20,
-                                        responsive: true,
-                                    },
-                                    legend: {
-                                        display: false,
-                                        position: 'top'
-                                    }
-                                }}
+                                options={lineOptions}
                             />
                         </ChartCard>
                         <ChartCard>
