@@ -9,6 +9,7 @@ text-align: center;
 display: flex;
 justify-content: center;
 `
+
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (

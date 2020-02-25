@@ -1,5 +1,5005 @@
 export const response1 = [
     {
+        "id": 152079,
+        "pubdate_iso8601": "2020-02-25T13:32:17+0100",
+        "pubdate_unix": "1582633937",
+        "title_type": "Trafikolycka",
+        "title_location": "Gällivare",
+        "lat": 67.1379,
+        "lng": 20.6593618,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152078,
+        "pubdate_iso8601": "2020-02-25T13:11:26+0100",
+        "pubdate_unix": "1582632686",
+        "title_type": "Inbrott",
+        "title_location": "Sollefteå",
+        "lat": 63.6958941,
+        "lng": 16.8788147,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152077,
+        "pubdate_iso8601": "2020-02-25T12:33:44+0100",
+        "pubdate_unix": "1582630424",
+        "title_type": "Rattfylleri",
+        "title_location": "Stockholm",
+        "lat": 59.3666781,
+        "lng": 17.8604375,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 152076,
+        "pubdate_iso8601": "2020-02-25T12:34:17+0100",
+        "pubdate_unix": "1582630457",
+        "title_type": "Trafikkontroll",
+        "title_location": "Strömsund",
+        "lat": 63.8536621,
+        "lng": 15.5568691,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 152075,
+        "pubdate_iso8601": "2020-02-25T12:39:49+0100",
+        "pubdate_unix": "1582630789",
+        "title_type": "Trafikolycka",
+        "title_location": "Luleå",
+        "lat": 65.6182849,
+        "lng": 22.0431806,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152074,
+        "pubdate_iso8601": "2020-02-25T12:29:32+0100",
+        "pubdate_unix": "1582630172",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Piteå",
+        "lat": 65.4585852,
+        "lng": 21.4541586,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152073,
+        "pubdate_iso8601": "2020-02-25T12:19:36+0100",
+        "pubdate_unix": "1582629576",
+        "title_type": "Trafikkontroll",
+        "title_location": "Umeå",
+        "lat": 63.8549923,
+        "lng": 20.3289328,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152072,
+        "pubdate_iso8601": "2020-02-25T12:19:58+0100",
+        "pubdate_unix": "1582629598",
+        "title_type": "Åldringsbrott",
+        "title_location": "Gävle",
+        "lat": 60.6748796,
+        "lng": 17.1412726,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 152071,
+        "pubdate_iso8601": "2020-02-25T11:44:19+0100",
+        "pubdate_unix": "1582627459",
+        "title_type": "Trafikolycka",
+        "title_location": "Jönköping",
+        "lat": 57.838521,
+        "lng": 14.8178022,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152070,
+        "pubdate_iso8601": "2020-02-25T11:45:23+0100",
+        "pubdate_unix": "1582627523",
+        "title_type": "Övrigt",
+        "title_location": "Örebro län",
+        "lat": 59.535036,
+        "lng": 15.0065731,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152069,
+        "pubdate_iso8601": "2020-02-25T11:45:46+0100",
+        "pubdate_unix": "1582627546",
+        "title_type": "Övrigt",
+        "title_location": "Värmlands län",
+        "lat": 59.7294065,
+        "lng": 13.2354024,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 152068,
+        "pubdate_iso8601": "2020-02-25T11:46:02+0100",
+        "pubdate_unix": "1582627562",
+        "title_type": "Övrigt",
+        "title_location": "Dalarnas län",
+        "lat": 61.0917012,
+        "lng": 14.6663653,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 152067,
+        "pubdate_iso8601": "2020-02-25T11:48:25+0100",
+        "pubdate_unix": "1582627705",
+        "title_type": "Trafikhinder",
+        "title_location": "Nässjö",
+        "lat": 57.466936,
+        "lng": 14.7577702,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152066,
+        "pubdate_iso8601": "2020-02-25T11:48:37+0100",
+        "pubdate_unix": "1582627717",
+        "title_type": "Trafikkontroll",
+        "title_location": "Sorsele",
+        "lat": 65.5372024,
+        "lng": 17.5430454,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152065,
+        "pubdate_iso8601": "2020-02-25T11:37:57+0100",
+        "pubdate_unix": "1582627077",
+        "title_type": "Trafikolycka",
+        "title_location": "Jönköping",
+        "lat": 57.2850395,
+        "lng": 13.5181765,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152064,
+        "pubdate_iso8601": "2020-02-25T11:39:13+0100",
+        "pubdate_unix": "1582627153",
+        "title_type": "Arbetsplatsolycka",
+        "title_location": "Luleå",
+        "lat": 65.584819,
+        "lng": 22.1567026,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152063,
+        "pubdate_iso8601": "2020-02-25T11:39:38+0100",
+        "pubdate_unix": "1582627178",
+        "title_type": "Mord/dråp",
+        "title_location": "Kumla",
+        "lat": 59.1265359,
+        "lng": 15.1401052,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152062,
+        "pubdate_iso8601": "2020-02-25T11:40:34+0100",
+        "pubdate_unix": "1582627234",
+        "title_type": "Olaga frihetsberövande/människorov",
+        "title_location": "Håbo",
+        "lat": 59.5669027,
+        "lng": 17.5300883,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 152061,
+        "pubdate_iso8601": "2020-02-25T11:41:44+0100",
+        "pubdate_unix": "1582627304",
+        "title_type": "Trafikkontroll",
+        "title_location": "Gällivare",
+        "lat": 67.1392793,
+        "lng": 20.6928355,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152060,
+        "pubdate_iso8601": "2020-02-25T11:32:52+0100",
+        "pubdate_unix": "1582626772",
+        "title_type": "Trafikolycka",
+        "title_location": "Malmö",
+        "lat": 55.5637461,
+        "lng": 12.9850917,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 152059,
+        "pubdate_iso8601": "2020-02-25T11:14:14+0100",
+        "pubdate_unix": "1582625654",
+        "title_type": "Stöld",
+        "title_location": "Kumla",
+        "lat": 59.0504223,
+        "lng": 15.0337084,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152058,
+        "pubdate_iso8601": "2020-02-25T11:01:41+0100",
+        "pubdate_unix": "1582624901",
+        "title_type": "Rattfylleri",
+        "title_location": "Örebro",
+        "lat": 59.2583406,
+        "lng": 15.2256072,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152057,
+        "pubdate_iso8601": "2020-02-25T10:44:25+0100",
+        "pubdate_unix": "1582623865",
+        "title_type": "Trafikkontroll",
+        "title_location": "Östersund",
+        "lat": 63.1833416,
+        "lng": 14.6470348,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 152056,
+        "pubdate_iso8601": "2020-02-25T10:46:30+0100",
+        "pubdate_unix": "1582623990",
+        "title_type": "Trafikkontroll",
+        "title_location": "Sundsvall",
+        "lat": 62.4316785,
+        "lng": 17.2675926,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152055,
+        "pubdate_iso8601": "2020-02-25T10:01:33+0100",
+        "pubdate_unix": "1582621293",
+        "title_type": "Rattfylleri",
+        "title_location": "Hällefors",
+        "lat": 59.7787517,
+        "lng": 14.5276978,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152054,
+        "pubdate_iso8601": "2020-02-25T09:45:15+0100",
+        "pubdate_unix": "1582620315",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Säffle",
+        "lat": 59.1318742,
+        "lng": 12.9316479,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 152053,
+        "pubdate_iso8601": "2020-02-25T09:50:48+0100",
+        "pubdate_unix": "1582620648",
+        "title_type": "Trafikolycka",
+        "title_location": "Värnamo",
+        "lat": 56.9861429,
+        "lng": 14.3061766,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152052,
+        "pubdate_iso8601": "2020-02-25T09:52:20+0100",
+        "pubdate_unix": "1582620740",
+        "title_type": "Mord/dråp,  försök",
+        "title_location": "Stockholm",
+        "lat": 59.3368853,
+        "lng": 17.9638875,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 152051,
+        "pubdate_iso8601": "2020-02-25T09:39:00+0100",
+        "pubdate_unix": "1582619940",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Karlstad",
+        "lat": 59.419042,
+        "lng": 13.536926,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 152050,
+        "pubdate_iso8601": "2020-02-25T09:40:10+0100",
+        "pubdate_unix": "1582620010",
+        "title_type": "Trafikolycka",
+        "title_location": "Gnosjö",
+        "lat": 57.3580398,
+        "lng": 13.7371898,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152049,
+        "pubdate_iso8601": "2020-02-25T09:24:48+0100",
+        "pubdate_unix": "1582619088",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Örebro",
+        "lat": 59.2417467,
+        "lng": 15.1197622,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152048,
+        "pubdate_iso8601": "2020-02-25T09:25:03+0100",
+        "pubdate_unix": "1582619103",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Örebro",
+        "lat": 59.2535419,
+        "lng": 14.9573252,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152047,
+        "pubdate_iso8601": "2020-02-25T09:26:39+0100",
+        "pubdate_unix": "1582619199",
+        "title_type": "Rattfylleri",
+        "title_location": "Borlänge",
+        "lat": 60.4730834,
+        "lng": 15.4111784,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 152046,
+        "pubdate_iso8601": "2020-02-25T09:02:54+0100",
+        "pubdate_unix": "1582617774",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.3153656,
+        "lng": 18.7951391,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152045,
+        "pubdate_iso8601": "2020-02-25T09:00:19+0100",
+        "pubdate_unix": "1582617619",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Sorsele",
+        "lat": 65.5349378,
+        "lng": 17.5421752,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152044,
+        "pubdate_iso8601": "2020-02-25T08:45:58+0100",
+        "pubdate_unix": "1582616758",
+        "title_type": "Trafikolycka",
+        "title_location": "Strömstad",
+        "lat": 0,
+        "lng": 0,
+        "administrative_area_level_1": null
+    },
+    {
+        "id": 152043,
+        "pubdate_iso8601": "2020-02-25T08:42:10+0100",
+        "pubdate_unix": "1582616530",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Ale",
+        "lat": 57.8783177,
+        "lng": 11.9695029,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 152042,
+        "pubdate_iso8601": "2020-02-25T08:22:57+0100",
+        "pubdate_unix": "1582615377",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västernorrland län",
+        "lat": 62.9284332,
+        "lng": 17.7862946,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152041,
+        "pubdate_iso8601": "2020-02-25T08:26:41+0100",
+        "pubdate_unix": "1582615601",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Hylte",
+        "lat": 56.9773129,
+        "lng": 13.3387659,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 152040,
+        "pubdate_iso8601": "2020-02-25T08:14:24+0100",
+        "pubdate_unix": "1582614864",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västerbottens län",
+        "lat": 63.9169548,
+        "lng": 19.7426794,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152039,
+        "pubdate_iso8601": "2020-02-25T08:17:53+0100",
+        "pubdate_unix": "1582615073",
+        "title_type": "Trafikolycka",
+        "title_location": "Södertälje",
+        "lat": 59.2020184,
+        "lng": 17.6145697,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 152038,
+        "pubdate_iso8601": "2020-02-25T08:20:43+0100",
+        "pubdate_unix": "1582615243",
+        "title_type": "Trafikolycka",
+        "title_location": "Nyköping",
+        "lat": 58.7417405,
+        "lng": 16.9158975,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 152037,
+        "pubdate_iso8601": "2020-02-25T08:06:41+0100",
+        "pubdate_unix": "1582614401",
+        "title_type": "Trafikolycka",
+        "title_location": "Tranås",
+        "lat": 58.0281322,
+        "lng": 14.992742,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152036,
+        "pubdate_iso8601": "2020-02-25T08:10:52+0100",
+        "pubdate_unix": "1582614652",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Norrbottens län",
+        "lat": 65.8417085,
+        "lng": 24.1276643,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 152035,
+        "pubdate_iso8601": "2020-02-25T08:11:23+0100",
+        "pubdate_unix": "1582614683",
+        "title_type": "Trafikbrott",
+        "title_location": "Karlstad",
+        "lat": 59.4002601,
+        "lng": 13.5009352,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 152034,
+        "pubdate_iso8601": "2020-02-25T07:54:20+0100",
+        "pubdate_unix": "1582613660",
+        "title_type": "Narkotikabrott",
+        "title_location": "Örebro",
+        "lat": 59.2525254,
+        "lng": 15.2327939,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152033,
+        "pubdate_iso8601": "2020-02-25T08:00:27+0100",
+        "pubdate_unix": "1582614027",
+        "title_type": "Rattfylleri",
+        "title_location": "Hedemora",
+        "lat": 60.296862,
+        "lng": 16.0221385,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 152032,
+        "pubdate_iso8601": "2020-02-25T07:50:29+0100",
+        "pubdate_unix": "1582613429",
+        "title_type": "Rattfylleri",
+        "title_location": "Örebro",
+        "lat": 59.278846,
+        "lng": 15.202116,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152031,
+        "pubdate_iso8601": "2020-02-25T07:34:11+0100",
+        "pubdate_unix": "1582612451",
+        "title_type": "Olaga intrång",
+        "title_location": "Uppsala",
+        "lat": 59.8585638,
+        "lng": 17.6389267,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 152030,
+        "pubdate_iso8601": "2020-02-25T07:34:50+0100",
+        "pubdate_unix": "1582612490",
+        "title_type": "Rattfylleri",
+        "title_location": "Örebro",
+        "lat": 59.295252,
+        "lng": 15.2027471,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 152029,
+        "pubdate_iso8601": "2020-02-25T07:35:21+0100",
+        "pubdate_unix": "1582612521",
+        "title_type": "Stöld",
+        "title_location": "Nynäshamn",
+        "lat": 58.902926,
+        "lng": 17.9465288,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 152028,
+        "pubdate_iso8601": "2020-02-25T07:22:21+0100",
+        "pubdate_unix": "1582611741",
+        "title_type": "Trafikolycka",
+        "title_location": "Vetlanda",
+        "lat": 57.4,
+        "lng": 15.083333,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152027,
+        "pubdate_iso8601": "2020-02-25T07:23:21+0100",
+        "pubdate_unix": "1582611801",
+        "title_type": "Trafikolycka",
+        "title_location": "Värnamo",
+        "lat": 57.1716595,
+        "lng": 14.0615275,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152026,
+        "pubdate_iso8601": "2020-02-25T07:23:56+0100",
+        "pubdate_unix": "1582611836",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Uppsala",
+        "lat": 59.8452236,
+        "lng": 17.6110047,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 152025,
+        "pubdate_iso8601": "2020-02-25T07:31:53+0100",
+        "pubdate_unix": "1582612313",
+        "title_type": "Trafikolycka",
+        "title_location": "Markaryd",
+        "lat": 56.5211609,
+        "lng": 13.2317071,
+        "administrative_area_level_1": null
+    },
+    {
+        "id": 152024,
+        "pubdate_iso8601": "2020-02-25T07:05:20+0100",
+        "pubdate_unix": "1582610720",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Östergötlands län",
+        "lat": 58.4059873,
+        "lng": 15.6265752,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 152023,
+        "pubdate_iso8601": "2020-02-25T07:06:40+0100",
+        "pubdate_unix": "1582610800",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jönköpings län",
+        "lat": 56.9861429,
+        "lng": 14.3061766,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152022,
+        "pubdate_iso8601": "2020-02-25T07:09:07+0100",
+        "pubdate_unix": "1582610947",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jämtlands län",
+        "lat": 63.8536621,
+        "lng": 15.5568691,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 152021,
+        "pubdate_iso8601": "2020-02-25T06:54:44+0100",
+        "pubdate_unix": "1582610084",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Södermanlands län",
+        "lat": 59.3672283,
+        "lng": 16.5043793,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 152020,
+        "pubdate_iso8601": "2020-02-25T06:56:14+0100",
+        "pubdate_unix": "1582610174",
+        "title_type": "Misshandel",
+        "title_location": "Svedala",
+        "lat": 55.5180884,
+        "lng": 13.2163152,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 152019,
+        "pubdate_iso8601": "2020-02-25T07:00:21+0100",
+        "pubdate_unix": "1582610421",
+        "title_type": "Trafikolycka",
+        "title_location": "Eslöv",
+        "lat": 55.8009207,
+        "lng": 13.3249117,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 152018,
+        "pubdate_iso8601": "2020-02-25T06:49:31+0100",
+        "pubdate_unix": "1582609771",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Västervik",
+        "lat": 57.747935,
+        "lng": 16.6471702,
+        "administrative_area_level_1": "Kalmar län"
+    },
+    {
+        "id": 152017,
+        "pubdate_iso8601": "2020-02-25T06:51:37+0100",
+        "pubdate_unix": "1582609897",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västra götalands län",
+        "lat": 57.721667,
+        "lng": 13.008685,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 152016,
+        "pubdate_iso8601": "2020-02-25T06:33:33+0100",
+        "pubdate_unix": "1582608813",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Hallands län",
+        "lat": 56.9027333,
+        "lng": 12.4888013,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 152015,
+        "pubdate_iso8601": "2020-02-25T05:33:04+0100",
+        "pubdate_unix": "1582605184",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Kramfors",
+        "lat": 63.2900474,
+        "lng": 18.7166166,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152014,
+        "pubdate_iso8601": "2020-02-25T03:52:16+0100",
+        "pubdate_unix": "1582599136",
+        "title_type": "Brand",
+        "title_location": "Uppsala",
+        "lat": 59.812239,
+        "lng": 17.619149,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 152013,
+        "pubdate_iso8601": "2020-02-24T22:05:07+0100",
+        "pubdate_unix": "1582578307",
+        "title_type": "Övrigt",
+        "title_location": "Jämtlands län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152012,
+        "pubdate_iso8601": "2020-02-24T22:06:18+0100",
+        "pubdate_unix": "1582578378",
+        "title_type": "Övrigt",
+        "title_location": "Västernorrland län",
+        "lat": 62.9163559,
+        "lng": 17.8828107,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152011,
+        "pubdate_iso8601": "2020-02-24T22:06:33+0100",
+        "pubdate_unix": "1582578393",
+        "title_type": "Övrigt",
+        "title_location": "Västerbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152010,
+        "pubdate_iso8601": "2020-02-24T22:06:41+0100",
+        "pubdate_unix": "1582578401",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Norberg",
+        "lat": 60.1066395,
+        "lng": 17.2130111,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 152009,
+        "pubdate_iso8601": "2020-02-24T22:06:45+0100",
+        "pubdate_unix": "1582578405",
+        "title_type": "Övrigt",
+        "title_location": "Norrbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 152008,
+        "pubdate_iso8601": "2020-02-24T22:01:14+0100",
+        "pubdate_unix": "1582578074",
+        "title_type": "Stöld",
+        "title_location": "Sundbyberg",
+        "lat": 59.360412,
+        "lng": 17.9658423,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 152007,
+        "pubdate_iso8601": "2020-02-24T21:50:19+0100",
+        "pubdate_unix": "1582577419",
+        "title_type": "Knivlagen",
+        "title_location": "Göteborg",
+        "lat": 57.7255488,
+        "lng": 11.9349777,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 152006,
+        "pubdate_iso8601": "2020-02-24T21:51:45+0100",
+        "pubdate_unix": "1582577505",
+        "title_type": "Övrigt",
+        "title_location": "Hallands län",
+        "lat": 56.8966805,
+        "lng": 12.8033993,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 152005,
+        "pubdate_iso8601": "2020-02-24T21:52:34+0100",
+        "pubdate_unix": "1582577554",
+        "title_type": "Övrigt",
+        "title_location": "Västra götalands län",
+        "lat": 58.2527926,
+        "lng": 13.0596425,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 152004,
+        "pubdate_iso8601": "2020-02-24T21:52:36+0100",
+        "pubdate_unix": "1582577556",
+        "title_type": "Övrigt",
+        "title_location": "Jönköpings län",
+        "lat": 57.3708434,
+        "lng": 14.3439174,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 152003,
+        "pubdate_iso8601": "2020-02-24T21:53:07+0100",
+        "pubdate_unix": "1582577587",
+        "title_type": "Övrigt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 152002,
+        "pubdate_iso8601": "2020-02-24T21:53:37+0100",
+        "pubdate_unix": "1582577617",
+        "title_type": "Övrigt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0336349,
+        "lng": 16.7518899,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 152001,
+        "pubdate_iso8601": "2020-02-24T21:35:35+0100",
+        "pubdate_unix": "1582576535",
+        "title_type": "Trafikbrott",
+        "title_location": "Sundsvall",
+        "lat": 62.390811,
+        "lng": 17.306927,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 152000,
+        "pubdate_iso8601": "2020-02-24T21:36:32+0100",
+        "pubdate_unix": "1582576592",
+        "title_type": "Stöld",
+        "title_location": "Grums",
+        "lat": 59.333333,
+        "lng": 13.1,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151999,
+        "pubdate_iso8601": "2020-02-24T21:18:14+0100",
+        "pubdate_unix": "1582575494",
+        "title_type": "Fylleri/LOB",
+        "title_location": "Umeå",
+        "lat": 63.830061,
+        "lng": 20.266814,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151998,
+        "pubdate_iso8601": "2020-02-24T21:11:14+0100",
+        "pubdate_unix": "1582575074",
+        "title_type": "Brand",
+        "title_location": "Grums",
+        "lat": 59.3531787,
+        "lng": 13.111732,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151997,
+        "pubdate_iso8601": "2020-02-24T21:03:04+0100",
+        "pubdate_unix": "1582574584",
+        "title_type": "Trafikolycka",
+        "title_location": "Uddevalla",
+        "lat": 58.3498003,
+        "lng": 11.935649,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151996,
+        "pubdate_iso8601": "2020-02-24T20:47:37+0100",
+        "pubdate_unix": "1582573657",
+        "title_type": "Trafikolycka",
+        "title_location": "Torsby",
+        "lat": 60.1409072,
+        "lng": 13.0102132,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151995,
+        "pubdate_iso8601": "2020-02-24T20:25:51+0100",
+        "pubdate_unix": "1582572351",
+        "title_type": "Bråk",
+        "title_location": "Stockholm",
+        "lat": 59.308035,
+        "lng": 17.996142,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151994,
+        "pubdate_iso8601": "2020-02-24T20:29:55+0100",
+        "pubdate_unix": "1582572595",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Karlstad",
+        "lat": 59.3951504,
+        "lng": 13.1952629,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151993,
+        "pubdate_iso8601": "2020-02-24T19:58:24+0100",
+        "pubdate_unix": "1582570704",
+        "title_type": "Rån",
+        "title_location": "Eskilstuna",
+        "lat": 59.3672283,
+        "lng": 16.5043793,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151992,
+        "pubdate_iso8601": "2020-02-24T20:00:28+0100",
+        "pubdate_unix": "1582570828",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Härjedalen",
+        "lat": 62.3126783,
+        "lng": 14.0377737,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151991,
+        "pubdate_iso8601": "2020-02-24T19:38:50+0100",
+        "pubdate_unix": "1582569530",
+        "title_type": "Trafikkontroll",
+        "title_location": "Umeå",
+        "lat": 63.8502198,
+        "lng": 20.3215287,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151990,
+        "pubdate_iso8601": "2020-02-24T19:40:32+0100",
+        "pubdate_unix": "1582569632",
+        "title_type": "Trafikolycka",
+        "title_location": "Järfälla",
+        "lat": 59.4001312,
+        "lng": 17.8625102,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151989,
+        "pubdate_iso8601": "2020-02-24T19:40:54+0100",
+        "pubdate_unix": "1582569654",
+        "title_type": "Trafikbrott",
+        "title_location": "Skellefteå",
+        "lat": 64.750244,
+        "lng": 20.950917,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151988,
+        "pubdate_iso8601": "2020-02-24T19:28:02+0100",
+        "pubdate_unix": "1582568882",
+        "title_type": "Rån",
+        "title_location": "Växjö",
+        "lat": 56.8816844,
+        "lng": 14.8049906,
+        "administrative_area_level_1": "Kronobergs län"
+    },
+    {
+        "id": 151987,
+        "pubdate_iso8601": "2020-02-24T19:31:14+0100",
+        "pubdate_unix": "1582569074",
+        "title_type": "Rattfylleri",
+        "title_location": "Härnösand",
+        "lat": 62.6365813,
+        "lng": 17.9342645,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151986,
+        "pubdate_iso8601": "2020-02-24T19:24:00+0100",
+        "pubdate_unix": "1582568640",
+        "title_type": "Trafikolycka",
+        "title_location": "Åsele",
+        "lat": 61.411942,
+        "lng": 13.0841429,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151985,
+        "pubdate_iso8601": "2020-02-24T19:24:03+0100",
+        "pubdate_unix": "1582568643",
+        "title_type": "Inbrott",
+        "title_location": "Stockholm",
+        "lat": 59.2662789,
+        "lng": 18.0610643,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151984,
+        "pubdate_iso8601": "2020-02-24T18:48:28+0100",
+        "pubdate_unix": "1582566508",
+        "title_type": "Försvunnen person",
+        "title_location": "Sundsvall",
+        "lat": 62.4122549,
+        "lng": 17.285035,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151983,
+        "pubdate_iso8601": "2020-02-24T18:23:23+0100",
+        "pubdate_unix": "1582565003",
+        "title_type": "Räddningsinsats",
+        "title_location": "Stockholm",
+        "lat": 59.342675,
+        "lng": 18.0385799,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151982,
+        "pubdate_iso8601": "2020-02-24T18:05:33+0100",
+        "pubdate_unix": "1582563933",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Övertorneå",
+        "lat": 66.3884435,
+        "lng": 23.639283,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151981,
+        "pubdate_iso8601": "2020-02-24T18:11:24+0100",
+        "pubdate_unix": "1582564284",
+        "title_type": "Trafikolycka",
+        "title_location": "Göteborg",
+        "lat": 57.7222316,
+        "lng": 11.9862494,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151980,
+        "pubdate_iso8601": "2020-02-24T18:12:38+0100",
+        "pubdate_unix": "1582564358",
+        "title_type": "Mord/dråp,  försök",
+        "title_location": "Eskilstuna",
+        "lat": 59.3712486,
+        "lng": 16.5098046,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151979,
+        "pubdate_iso8601": "2020-02-24T17:51:07+0100",
+        "pubdate_unix": "1582563067",
+        "title_type": "Trafikolycka",
+        "title_location": "Eskilstuna",
+        "lat": 59.3798744,
+        "lng": 16.5959401,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151978,
+        "pubdate_iso8601": "2020-02-24T17:56:37+0100",
+        "pubdate_unix": "1582563397",
+        "title_type": "Brand",
+        "title_location": "Åre",
+        "lat": 63.3990428,
+        "lng": 13.0815058,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151977,
+        "pubdate_iso8601": "2020-02-24T17:24:27+0100",
+        "pubdate_unix": "1582561467",
+        "title_type": "Trafikkontroll",
+        "title_location": "Arjeplog",
+        "lat": 65.585845,
+        "lng": 18.1640176,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151976,
+        "pubdate_iso8601": "2020-02-24T17:31:28+0100",
+        "pubdate_unix": "1582561888",
+        "title_type": "Inbrott",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.2900474,
+        "lng": 18.7166166,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151975,
+        "pubdate_iso8601": "2020-02-24T17:23:28+0100",
+        "pubdate_unix": "1582561408",
+        "title_type": "Olaga hot",
+        "title_location": "Haninge",
+        "lat": 59.1410049,
+        "lng": 18.1321204,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151974,
+        "pubdate_iso8601": "2020-02-24T17:06:53+0100",
+        "pubdate_unix": "1582560413",
+        "title_type": "Stöld",
+        "title_location": "Enköping",
+        "lat": 59.6267071,
+        "lng": 17.256975,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151973,
+        "pubdate_iso8601": "2020-02-24T17:09:11+0100",
+        "pubdate_unix": "1582560551",
+        "title_type": "Ofredande/förargelse",
+        "title_location": "Timrå",
+        "lat": 62.4986444,
+        "lng": 17.3542099,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151972,
+        "pubdate_iso8601": "2020-02-24T16:56:58+0100",
+        "pubdate_unix": "1582559818",
+        "title_type": "Trafikkontroll",
+        "title_location": "Boden",
+        "lat": 65.8251188,
+        "lng": 21.6887028,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151971,
+        "pubdate_iso8601": "2020-02-24T16:59:38+0100",
+        "pubdate_unix": "1582559978",
+        "title_type": "Trafikolycka",
+        "title_location": "Göteborg",
+        "lat": 57.7989382,
+        "lng": 12.0247958,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151970,
+        "pubdate_iso8601": "2020-02-24T16:47:10+0100",
+        "pubdate_unix": "1582559230",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Umeå",
+        "lat": 63.85455,
+        "lng": 20.538397,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151969,
+        "pubdate_iso8601": "2020-02-24T16:41:24+0100",
+        "pubdate_unix": "1582558884",
+        "title_type": "Trafikolycka",
+        "title_location": "Örebro",
+        "lat": 59.268023,
+        "lng": 15.1736387,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151968,
+        "pubdate_iso8601": "2020-02-24T16:32:31+0100",
+        "pubdate_unix": "1582558351",
+        "title_type": "Trafikolycka",
+        "title_location": "Härnösand",
+        "lat": 62.6334103,
+        "lng": 17.9273423,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151967,
+        "pubdate_iso8601": "2020-02-24T16:15:56+0100",
+        "pubdate_unix": "1582557356",
+        "title_type": "Trafikolycka",
+        "title_location": "Landskrona",
+        "lat": 55.875143,
+        "lng": 12.885777,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151966,
+        "pubdate_iso8601": "2020-02-24T16:08:22+0100",
+        "pubdate_unix": "1582556902",
+        "title_type": "Trafikkontroll",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.2958706,
+        "lng": 18.7031545,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151965,
+        "pubdate_iso8601": "2020-02-24T16:10:16+0100",
+        "pubdate_unix": "1582557016",
+        "title_type": "Trafikkontroll",
+        "title_location": "Härnösand",
+        "lat": 62.6294826,
+        "lng": 17.9335059,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151963,
+        "pubdate_iso8601": "2020-02-24T16:00:00+0100",
+        "pubdate_unix": "1582556400",
+        "title_type": "Trafikolycka",
+        "title_location": "Luleå",
+        "lat": 65.584819,
+        "lng": 22.1567026,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151962,
+        "pubdate_iso8601": "2020-02-24T16:02:46+0100",
+        "pubdate_unix": "1582556566",
+        "title_type": "Mord/dråp,  försök",
+        "title_location": "Västerås",
+        "lat": 59.6314129,
+        "lng": 16.5553001,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151961,
+        "pubdate_iso8601": "2020-02-24T14:55:22+0100",
+        "pubdate_unix": "1582552522",
+        "title_type": "Fjällräddning",
+        "title_location": "Älvdalen",
+        "lat": 62.0964536,
+        "lng": 12.3131933,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151960,
+        "pubdate_iso8601": "2020-02-24T14:23:54+0100",
+        "pubdate_unix": "1582550634",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Borlänge",
+        "lat": 60.484304,
+        "lng": 15.433969,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151959,
+        "pubdate_iso8601": "2020-02-24T14:06:44+0100",
+        "pubdate_unix": "1582549604",
+        "title_type": "Bråk",
+        "title_location": "Borlänge",
+        "lat": 60.483803,
+        "lng": 15.430154,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151958,
+        "pubdate_iso8601": "2020-02-24T13:54:30+0100",
+        "pubdate_unix": "1582548870",
+        "title_type": "Trafikolycka",
+        "title_location": "Eskilstuna",
+        "lat": 59.3712486,
+        "lng": 16.5098046,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151957,
+        "pubdate_iso8601": "2020-02-24T13:37:46+0100",
+        "pubdate_unix": "1582547866",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Örebro",
+        "lat": 59.268023,
+        "lng": 15.1736387,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151956,
+        "pubdate_iso8601": "2020-02-24T13:38:23+0100",
+        "pubdate_unix": "1582547903",
+        "title_type": "Trafikolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.3029991,
+        "lng": 17.3042477,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151955,
+        "pubdate_iso8601": "2020-02-24T13:41:11+0100",
+        "pubdate_unix": "1582548071",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Sundsvall",
+        "lat": 62.400764,
+        "lng": 17.3422973,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151954,
+        "pubdate_iso8601": "2020-02-24T13:25:08+0100",
+        "pubdate_unix": "1582547108",
+        "title_type": "Trafikbrott",
+        "title_location": "Sundsvall",
+        "lat": 62.1661507,
+        "lng": 17.3979231,
+        "administrative_area_level_1": null
+    },
+    {
+        "id": 151953,
+        "pubdate_iso8601": "2020-02-24T13:30:54+0100",
+        "pubdate_unix": "1582547454",
+        "title_type": "Trafikbrott",
+        "title_location": "Piteå",
+        "lat": 65.3131734,
+        "lng": 21.4998217,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151952,
+        "pubdate_iso8601": "2020-02-24T13:16:18+0100",
+        "pubdate_unix": "1582546578",
+        "title_type": "Vapenlagen",
+        "title_location": "Upplands väsby",
+        "lat": 59.51961,
+        "lng": 17.92834,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151951,
+        "pubdate_iso8601": "2020-02-24T13:21:18+0100",
+        "pubdate_unix": "1582546878",
+        "title_type": "Trafikkontroll",
+        "title_location": "Dorotea",
+        "lat": 64.2617939,
+        "lng": 16.4152338,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151950,
+        "pubdate_iso8601": "2020-02-24T13:05:14+0100",
+        "pubdate_unix": "1582545914",
+        "title_type": "Sedlighetsbrott",
+        "title_location": "Malmö",
+        "lat": 55.5900778,
+        "lng": 12.9887444,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151949,
+        "pubdate_iso8601": "2020-02-24T12:53:16+0100",
+        "pubdate_unix": "1582545196",
+        "title_type": "Olaga hot",
+        "title_location": "Stockholm",
+        "lat": 59.3620316,
+        "lng": 17.9712917,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151948,
+        "pubdate_iso8601": "2020-02-24T13:02:12+0100",
+        "pubdate_unix": "1582545732",
+        "title_type": "Trafikolycka",
+        "title_location": "Staffanstorp",
+        "lat": 55.641065,
+        "lng": 13.212229,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151947,
+        "pubdate_iso8601": "2020-02-24T12:53:01+0100",
+        "pubdate_unix": "1582545181",
+        "title_type": "Brand",
+        "title_location": "Kristinehamn",
+        "lat": 59.1019955,
+        "lng": 14.1651299,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151946,
+        "pubdate_iso8601": "2020-02-24T12:37:48+0100",
+        "pubdate_unix": "1582544268",
+        "title_type": "Stöld",
+        "title_location": "Gällivare",
+        "lat": 67.1379,
+        "lng": 20.6593618,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151945,
+        "pubdate_iso8601": "2020-02-24T12:27:11+0100",
+        "pubdate_unix": "1582543631",
+        "title_type": "Uppdatering",
+        "title_location": "Mjölby",
+        "lat": 58.3454642,
+        "lng": 15.1370888,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151944,
+        "pubdate_iso8601": "2020-02-24T12:16:09+0100",
+        "pubdate_unix": "1582542969",
+        "title_type": "Arbetsplatsolycka",
+        "title_location": "Umeå",
+        "lat": 63.8258471,
+        "lng": 20.2630354,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151943,
+        "pubdate_iso8601": "2020-02-24T12:21:00+0100",
+        "pubdate_unix": "1582543260",
+        "title_type": "Trafikolycka",
+        "title_location": "Norrköping",
+        "lat": 58.5914881,
+        "lng": 16.1866196,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151942,
+        "pubdate_iso8601": "2020-02-24T12:04:05+0100",
+        "pubdate_unix": "1582542245",
+        "title_type": "Brand",
+        "title_location": "Surahammar",
+        "lat": 59.7072262,
+        "lng": 16.2268408,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151941,
+        "pubdate_iso8601": "2020-02-24T12:09:41+0100",
+        "pubdate_unix": "1582542581",
+        "title_type": "Trafikolycka",
+        "title_location": "Helsingborg",
+        "lat": 56.0464674,
+        "lng": 12.6945121,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151940,
+        "pubdate_iso8601": "2020-02-24T12:09:53+0100",
+        "pubdate_unix": "1582542593",
+        "title_type": "Rattfylleri",
+        "title_location": "Luleå",
+        "lat": 65.6038729,
+        "lng": 22.1203301,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151939,
+        "pubdate_iso8601": "2020-02-24T12:00:33+0100",
+        "pubdate_unix": "1582542033",
+        "title_type": "Arbetsplatsolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.390811,
+        "lng": 17.306927,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151938,
+        "pubdate_iso8601": "2020-02-24T11:47:59+0100",
+        "pubdate_unix": "1582541279",
+        "title_type": "Trafikbrott",
+        "title_location": "Umeå",
+        "lat": 63.8258471,
+        "lng": 20.2630354,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151937,
+        "pubdate_iso8601": "2020-02-24T11:33:04+0100",
+        "pubdate_unix": "1582540384",
+        "title_type": "Trafikolycka",
+        "title_location": "Norrköping",
+        "lat": 58.6520343,
+        "lng": 16.0243955,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151936,
+        "pubdate_iso8601": "2020-02-24T11:40:30+0100",
+        "pubdate_unix": "1582540830",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Eskilstuna",
+        "lat": 59.3469593,
+        "lng": 16.4788532,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151935,
+        "pubdate_iso8601": "2020-02-24T11:27:53+0100",
+        "pubdate_unix": "1582540073",
+        "title_type": "Rattfylleri",
+        "title_location": "Skövde",
+        "lat": 58.390925,
+        "lng": 13.846303,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151934,
+        "pubdate_iso8601": "2020-02-24T11:18:39+0100",
+        "pubdate_unix": "1582539519",
+        "title_type": "Trafikhinder",
+        "title_location": "Nordmaling",
+        "lat": 63.7730443,
+        "lng": 19.6386944,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151933,
+        "pubdate_iso8601": "2020-02-24T10:37:44+0100",
+        "pubdate_unix": "1582537064",
+        "title_type": "Rån,  försök",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151932,
+        "pubdate_iso8601": "2020-02-24T10:38:11+0100",
+        "pubdate_unix": "1582537091",
+        "title_type": "Trafikkontroll",
+        "title_location": "Arvidsjaur",
+        "lat": 65.5958656,
+        "lng": 19.2036751,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151931,
+        "pubdate_iso8601": "2020-02-24T10:31:02+0100",
+        "pubdate_unix": "1582536662",
+        "title_type": "Trafikolycka",
+        "title_location": "Knivsta",
+        "lat": 59.7261195,
+        "lng": 17.7920363,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151930,
+        "pubdate_iso8601": "2020-02-24T10:14:45+0100",
+        "pubdate_unix": "1582535685",
+        "title_type": "Arbetsplatsolycka",
+        "title_location": "Årjäng",
+        "lat": 59.5075308,
+        "lng": 11.8425512,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151929,
+        "pubdate_iso8601": "2020-02-24T10:22:15+0100",
+        "pubdate_unix": "1582536135",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Stockholm",
+        "lat": 59.2479837,
+        "lng": 18.0650459,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151928,
+        "pubdate_iso8601": "2020-02-24T10:02:48+0100",
+        "pubdate_unix": "1582534968",
+        "title_type": "Övrigt",
+        "title_location": "Örebro",
+        "lat": 59.260166,
+        "lng": 15.194475,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151927,
+        "pubdate_iso8601": "2020-02-24T10:02:05+0100",
+        "pubdate_unix": "1582534925",
+        "title_type": "Trafikolycka",
+        "title_location": "Luleå",
+        "lat": 65.5855239,
+        "lng": 22.2210409,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151926,
+        "pubdate_iso8601": "2020-02-24T09:25:19+0100",
+        "pubdate_unix": "1582532719",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Uppsala",
+        "lat": 59.8675146,
+        "lng": 17.6975469,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151925,
+        "pubdate_iso8601": "2020-02-24T09:29:53+0100",
+        "pubdate_unix": "1582532993",
+        "title_type": "Trafikbrott",
+        "title_location": "Umeå",
+        "lat": 63.697555,
+        "lng": 20.3061052,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151924,
+        "pubdate_iso8601": "2020-02-24T09:11:13+0100",
+        "pubdate_unix": "1582531873",
+        "title_type": "Trafikolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.3946305,
+        "lng": 17.290592,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151923,
+        "pubdate_iso8601": "2020-02-24T08:52:45+0100",
+        "pubdate_unix": "1582530765",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Örebro",
+        "lat": 59.2646639,
+        "lng": 15.1631538,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151922,
+        "pubdate_iso8601": "2020-02-24T08:54:12+0100",
+        "pubdate_unix": "1582530852",
+        "title_type": "Trafikolycka",
+        "title_location": "Uddevalla",
+        "lat": 58.3555556,
+        "lng": 11.9630555,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151921,
+        "pubdate_iso8601": "2020-02-24T08:50:46+0100",
+        "pubdate_unix": "1582530646",
+        "title_type": "Trafikolycka",
+        "title_location": "Luleå",
+        "lat": 65.5835212,
+        "lng": 22.1523297,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151920,
+        "pubdate_iso8601": "2020-02-24T08:22:21+0100",
+        "pubdate_unix": "1582528941",
+        "title_type": "Trafikolycka",
+        "title_location": "Eksjö",
+        "lat": 57.6568255,
+        "lng": 14.9901691,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151919,
+        "pubdate_iso8601": "2020-02-24T08:31:03+0100",
+        "pubdate_unix": "1582529463",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Västerås",
+        "lat": 59.6006469,
+        "lng": 16.4608082,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151918,
+        "pubdate_iso8601": "2020-02-24T08:17:47+0100",
+        "pubdate_unix": "1582528667",
+        "title_type": "Brand",
+        "title_location": "Härnösand",
+        "lat": 62.6411074,
+        "lng": 17.920403,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151917,
+        "pubdate_iso8601": "2020-02-24T08:08:02+0100",
+        "pubdate_unix": "1582528082",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Norrbottens län",
+        "lat": 65.6421004,
+        "lng": 22.0131975,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151916,
+        "pubdate_iso8601": "2020-02-24T07:51:03+0100",
+        "pubdate_unix": "1582527063",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jämtlands län",
+        "lat": 62.4493426,
+        "lng": 13.8306871,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151915,
+        "pubdate_iso8601": "2020-02-24T07:34:37+0100",
+        "pubdate_unix": "1582526077",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västernorrland län",
+        "lat": 62.632175,
+        "lng": 17.945979,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151914,
+        "pubdate_iso8601": "2020-02-24T07:35:38+0100",
+        "pubdate_unix": "1582526138",
+        "title_type": "Inbrott",
+        "title_location": "Västerås",
+        "lat": 59.6099005,
+        "lng": 16.5448092,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151913,
+        "pubdate_iso8601": "2020-02-24T07:37:00+0100",
+        "pubdate_unix": "1582526220",
+        "title_type": "Trafikolycka",
+        "title_location": "Göteborg",
+        "lat": 57.70887,
+        "lng": 11.97456,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151912,
+        "pubdate_iso8601": "2020-02-24T07:12:07+0100",
+        "pubdate_unix": "1582524727",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Stockholm",
+        "lat": 59.3146977,
+        "lng": 18.0718008,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151911,
+        "pubdate_iso8601": "2020-02-24T07:15:19+0100",
+        "pubdate_unix": "1582524919",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västerbottens län",
+        "lat": 63.8231747,
+        "lng": 20.2456971,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151910,
+        "pubdate_iso8601": "2020-02-24T07:21:31+0100",
+        "pubdate_unix": "1582525291",
+        "title_type": "Brand",
+        "title_location": "Haninge",
+        "lat": 59.170301,
+        "lng": 18.1702858,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151909,
+        "pubdate_iso8601": "2020-02-24T06:42:29+0100",
+        "pubdate_unix": "1582522949",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Hallands län",
+        "lat": 56.9048299,
+        "lng": 12.5217879,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151908,
+        "pubdate_iso8601": "2020-02-24T06:35:40+0100",
+        "pubdate_unix": "1582522540",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Kalmar",
+        "lat": 56.691813,
+        "lng": 16.338962,
+        "administrative_area_level_1": "Kalmar län"
+    },
+    {
+        "id": 151907,
+        "pubdate_iso8601": "2020-02-24T06:40:59+0100",
+        "pubdate_unix": "1582522859",
+        "title_type": "Trafikolycka",
+        "title_location": "Karlskrona",
+        "lat": 56.2011731,
+        "lng": 15.5365459,
+        "administrative_area_level_1": "Blekinge län"
+    },
+    {
+        "id": 151906,
+        "pubdate_iso8601": "2020-02-24T06:25:44+0100",
+        "pubdate_unix": "1582521944",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Västra götalands län",
+        "lat": 57.7446156,
+        "lng": 11.8917679,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151905,
+        "pubdate_iso8601": "2020-02-24T06:26:04+0100",
+        "pubdate_unix": "1582521964",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0462949,
+        "lng": 17.3001693,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151904,
+        "pubdate_iso8601": "2020-02-24T06:26:22+0100",
+        "pubdate_unix": "1582521982",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151903,
+        "pubdate_iso8601": "2020-02-24T06:26:46+0100",
+        "pubdate_unix": "1582522006",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jönköping",
+        "lat": 57.7826137,
+        "lng": 14.1617876,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151902,
+        "pubdate_iso8601": "2020-02-24T05:41:10+0100",
+        "pubdate_unix": "1582519270",
+        "title_type": "Olaga hot",
+        "title_location": "Uppsala",
+        "lat": 59.8861613,
+        "lng": 17.1980244,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151901,
+        "pubdate_iso8601": "2020-02-24T01:17:46+0100",
+        "pubdate_unix": "1582503466",
+        "title_type": "Brand",
+        "title_location": "Söderhamn",
+        "lat": 61.2993454,
+        "lng": 17.0340844,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151900,
+        "pubdate_iso8601": "2020-02-24T00:44:34+0100",
+        "pubdate_unix": "1582501474",
+        "title_type": "Mord/dråp,  försök",
+        "title_location": "Sandviken",
+        "lat": 60.6213645,
+        "lng": 16.741429,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151899,
+        "pubdate_iso8601": "2020-02-23T23:54:40+0100",
+        "pubdate_unix": "1582498480",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Uppsala",
+        "lat": 59.8528043,
+        "lng": 17.6420185,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151898,
+        "pubdate_iso8601": "2020-02-23T20:02:22+0100",
+        "pubdate_unix": "1582484542",
+        "title_type": "Trafikolycka",
+        "title_location": "Ängelholm",
+        "lat": 56.3231508,
+        "lng": 12.908397,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151897,
+        "pubdate_iso8601": "2020-02-23T16:35:12+0100",
+        "pubdate_unix": "1582472112",
+        "title_type": "Brand",
+        "title_location": "Stockholm",
+        "lat": 59.2650918,
+        "lng": 18.0084488,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151896,
+        "pubdate_iso8601": "2020-02-23T16:02:23+0100",
+        "pubdate_unix": "1582470143",
+        "title_type": "Rån",
+        "title_location": "Botkyrka",
+        "lat": 59.199859,
+        "lng": 17.8309572,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151895,
+        "pubdate_iso8601": "2020-02-23T15:40:54+0100",
+        "pubdate_unix": "1582468854",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151894,
+        "pubdate_iso8601": "2020-02-23T15:45:54+0100",
+        "pubdate_unix": "1582469154",
+        "title_type": "Övrigt",
+        "title_location": "Hallands län",
+        "lat": 56.8966805,
+        "lng": 12.8033993,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151893,
+        "pubdate_iso8601": "2020-02-23T15:46:37+0100",
+        "pubdate_unix": "1582469197",
+        "title_type": "Övrigt",
+        "title_location": "Västra götalands län",
+        "lat": 58.2527926,
+        "lng": 13.0596425,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151892,
+        "pubdate_iso8601": "2020-02-23T15:29:53+0100",
+        "pubdate_unix": "1582468193",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Kristinehamn",
+        "lat": 59.3100677,
+        "lng": 14.1089193,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151891,
+        "pubdate_iso8601": "2020-02-23T15:19:28+0100",
+        "pubdate_unix": "1582467568",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Västerås",
+        "lat": 59.7164815,
+        "lng": 16.4302921,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151890,
+        "pubdate_iso8601": "2020-02-23T15:29:15+0100",
+        "pubdate_unix": "1582468155",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Vänersborg",
+        "lat": 58.3806435,
+        "lng": 12.3253892,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151889,
+        "pubdate_iso8601": "2020-02-23T15:09:47+0100",
+        "pubdate_unix": "1582466987",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151888,
+        "pubdate_iso8601": "2020-02-23T15:16:39+0100",
+        "pubdate_unix": "1582467399",
+        "title_type": "Inbrott",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151887,
+        "pubdate_iso8601": "2020-02-23T14:59:30+0100",
+        "pubdate_unix": "1582466370",
+        "title_type": "Övrigt",
+        "title_location": "Västerbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151886,
+        "pubdate_iso8601": "2020-02-23T14:59:57+0100",
+        "pubdate_unix": "1582466397",
+        "title_type": "Övrigt",
+        "title_location": "Västernorrland län",
+        "lat": 62.9163559,
+        "lng": 17.8828107,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151885,
+        "pubdate_iso8601": "2020-02-23T15:00:27+0100",
+        "pubdate_unix": "1582466427",
+        "title_type": "Övrigt",
+        "title_location": "Jämtlands län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151884,
+        "pubdate_iso8601": "2020-02-23T14:50:51+0100",
+        "pubdate_unix": "1582465851",
+        "title_type": "Övrigt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0336349,
+        "lng": 16.7518899,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151883,
+        "pubdate_iso8601": "2020-02-23T14:51:24+0100",
+        "pubdate_unix": "1582465884",
+        "title_type": "Övrigt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151882,
+        "pubdate_iso8601": "2020-02-23T14:51:49+0100",
+        "pubdate_unix": "1582465909",
+        "title_type": "Övrigt",
+        "title_location": "Jönköpings län",
+        "lat": 57.3708434,
+        "lng": 14.3439174,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151881,
+        "pubdate_iso8601": "2020-02-23T14:58:55+0100",
+        "pubdate_unix": "1582466335",
+        "title_type": "Övrigt",
+        "title_location": "Norrbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151880,
+        "pubdate_iso8601": "2020-02-23T14:47:33+0100",
+        "pubdate_unix": "1582465653",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Hagfors",
+        "lat": 60.0632454,
+        "lng": 13.557451,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151879,
+        "pubdate_iso8601": "2020-02-23T14:35:45+0100",
+        "pubdate_unix": "1582464945",
+        "title_type": "Trafikolycka",
+        "title_location": "Härjedalen",
+        "lat": 62.3693406,
+        "lng": 13.4079714,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151878,
+        "pubdate_iso8601": "2020-02-23T14:27:42+0100",
+        "pubdate_unix": "1582464462",
+        "title_type": "Trafikolycka",
+        "title_location": "Stockholm",
+        "lat": 59.2863635,
+        "lng": 17.9434257,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151877,
+        "pubdate_iso8601": "2020-02-23T14:13:01+0100",
+        "pubdate_unix": "1582463581",
+        "title_type": "Trafikolycka",
+        "title_location": "Krokom",
+        "lat": 63.3982333,
+        "lng": 14.3245295,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151876,
+        "pubdate_iso8601": "2020-02-23T13:44:24+0100",
+        "pubdate_unix": "1582461864",
+        "title_type": "Misshandel",
+        "title_location": "Torsby",
+        "lat": 60.1409072,
+        "lng": 13.0102132,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151875,
+        "pubdate_iso8601": "2020-02-23T13:26:46+0100",
+        "pubdate_unix": "1582460806",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Falkenberg",
+        "lat": 56.8817589,
+        "lng": 12.5457709,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151874,
+        "pubdate_iso8601": "2020-02-23T13:08:45+0100",
+        "pubdate_unix": "1582459725",
+        "title_type": "Rattfylleri",
+        "title_location": "Malung-sälen",
+        "lat": 61.1603781,
+        "lng": 13.1957968,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151873,
+        "pubdate_iso8601": "2020-02-23T12:59:18+0100",
+        "pubdate_unix": "1582459158",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Gävle",
+        "lat": 60.894139,
+        "lng": 17.1024954,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151872,
+        "pubdate_iso8601": "2020-02-23T13:00:47+0100",
+        "pubdate_unix": "1582459247",
+        "title_type": "Rån",
+        "title_location": "Nyköping",
+        "lat": 58.7527984,
+        "lng": 17.0080535,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151871,
+        "pubdate_iso8601": "2020-02-23T12:40:14+0100",
+        "pubdate_unix": "1582458014",
+        "title_type": "Trafikbrott",
+        "title_location": "Fagersta",
+        "lat": 60.0079881,
+        "lng": 15.806752,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151870,
+        "pubdate_iso8601": "2020-02-23T12:47:56+0100",
+        "pubdate_unix": "1582458476",
+        "title_type": "Rattfylleri",
+        "title_location": "Sundsvall",
+        "lat": 62.3912673,
+        "lng": 17.2636223,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151869,
+        "pubdate_iso8601": "2020-02-23T12:28:30+0100",
+        "pubdate_unix": "1582457310",
+        "title_type": "Trafikbrott",
+        "title_location": "Piteå",
+        "lat": 65.342949,
+        "lng": 21.3968857,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151868,
+        "pubdate_iso8601": "2020-02-23T12:25:38+0100",
+        "pubdate_unix": "1582457138",
+        "title_type": "Trafikkontroll",
+        "title_location": "Luleå",
+        "lat": 65.6593229,
+        "lng": 21.9471873,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151867,
+        "pubdate_iso8601": "2020-02-23T12:13:37+0100",
+        "pubdate_unix": "1582456417",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Haninge",
+        "lat": 59.1353294,
+        "lng": 18.4106144,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151866,
+        "pubdate_iso8601": "2020-02-23T12:02:32+0100",
+        "pubdate_unix": "1582455752",
+        "title_type": "Trafikolycka",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.2747473,
+        "lng": 18.6812893,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151865,
+        "pubdate_iso8601": "2020-02-23T11:19:28+0100",
+        "pubdate_unix": "1582453168",
+        "title_type": "Vapenlagen",
+        "title_location": "Uppsala",
+        "lat": 59.8579112,
+        "lng": 17.4301962,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151864,
+        "pubdate_iso8601": "2020-02-23T11:19:34+0100",
+        "pubdate_unix": "1582453174",
+        "title_type": "Trafikolycka",
+        "title_location": "Vännäs",
+        "lat": 63.908007,
+        "lng": 19.752965,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151863,
+        "pubdate_iso8601": "2020-02-23T10:29:07+0100",
+        "pubdate_unix": "1582450147",
+        "title_type": "Misshandel",
+        "title_location": "Solna",
+        "lat": 59.3688791,
+        "lng": 18.0084334,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151862,
+        "pubdate_iso8601": "2020-02-23T10:35:51+0100",
+        "pubdate_unix": "1582450551",
+        "title_type": "Trafikolycka",
+        "title_location": "Överkalix",
+        "lat": 66.65,
+        "lng": 22.5333333,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151861,
+        "pubdate_iso8601": "2020-02-23T10:16:36+0100",
+        "pubdate_unix": "1582449396",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Åre",
+        "lat": 63.3990428,
+        "lng": 13.0815058,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151860,
+        "pubdate_iso8601": "2020-02-23T10:17:23+0100",
+        "pubdate_unix": "1582449443",
+        "title_type": "Våldtäkt",
+        "title_location": "Stockholms län",
+        "lat": 59.3670471,
+        "lng": 17.9663093,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151859,
+        "pubdate_iso8601": "2020-02-23T10:20:20+0100",
+        "pubdate_unix": "1582449620",
+        "title_type": "Trafikbrott",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.2747473,
+        "lng": 18.6812893,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151858,
+        "pubdate_iso8601": "2020-02-23T10:22:47+0100",
+        "pubdate_unix": "1582449767",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.3293235,
+        "lng": 18.0685808,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151857,
+        "pubdate_iso8601": "2020-02-23T10:24:06+0100",
+        "pubdate_unix": "1582449846",
+        "title_type": "Trafikolycka",
+        "title_location": "Köping",
+        "lat": 59.5120962,
+        "lng": 15.9945102,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151856,
+        "pubdate_iso8601": "2020-02-23T09:51:56+0100",
+        "pubdate_unix": "1582447916",
+        "title_type": "Rattfylleri",
+        "title_location": "Karlstad",
+        "lat": 59.4021806,
+        "lng": 13.5114978,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151855,
+        "pubdate_iso8601": "2020-02-23T09:55:14+0100",
+        "pubdate_unix": "1582448114",
+        "title_type": "Fylleri/LOB",
+        "title_location": "Östersund",
+        "lat": 63.1766832,
+        "lng": 14.6360681,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151854,
+        "pubdate_iso8601": "2020-02-23T09:28:13+0100",
+        "pubdate_unix": "1582446493",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Uppsala",
+        "lat": 59.880169,
+        "lng": 17.6309378,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151853,
+        "pubdate_iso8601": "2020-02-23T09:33:12+0100",
+        "pubdate_unix": "1582446792",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Köping",
+        "lat": 59.5120962,
+        "lng": 15.9945102,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151852,
+        "pubdate_iso8601": "2020-02-23T09:10:48+0100",
+        "pubdate_unix": "1582445448",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Gävle",
+        "lat": 60.6699196,
+        "lng": 17.1690515,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151851,
+        "pubdate_iso8601": "2020-02-23T09:00:20+0100",
+        "pubdate_unix": "1582444820",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Storuman",
+        "lat": 65.1833333,
+        "lng": 17.2666668,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151850,
+        "pubdate_iso8601": "2020-02-23T08:38:29+0100",
+        "pubdate_unix": "1582443509",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Norrbottens län",
+        "lat": 65.8252771,
+        "lng": 24.1453878,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151849,
+        "pubdate_iso8601": "2020-02-23T08:40:06+0100",
+        "pubdate_unix": "1582443606",
+        "title_type": "Våld/hot mot tjänsteman",
+        "title_location": "Västerås",
+        "lat": 59.6191363,
+        "lng": 16.5368274,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151848,
+        "pubdate_iso8601": "2020-02-23T08:30:52+0100",
+        "pubdate_unix": "1582443052",
+        "title_type": "Skadegörelse",
+        "title_location": "Västerås",
+        "lat": 59.6223085,
+        "lng": 16.5593124,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151847,
+        "pubdate_iso8601": "2020-02-23T08:32:08+0100",
+        "pubdate_unix": "1582443128",
+        "title_type": "Misshandel",
+        "title_location": "Östra göinge",
+        "lat": 56.1943444,
+        "lng": 14.0834269,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151846,
+        "pubdate_iso8601": "2020-02-23T08:34:48+0100",
+        "pubdate_unix": "1582443288",
+        "title_type": "Mord/dråp",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151845,
+        "pubdate_iso8601": "2020-02-23T08:18:32+0100",
+        "pubdate_unix": "1582442312",
+        "title_type": "Detonation",
+        "title_location": "Gävle",
+        "lat": 60.6686513,
+        "lng": 17.1565159,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151844,
+        "pubdate_iso8601": "2020-02-23T08:20:47+0100",
+        "pubdate_unix": "1582442447",
+        "title_type": "Misshandel",
+        "title_location": "Örebro",
+        "lat": 59.2754269,
+        "lng": 15.21376,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151843,
+        "pubdate_iso8601": "2020-02-23T08:21:08+0100",
+        "pubdate_unix": "1582442468",
+        "title_type": "Skadegörelse",
+        "title_location": "Gävle",
+        "lat": 60.6787185,
+        "lng": 17.1475898,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151842,
+        "pubdate_iso8601": "2020-02-23T08:09:31+0100",
+        "pubdate_unix": "1582441771",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Södermanlands län",
+        "lat": 59.3715404,
+        "lng": 16.512401,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151841,
+        "pubdate_iso8601": "2020-02-23T08:10:39+0100",
+        "pubdate_unix": "1582441839",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Östergötlands län",
+        "lat": 58.4177808,
+        "lng": 15.6129613,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151840,
+        "pubdate_iso8601": "2020-02-23T08:12:08+0100",
+        "pubdate_unix": "1582441928",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jönköpings län",
+        "lat": 57.6446952,
+        "lng": 14.984312,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151839,
+        "pubdate_iso8601": "2020-02-23T07:55:51+0100",
+        "pubdate_unix": "1582440951",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västerbottens län",
+        "lat": 63.5671062,
+        "lng": 19.5050215,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151838,
+        "pubdate_iso8601": "2020-02-23T07:57:04+0100",
+        "pubdate_unix": "1582441024",
+        "title_type": "Vapenlagen",
+        "title_location": "Örebro",
+        "lat": 59.2961143,
+        "lng": 15.1928488,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151837,
+        "pubdate_iso8601": "2020-02-23T07:44:46+0100",
+        "pubdate_unix": "1582440286",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Västra götalands län",
+        "lat": 57.6350887,
+        "lng": 11.9368416,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151836,
+        "pubdate_iso8601": "2020-02-23T07:47:52+0100",
+        "pubdate_unix": "1582440472",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Håbo",
+        "lat": 59.5553106,
+        "lng": 17.5435613,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151835,
+        "pubdate_iso8601": "2020-02-23T07:52:11+0100",
+        "pubdate_unix": "1582440731",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Västerås",
+        "lat": 59.598521,
+        "lng": 16.4918074,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151834,
+        "pubdate_iso8601": "2020-02-23T07:41:39+0100",
+        "pubdate_unix": "1582440099",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Hallands län",
+        "lat": 56.499721,
+        "lng": 12.9468661,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151833,
+        "pubdate_iso8601": "2020-02-23T07:43:27+0100",
+        "pubdate_unix": "1582440207",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Sala",
+        "lat": 59.9182188,
+        "lng": 16.6239394,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151832,
+        "pubdate_iso8601": "2020-02-23T07:18:44+0100",
+        "pubdate_unix": "1582438724",
+        "title_type": "Larm Inbrott",
+        "title_location": "Västerås",
+        "lat": 59.5989635,
+        "lng": 16.5893171,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151831,
+        "pubdate_iso8601": "2020-02-23T07:02:32+0100",
+        "pubdate_unix": "1582437752",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jämtlands län",
+        "lat": 63.1711922,
+        "lng": 14.95918,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151830,
+        "pubdate_iso8601": "2020-02-23T04:53:25+0100",
+        "pubdate_unix": "1582430005",
+        "title_type": "Brand",
+        "title_location": "Håbo",
+        "lat": 59.5743921,
+        "lng": 17.5158393,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151829,
+        "pubdate_iso8601": "2020-02-23T04:49:33+0100",
+        "pubdate_unix": "1582429773",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Kramfors",
+        "lat": 63.1744324,
+        "lng": 17.2352598,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151828,
+        "pubdate_iso8601": "2020-02-22T21:23:29+0100",
+        "pubdate_unix": "1582403009",
+        "title_type": "Övrigt",
+        "title_location": "Stockholms län",
+        "lat": 59.6024958,
+        "lng": 18.1384383,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151827,
+        "pubdate_iso8601": "2020-02-22T20:49:21+0100",
+        "pubdate_unix": "1582400961",
+        "title_type": "Brand",
+        "title_location": "Haninge",
+        "lat": 59.17555,
+        "lng": 18.1413703,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151826,
+        "pubdate_iso8601": "2020-02-22T20:51:44+0100",
+        "pubdate_unix": "1582401104",
+        "title_type": "Fjällräddning",
+        "title_location": "Härjedalen",
+        "lat": 62.1118857,
+        "lng": 13.2775058,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151825,
+        "pubdate_iso8601": "2020-02-22T20:56:43+0100",
+        "pubdate_unix": "1582401403",
+        "title_type": "Rattfylleri",
+        "title_location": "Huddinge",
+        "lat": 59.2796521,
+        "lng": 17.9427538,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151824,
+        "pubdate_iso8601": "2020-02-22T20:27:13+0100",
+        "pubdate_unix": "1582399633",
+        "title_type": "Fjällräddning",
+        "title_location": "Krokom",
+        "lat": 63.3262424,
+        "lng": 14.4486543,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151823,
+        "pubdate_iso8601": "2020-02-22T19:49:31+0100",
+        "pubdate_unix": "1582397371",
+        "title_type": "Försvunnen person",
+        "title_location": "Vellinge",
+        "lat": 55.4897872,
+        "lng": 13.1093568,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151822,
+        "pubdate_iso8601": "2020-02-22T19:02:22+0100",
+        "pubdate_unix": "1582394542",
+        "title_type": "Stöld",
+        "title_location": "Täby",
+        "lat": 59.4451025,
+        "lng": 18.067541,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151821,
+        "pubdate_iso8601": "2020-02-22T18:50:24+0100",
+        "pubdate_unix": "1582393824",
+        "title_type": "Trafikolycka",
+        "title_location": "Ljungby",
+        "lat": 56.5783672,
+        "lng": 13.7477129,
+        "administrative_area_level_1": "Kronobergs län"
+    },
+    {
+        "id": 151820,
+        "pubdate_iso8601": "2020-02-22T18:32:32+0100",
+        "pubdate_unix": "1582392752",
+        "title_type": "Häleri",
+        "title_location": "Stockholms län",
+        "lat": 59.6024958,
+        "lng": 18.1384383,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151819,
+        "pubdate_iso8601": "2020-02-22T15:57:48+0100",
+        "pubdate_unix": "1582383468",
+        "title_type": "Trafikolycka",
+        "title_location": "Östra göinge",
+        "lat": 56.2549473,
+        "lng": 14.068375,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151818,
+        "pubdate_iso8601": "2020-02-22T15:45:39+0100",
+        "pubdate_unix": "1582382739",
+        "title_type": "Övrigt",
+        "title_location": "Hallands län",
+        "lat": 56.8966805,
+        "lng": 12.8033993,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151817,
+        "pubdate_iso8601": "2020-02-22T15:46:00+0100",
+        "pubdate_unix": "1582382760",
+        "title_type": "Övrigt",
+        "title_location": "Västra götalands län",
+        "lat": 58.2527926,
+        "lng": 13.0596425,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151816,
+        "pubdate_iso8601": "2020-02-22T15:34:53+0100",
+        "pubdate_unix": "1582382093",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Vallentuna",
+        "lat": 59.5362617,
+        "lng": 18.1691275,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151815,
+        "pubdate_iso8601": "2020-02-22T15:28:41+0100",
+        "pubdate_unix": "1582381721",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.312903,
+        "lng": 18.0739595,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151814,
+        "pubdate_iso8601": "2020-02-22T15:20:52+0100",
+        "pubdate_unix": "1582381252",
+        "title_type": "Brand",
+        "title_location": "Växjö",
+        "lat": 57.0599236,
+        "lng": 15.0520043,
+        "administrative_area_level_1": "Kronobergs län"
+    },
+    {
+        "id": 151813,
+        "pubdate_iso8601": "2020-02-22T14:52:12+0100",
+        "pubdate_unix": "1582379532",
+        "title_type": "Inbrott",
+        "title_location": "Avesta",
+        "lat": 60.2936178,
+        "lng": 16.4044992,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151812,
+        "pubdate_iso8601": "2020-02-22T14:55:24+0100",
+        "pubdate_unix": "1582379724",
+        "title_type": "Trafikkontroll",
+        "title_location": "Skellefteå",
+        "lat": 64.5197907,
+        "lng": 20.6566773,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151811,
+        "pubdate_iso8601": "2020-02-22T14:57:17+0100",
+        "pubdate_unix": "1582379837",
+        "title_type": "Övrigt",
+        "title_location": "Västerbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151810,
+        "pubdate_iso8601": "2020-02-22T14:57:45+0100",
+        "pubdate_unix": "1582379865",
+        "title_type": "Övrigt",
+        "title_location": "Norrbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151809,
+        "pubdate_iso8601": "2020-02-22T14:58:15+0100",
+        "pubdate_unix": "1582379895",
+        "title_type": "Övrigt",
+        "title_location": "Västernorrland län",
+        "lat": 62.9163559,
+        "lng": 17.8828107,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151808,
+        "pubdate_iso8601": "2020-02-22T14:58:39+0100",
+        "pubdate_unix": "1582379919",
+        "title_type": "Övrigt",
+        "title_location": "Jämtlands län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151807,
+        "pubdate_iso8601": "2020-02-22T14:59:02+0100",
+        "pubdate_unix": "1582379942",
+        "title_type": "Övrigt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0336349,
+        "lng": 16.7518899,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151806,
+        "pubdate_iso8601": "2020-02-22T14:59:28+0100",
+        "pubdate_unix": "1582379968",
+        "title_type": "Övrigt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151805,
+        "pubdate_iso8601": "2020-02-22T14:59:57+0100",
+        "pubdate_unix": "1582379997",
+        "title_type": "Övrigt",
+        "title_location": "Jönköpings län",
+        "lat": 57.3708434,
+        "lng": 14.3439174,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151804,
+        "pubdate_iso8601": "2020-02-22T14:46:52+0100",
+        "pubdate_unix": "1582379212",
+        "title_type": "Brand",
+        "title_location": "Arvika",
+        "lat": 59.7038063,
+        "lng": 12.6102567,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151803,
+        "pubdate_iso8601": "2020-02-22T14:40:07+0100",
+        "pubdate_unix": "1582378807",
+        "title_type": "Misshandel",
+        "title_location": "Ludvika",
+        "lat": 60.152358,
+        "lng": 15.1916391,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151802,
+        "pubdate_iso8601": "2020-02-22T14:23:15+0100",
+        "pubdate_unix": "1582377795",
+        "title_type": "Brand",
+        "title_location": "Jönköping",
+        "lat": 57.1962359,
+        "lng": 13.5088402,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151801,
+        "pubdate_iso8601": "2020-02-22T14:25:36+0100",
+        "pubdate_unix": "1582377936",
+        "title_type": "Trafikbrott",
+        "title_location": "Boden",
+        "lat": 65.8251188,
+        "lng": 21.6887028,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151800,
+        "pubdate_iso8601": "2020-02-22T14:27:58+0100",
+        "pubdate_unix": "1582378078",
+        "title_type": "Olaga intrång",
+        "title_location": "Lindesberg",
+        "lat": 59.5976983,
+        "lng": 15.2229108,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151799,
+        "pubdate_iso8601": "2020-02-22T14:12:19+0100",
+        "pubdate_unix": "1582377139",
+        "title_type": "Trafikbrott",
+        "title_location": "Laxå",
+        "lat": 58.98269,
+        "lng": 14.62289,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151798,
+        "pubdate_iso8601": "2020-02-22T14:06:11+0100",
+        "pubdate_unix": "1582376771",
+        "title_type": "Trafikolycka",
+        "title_location": "Gällivare",
+        "lat": 67.1379,
+        "lng": 20.6593618,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151797,
+        "pubdate_iso8601": "2020-02-22T14:09:13+0100",
+        "pubdate_unix": "1582376953",
+        "title_type": "Trafikolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.5778841,
+        "lng": 17.0959626,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151796,
+        "pubdate_iso8601": "2020-02-22T14:09:32+0100",
+        "pubdate_unix": "1582376972",
+        "title_type": "Trafikbrott",
+        "title_location": "Solna",
+        "lat": 59.3635301,
+        "lng": 18.0236372,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151795,
+        "pubdate_iso8601": "2020-02-22T13:43:11+0100",
+        "pubdate_unix": "1582375391",
+        "title_type": "Sjukdom/olycksfall",
+        "title_location": "Västerås",
+        "lat": 59.6099005,
+        "lng": 16.5448092,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151794,
+        "pubdate_iso8601": "2020-02-22T13:43:46+0100",
+        "pubdate_unix": "1582375426",
+        "title_type": "Trafikkontroll",
+        "title_location": "Piteå",
+        "lat": 65.3590992,
+        "lng": 21.3701726,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151793,
+        "pubdate_iso8601": "2020-02-22T13:49:20+0100",
+        "pubdate_unix": "1582375760",
+        "title_type": "Trafikkontroll",
+        "title_location": "Umeå",
+        "lat": 63.8105975,
+        "lng": 20.3291099,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151792,
+        "pubdate_iso8601": "2020-02-22T13:58:49+0100",
+        "pubdate_unix": "1582376329",
+        "title_type": "Stöld",
+        "title_location": "Sundsvall",
+        "lat": 62.3901113,
+        "lng": 17.3171102,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151791,
+        "pubdate_iso8601": "2020-02-22T13:31:24+0100",
+        "pubdate_unix": "1582374684",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Knivsta",
+        "lat": 59.7487317,
+        "lng": 18.0170624,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151790,
+        "pubdate_iso8601": "2020-02-22T13:39:07+0100",
+        "pubdate_unix": "1582375147",
+        "title_type": "Trafikolycka",
+        "title_location": "Vilhelmina",
+        "lat": 64.6296294,
+        "lng": 16.6358094,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151789,
+        "pubdate_iso8601": "2020-02-22T13:14:19+0100",
+        "pubdate_unix": "1582373659",
+        "title_type": "Trafikbrott",
+        "title_location": "Piteå",
+        "lat": 65.342949,
+        "lng": 21.3968857,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151788,
+        "pubdate_iso8601": "2020-02-22T13:23:37+0100",
+        "pubdate_unix": "1582374217",
+        "title_type": "Trafikhinder",
+        "title_location": "Katrineholm",
+        "lat": 59.0310046,
+        "lng": 16.4460913,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151787,
+        "pubdate_iso8601": "2020-02-22T13:24:59+0100",
+        "pubdate_unix": "1582374299",
+        "title_type": "Trafikolycka",
+        "title_location": "Åstorp",
+        "lat": 56.134262,
+        "lng": 12.945908,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151786,
+        "pubdate_iso8601": "2020-02-22T13:26:52+0100",
+        "pubdate_unix": "1582374412",
+        "title_type": "Rån",
+        "title_location": "Uppsala",
+        "lat": 59.8522744,
+        "lng": 17.6428974,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151785,
+        "pubdate_iso8601": "2020-02-22T13:06:24+0100",
+        "pubdate_unix": "1582373184",
+        "title_type": "Kontroll person/fordon",
+        "title_location": "Stockholm",
+        "lat": 59.3117576,
+        "lng": 18.066317,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151784,
+        "pubdate_iso8601": "2020-02-22T12:54:27+0100",
+        "pubdate_unix": "1582372467",
+        "title_type": "Trafikolycka",
+        "title_location": "Storuman",
+        "lat": 65.0956204,
+        "lng": 17.1122771,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151783,
+        "pubdate_iso8601": "2020-02-22T12:56:07+0100",
+        "pubdate_unix": "1582372567",
+        "title_type": "Trafikolycka",
+        "title_location": "Rättvik",
+        "lat": 60.889025,
+        "lng": 15.1233731,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151782,
+        "pubdate_iso8601": "2020-02-22T12:41:45+0100",
+        "pubdate_unix": "1582371705",
+        "title_type": "Fjällräddning",
+        "title_location": "Åre",
+        "lat": 63.1837883,
+        "lng": 12.3126483,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151781,
+        "pubdate_iso8601": "2020-02-22T12:29:39+0100",
+        "pubdate_unix": "1582370979",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Gagnef",
+        "lat": 60.590983,
+        "lng": 15.0700492,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151780,
+        "pubdate_iso8601": "2020-02-22T12:22:04+0100",
+        "pubdate_unix": "1582370524",
+        "title_type": "Trafikolycka",
+        "title_location": "Umeå",
+        "lat": 63.8179037,
+        "lng": 20.316584,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151779,
+        "pubdate_iso8601": "2020-02-22T11:54:31+0100",
+        "pubdate_unix": "1582368871",
+        "title_type": "Trafikolycka",
+        "title_location": "Jönköping",
+        "lat": 57.672343,
+        "lng": 14.1601752,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151778,
+        "pubdate_iso8601": "2020-02-22T11:54:49+0100",
+        "pubdate_unix": "1582368889",
+        "title_type": "Inbrott",
+        "title_location": "Kristinehamn",
+        "lat": 59.3138005,
+        "lng": 14.1531343,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151777,
+        "pubdate_iso8601": "2020-02-22T11:47:53+0100",
+        "pubdate_unix": "1582368473",
+        "title_type": "Stöld",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151776,
+        "pubdate_iso8601": "2020-02-22T11:30:41+0100",
+        "pubdate_unix": "1582367441",
+        "title_type": "Trafikkontroll",
+        "title_location": "Boden",
+        "lat": 65.8208616,
+        "lng": 21.6761299,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151775,
+        "pubdate_iso8601": "2020-02-22T11:34:54+0100",
+        "pubdate_unix": "1582367694",
+        "title_type": "Trafikbrott",
+        "title_location": "Lycksele",
+        "lat": 64.5958098,
+        "lng": 18.6763669,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151774,
+        "pubdate_iso8601": "2020-02-22T11:22:43+0100",
+        "pubdate_unix": "1582366963",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.2951508,
+        "lng": 18.0969905,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151773,
+        "pubdate_iso8601": "2020-02-22T10:45:35+0100",
+        "pubdate_unix": "1582364735",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Norrköping",
+        "lat": 58.6017157,
+        "lng": 16.1595763,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151772,
+        "pubdate_iso8601": "2020-02-22T10:30:23+0100",
+        "pubdate_unix": "1582363823",
+        "title_type": "Trafikbrott",
+        "title_location": "Sundsvall",
+        "lat": 62.3890509,
+        "lng": 17.2844774,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151771,
+        "pubdate_iso8601": "2020-02-22T10:34:34+0100",
+        "pubdate_unix": "1582364074",
+        "title_type": "Räddningsinsats",
+        "title_location": "Solna",
+        "lat": 59.3489334,
+        "lng": 17.9960429,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151770,
+        "pubdate_iso8601": "2020-02-22T10:19:40+0100",
+        "pubdate_unix": "1582363180",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Lycksele",
+        "lat": 64.8254167,
+        "lng": 18.7995678,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151769,
+        "pubdate_iso8601": "2020-02-22T10:12:19+0100",
+        "pubdate_unix": "1582362739",
+        "title_type": "Trafikkontroll",
+        "title_location": "Lycksele",
+        "lat": 64.5380448,
+        "lng": 18.7565842,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151768,
+        "pubdate_iso8601": "2020-02-22T09:59:28+0100",
+        "pubdate_unix": "1582361968",
+        "title_type": "Trafikolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.3474613,
+        "lng": 17.366599,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151767,
+        "pubdate_iso8601": "2020-02-22T09:41:02+0100",
+        "pubdate_unix": "1582360862",
+        "title_type": "Trafikolycka",
+        "title_location": "Köping",
+        "lat": 59.5120962,
+        "lng": 15.9945102,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151766,
+        "pubdate_iso8601": "2020-02-22T09:35:47+0100",
+        "pubdate_unix": "1582360547",
+        "title_type": "Trafikolycka",
+        "title_location": "Linköping",
+        "lat": 58.407974,
+        "lng": 15.6178275,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151765,
+        "pubdate_iso8601": "2020-02-22T09:27:00+0100",
+        "pubdate_unix": "1582360020",
+        "title_type": "Stöld",
+        "title_location": "Stockholm",
+        "lat": 59.3117576,
+        "lng": 18.066317,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151764,
+        "pubdate_iso8601": "2020-02-22T08:56:41+0100",
+        "pubdate_unix": "1582358201",
+        "title_type": "Skadegörelse",
+        "title_location": "Huddinge",
+        "lat": 59.2057257,
+        "lng": 18.0389113,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151763,
+        "pubdate_iso8601": "2020-02-22T08:42:32+0100",
+        "pubdate_unix": "1582357352",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Kristianstad",
+        "lat": 56.0575869,
+        "lng": 14.0230669,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151762,
+        "pubdate_iso8601": "2020-02-22T08:02:13+0100",
+        "pubdate_unix": "1582354933",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jämtlands län",
+        "lat": 63.1766832,
+        "lng": 14.6360681,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151761,
+        "pubdate_iso8601": "2020-02-22T07:49:58+0100",
+        "pubdate_unix": "1582354198",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jönköpings län",
+        "lat": 58.02563,
+        "lng": 14.4637569,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151760,
+        "pubdate_iso8601": "2020-02-22T07:50:54+0100",
+        "pubdate_unix": "1582354254",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3454642,
+        "lng": 15.1370888,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151759,
+        "pubdate_iso8601": "2020-02-22T07:51:47+0100",
+        "pubdate_unix": "1582354307",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0340818,
+        "lng": 17.2743129,
+        "administrative_area_level_1": null
+    },
+    {
+        "id": 151758,
+        "pubdate_iso8601": "2020-02-22T07:52:22+0100",
+        "pubdate_unix": "1582354342",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Hallands län",
+        "lat": 57.0940899,
+        "lng": 12.2608298,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151757,
+        "pubdate_iso8601": "2020-02-22T07:52:34+0100",
+        "pubdate_unix": "1582354354",
+        "title_type": "Sammanfattning kväll och natt",
+        "title_location": "Västra götalands län",
+        "lat": 57.6823672,
+        "lng": 11.9614318,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151756,
+        "pubdate_iso8601": "2020-02-22T07:41:57+0100",
+        "pubdate_unix": "1582353717",
+        "title_type": "Bråk",
+        "title_location": "Gävle",
+        "lat": 60.6745425,
+        "lng": 17.1417788,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151755,
+        "pubdate_iso8601": "2020-02-22T07:45:30+0100",
+        "pubdate_unix": "1582353930",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västerbottens län",
+        "lat": 64.5958098,
+        "lng": 18.6763669,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151754,
+        "pubdate_iso8601": "2020-02-22T07:18:07+0100",
+        "pubdate_unix": "1582352287",
+        "title_type": "Hemfridsbrott",
+        "title_location": "Bollnäs",
+        "lat": 61.3527908,
+        "lng": 16.3905067,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151753,
+        "pubdate_iso8601": "2020-02-22T07:21:25+0100",
+        "pubdate_unix": "1582352485",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Norrbottens län",
+        "lat": 65.8057856,
+        "lng": 21.7285518,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151752,
+        "pubdate_iso8601": "2020-02-22T07:05:13+0100",
+        "pubdate_unix": "1582351513",
+        "title_type": "Brand",
+        "title_location": "Gävle",
+        "lat": 60.6926137,
+        "lng": 17.1206164,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151751,
+        "pubdate_iso8601": "2020-02-22T07:11:26+0100",
+        "pubdate_unix": "1582351886",
+        "title_type": "Misshandel",
+        "title_location": "Uppsala",
+        "lat": 59.8202741,
+        "lng": 17.6175333,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151750,
+        "pubdate_iso8601": "2020-02-22T07:00:07+0100",
+        "pubdate_unix": "1582351207",
+        "title_type": "Misshandel",
+        "title_location": "Uppsala",
+        "lat": 59.8606903,
+        "lng": 17.6381383,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151749,
+        "pubdate_iso8601": "2020-02-22T07:00:12+0100",
+        "pubdate_unix": "1582351212",
+        "title_type": "Rån",
+        "title_location": "Västerås",
+        "lat": 59.5196769,
+        "lng": 16.3662126,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151748,
+        "pubdate_iso8601": "2020-02-22T07:00:26+0100",
+        "pubdate_unix": "1582351226",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.3376963,
+        "lng": 18.0900386,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151747,
+        "pubdate_iso8601": "2020-02-22T06:44:32+0100",
+        "pubdate_unix": "1582350272",
+        "title_type": "Sabotage mot blåljusverksamhet",
+        "title_location": "Västervik",
+        "lat": 57.746224,
+        "lng": 16.6456376,
+        "administrative_area_level_1": "Kalmar län"
+    },
+    {
+        "id": 151746,
+        "pubdate_iso8601": "2020-02-22T05:19:28+0100",
+        "pubdate_unix": "1582345168",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Uppsala",
+        "lat": 59.8645054,
+        "lng": 17.6434042,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151745,
+        "pubdate_iso8601": "2020-02-22T03:56:42+0100",
+        "pubdate_unix": "1582340202",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Uppsala",
+        "lat": 59.8645054,
+        "lng": 17.6434042,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151744,
+        "pubdate_iso8601": "2020-02-22T03:46:56+0100",
+        "pubdate_unix": "1582339616",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Gävle",
+        "lat": 60.6954369,
+        "lng": 17.1025361,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151743,
+        "pubdate_iso8601": "2020-02-22T01:16:06+0100",
+        "pubdate_unix": "1582330566",
+        "title_type": "Sammanfattning kväll",
+        "title_location": "Västernorrland län",
+        "lat": 62.445556,
+        "lng": 17.325833,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151742,
+        "pubdate_iso8601": "2020-02-22T01:19:36+0100",
+        "pubdate_unix": "1582330776",
+        "title_type": "Sammanfattning kväll",
+        "title_location": "Jämtlands län",
+        "lat": 63.8536621,
+        "lng": 15.5568691,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151741,
+        "pubdate_iso8601": "2020-02-21T22:05:59+0100",
+        "pubdate_unix": "1582319159",
+        "title_type": "Trafikolycka",
+        "title_location": "Heby",
+        "lat": 59.9330873,
+        "lng": 16.9633104,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151740,
+        "pubdate_iso8601": "2020-02-21T21:55:40+0100",
+        "pubdate_unix": "1582318540",
+        "title_type": "Övrigt",
+        "title_location": "Jönköpings län",
+        "lat": 57.3708434,
+        "lng": 14.3439174,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151739,
+        "pubdate_iso8601": "2020-02-21T21:57:05+0100",
+        "pubdate_unix": "1582318625",
+        "title_type": "Larm Inbrott",
+        "title_location": "Gävle",
+        "lat": 60.6979715,
+        "lng": 17.1055269,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151738,
+        "pubdate_iso8601": "2020-02-21T22:00:21+0100",
+        "pubdate_unix": "1582318821",
+        "title_type": "Övrigt",
+        "title_location": "Norrbottens län",
+        "lat": 66.8309216,
+        "lng": 20.3991966,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151737,
+        "pubdate_iso8601": "2020-02-21T22:00:45+0100",
+        "pubdate_unix": "1582318845",
+        "title_type": "Övrigt",
+        "title_location": "Västerbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151736,
+        "pubdate_iso8601": "2020-02-21T22:01:08+0100",
+        "pubdate_unix": "1582318868",
+        "title_type": "Övrigt",
+        "title_location": "Västernorrland län",
+        "lat": 63.4276473,
+        "lng": 17.7292444,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151735,
+        "pubdate_iso8601": "2020-02-21T22:01:47+0100",
+        "pubdate_unix": "1582318907",
+        "title_type": "Övrigt",
+        "title_location": "Jämtlands län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151734,
+        "pubdate_iso8601": "2020-02-21T21:46:40+0100",
+        "pubdate_unix": "1582318000",
+        "title_type": "Övrigt",
+        "title_location": "Hallands län",
+        "lat": 56.8966805,
+        "lng": 12.8033993,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151733,
+        "pubdate_iso8601": "2020-02-21T21:47:02+0100",
+        "pubdate_unix": "1582318022",
+        "title_type": "Övrigt",
+        "title_location": "Västra götalands län",
+        "lat": 58.2527926,
+        "lng": 13.0596425,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151732,
+        "pubdate_iso8601": "2020-02-21T21:50:31+0100",
+        "pubdate_unix": "1582318231",
+        "title_type": "Övrigt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0336349,
+        "lng": 16.7518899,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151731,
+        "pubdate_iso8601": "2020-02-21T21:52:12+0100",
+        "pubdate_unix": "1582318332",
+        "title_type": "Övrigt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151730,
+        "pubdate_iso8601": "2020-02-21T21:52:13+0100",
+        "pubdate_unix": "1582318333",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Härnösand",
+        "lat": 62.630634,
+        "lng": 17.788898,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151729,
+        "pubdate_iso8601": "2020-02-21T21:52:39+0100",
+        "pubdate_unix": "1582318359",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Gävle",
+        "lat": 60.6883134,
+        "lng": 17.1242002,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151728,
+        "pubdate_iso8601": "2020-02-21T21:38:32+0100",
+        "pubdate_unix": "1582317512",
+        "title_type": "Rån,  försök",
+        "title_location": "Solna",
+        "lat": 59.3688791,
+        "lng": 18.0084334,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151727,
+        "pubdate_iso8601": "2020-02-21T21:39:52+0100",
+        "pubdate_unix": "1582317592",
+        "title_type": "Stöld",
+        "title_location": "Gävle",
+        "lat": 60.6741258,
+        "lng": 17.1399119,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151726,
+        "pubdate_iso8601": "2020-02-21T21:25:23+0100",
+        "pubdate_unix": "1582316723",
+        "title_type": "Trafikolycka,  smitning från",
+        "title_location": "Hudiksvall",
+        "lat": 61.9382499,
+        "lng": 16.5035975,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151725,
+        "pubdate_iso8601": "2020-02-21T21:28:53+0100",
+        "pubdate_unix": "1582316933",
+        "title_type": "Misshandel",
+        "title_location": "Luleå",
+        "lat": 65.584819,
+        "lng": 22.1567026,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151724,
+        "pubdate_iso8601": "2020-02-21T21:29:47+0100",
+        "pubdate_unix": "1582316987",
+        "title_type": "Misshandel",
+        "title_location": "Gislaved",
+        "lat": 57.2985,
+        "lng": 13.54326,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151723,
+        "pubdate_iso8601": "2020-02-21T21:17:40+0100",
+        "pubdate_unix": "1582316260",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Östhammar",
+        "lat": 60.2593019,
+        "lng": 18.365341,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151722,
+        "pubdate_iso8601": "2020-02-21T21:03:07+0100",
+        "pubdate_unix": "1582315387",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Ludvika",
+        "lat": 60.152358,
+        "lng": 15.1916391,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151721,
+        "pubdate_iso8601": "2020-02-21T20:36:01+0100",
+        "pubdate_unix": "1582313761",
+        "title_type": "Bråk",
+        "title_location": "Uppsala",
+        "lat": 59.8500217,
+        "lng": 17.6774429,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151720,
+        "pubdate_iso8601": "2020-02-21T20:39:28+0100",
+        "pubdate_unix": "1582313968",
+        "title_type": "Trafikkontroll",
+        "title_location": "Gällivare",
+        "lat": 67.1379,
+        "lng": 20.6593618,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151719,
+        "pubdate_iso8601": "2020-02-21T20:34:53+0100",
+        "pubdate_unix": "1582313693",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.3376963,
+        "lng": 18.0900386,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151718,
+        "pubdate_iso8601": "2020-02-21T20:16:05+0100",
+        "pubdate_unix": "1582312565",
+        "title_type": "Misshandel",
+        "title_location": "Uppsala",
+        "lat": 59.8585638,
+        "lng": 17.6389267,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151717,
+        "pubdate_iso8601": "2020-02-21T19:45:02+0100",
+        "pubdate_unix": "1582310702",
+        "title_type": "Djur",
+        "title_location": "Örnsköldsvik",
+        "lat": 63.2964062,
+        "lng": 18.885952,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151716,
+        "pubdate_iso8601": "2020-02-21T19:52:48+0100",
+        "pubdate_unix": "1582311168",
+        "title_type": "Trafikolycka",
+        "title_location": "Gnosjö",
+        "lat": 57.3176682,
+        "lng": 13.8859134,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151715,
+        "pubdate_iso8601": "2020-02-21T19:36:00+0100",
+        "pubdate_unix": "1582310160",
+        "title_type": "Stöld",
+        "title_location": "Sundsvall",
+        "lat": 62.2960554,
+        "lng": 17.3790503,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151714,
+        "pubdate_iso8601": "2020-02-21T19:39:18+0100",
+        "pubdate_unix": "1582310358",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Timrå",
+        "lat": 62.4854563,
+        "lng": 17.3248651,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151713,
+        "pubdate_iso8601": "2020-02-21T19:42:17+0100",
+        "pubdate_unix": "1582310537",
+        "title_type": "Brand",
+        "title_location": "Göteborg",
+        "lat": 57.698365,
+        "lng": 11.9376941,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151712,
+        "pubdate_iso8601": "2020-02-21T19:32:58+0100",
+        "pubdate_unix": "1582309978",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Härnösand",
+        "lat": 62.7430353,
+        "lng": 17.9200695,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151711,
+        "pubdate_iso8601": "2020-02-21T19:32:59+0100",
+        "pubdate_unix": "1582309979",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Gävle",
+        "lat": 60.6160998,
+        "lng": 16.8919154,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151710,
+        "pubdate_iso8601": "2020-02-21T19:20:10+0100",
+        "pubdate_unix": "1582309210",
+        "title_type": "Motorfordon,  anträffat stulet",
+        "title_location": "Sundsvall",
+        "lat": 62.3202296,
+        "lng": 17.3953488,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151709,
+        "pubdate_iso8601": "2020-02-21T19:01:53+0100",
+        "pubdate_unix": "1582308113",
+        "title_type": "Trafikbrott",
+        "title_location": "Kiruna",
+        "lat": 67.678642,
+        "lng": 21.6413157,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151708,
+        "pubdate_iso8601": "2020-02-21T18:39:55+0100",
+        "pubdate_unix": "1582306795",
+        "title_type": "Brand",
+        "title_location": "Norrköping",
+        "lat": 58.5349013,
+        "lng": 16.2090916,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151707,
+        "pubdate_iso8601": "2020-02-21T18:25:13+0100",
+        "pubdate_unix": "1582305913",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Nyköping",
+        "lat": 58.8605867,
+        "lng": 16.6988805,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151706,
+        "pubdate_iso8601": "2020-02-21T18:30:18+0100",
+        "pubdate_unix": "1582306218",
+        "title_type": "Brand",
+        "title_location": "Gnosjö",
+        "lat": 57.3580398,
+        "lng": 13.7371898,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151705,
+        "pubdate_iso8601": "2020-02-21T18:08:11+0100",
+        "pubdate_unix": "1582304891",
+        "title_type": "Sammanfattning vecka",
+        "title_location": "Knivsta",
+        "lat": 59.7276304,
+        "lng": 17.7857856,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151704,
+        "pubdate_iso8601": "2020-02-21T17:45:02+0100",
+        "pubdate_unix": "1582303502",
+        "title_type": "Fylleri/LOB",
+        "title_location": "Umeå",
+        "lat": 63.8258471,
+        "lng": 20.2630354,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151703,
+        "pubdate_iso8601": "2020-02-21T17:38:33+0100",
+        "pubdate_unix": "1582303113",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Gällivare",
+        "lat": 66.7606389,
+        "lng": 21.8860541,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151702,
+        "pubdate_iso8601": "2020-02-21T17:27:37+0100",
+        "pubdate_unix": "1582302457",
+        "title_type": "Trafikkontroll",
+        "title_location": "Kalix",
+        "lat": 65.8811828,
+        "lng": 23.0398257,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151701,
+        "pubdate_iso8601": "2020-02-21T17:15:06+0100",
+        "pubdate_unix": "1582301706",
+        "title_type": "Djur",
+        "title_location": "Ljusdal",
+        "lat": 62.0284034,
+        "lng": 15.9083533,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151700,
+        "pubdate_iso8601": "2020-02-21T17:15:29+0100",
+        "pubdate_unix": "1582301729",
+        "title_type": "Rån",
+        "title_location": "Stockholm",
+        "lat": 59.3347959,
+        "lng": 18.0604803,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151699,
+        "pubdate_iso8601": "2020-02-21T17:09:19+0100",
+        "pubdate_unix": "1582301359",
+        "title_type": "Misshandel,  grov",
+        "title_location": "Sollefteå",
+        "lat": 63.1654065,
+        "lng": 17.277135,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151698,
+        "pubdate_iso8601": "2020-02-21T17:14:06+0100",
+        "pubdate_unix": "1582301646",
+        "title_type": "Trafikkontroll",
+        "title_location": "Åre",
+        "lat": 63.3989713,
+        "lng": 13.0810136,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151697,
+        "pubdate_iso8601": "2020-02-21T16:40:12+0100",
+        "pubdate_unix": "1582299612",
+        "title_type": "Trafikolycka",
+        "title_location": "Sundsvall",
+        "lat": 62.3890509,
+        "lng": 17.2844774,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151696,
+        "pubdate_iso8601": "2020-02-21T16:14:31+0100",
+        "pubdate_unix": "1582298071",
+        "title_type": "Trafikolycka",
+        "title_location": "Strömsund",
+        "lat": 63.8536621,
+        "lng": 15.5568691,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151695,
+        "pubdate_iso8601": "2020-02-21T16:04:08+0100",
+        "pubdate_unix": "1582297448",
+        "title_type": "Misshandel",
+        "title_location": "Karlskoga",
+        "lat": 59.328163,
+        "lng": 14.5250682,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151694,
+        "pubdate_iso8601": "2020-02-21T15:56:09+0100",
+        "pubdate_unix": "1582296969",
+        "title_type": "Trafikolycka",
+        "title_location": "Östersund",
+        "lat": 63.1382425,
+        "lng": 14.7424939,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151693,
+        "pubdate_iso8601": "2020-02-21T16:00:27+0100",
+        "pubdate_unix": "1582297227",
+        "title_type": "Ofredande/förargelse",
+        "title_location": "Östersund",
+        "lat": 63.1766832,
+        "lng": 14.6360681,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151692,
+        "pubdate_iso8601": "2020-02-21T15:49:40+0100",
+        "pubdate_unix": "1582296580",
+        "title_type": "Trafikbrott",
+        "title_location": "Ånge",
+        "lat": 62.5228738,
+        "lng": 15.6589419,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151691,
+        "pubdate_iso8601": "2020-02-21T15:34:34+0100",
+        "pubdate_unix": "1582295674",
+        "title_type": "Trafikbrott",
+        "title_location": "Umeå",
+        "lat": 63.8162312,
+        "lng": 20.3182057,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151690,
+        "pubdate_iso8601": "2020-02-21T15:42:18+0100",
+        "pubdate_unix": "1582296138",
+        "title_type": "Motorfordon,  anträffat stulet",
+        "title_location": "Timrå",
+        "lat": 62.5096244,
+        "lng": 17.3708025,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151689,
+        "pubdate_iso8601": "2020-02-21T15:43:34+0100",
+        "pubdate_unix": "1582296214",
+        "title_type": "Trafikkontroll",
+        "title_location": "Kramfors",
+        "lat": 62.883748,
+        "lng": 17.8906469,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151688,
+        "pubdate_iso8601": "2020-02-21T15:09:15+0100",
+        "pubdate_unix": "1582294155",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Värnamo",
+        "lat": 57.1831605,
+        "lng": 14.0478214,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151687,
+        "pubdate_iso8601": "2020-02-21T14:54:40+0100",
+        "pubdate_unix": "1582293280",
+        "title_type": "Trafikolycka",
+        "title_location": "Karlstad",
+        "lat": 59.4021806,
+        "lng": 13.5114978,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151686,
+        "pubdate_iso8601": "2020-02-21T14:57:34+0100",
+        "pubdate_unix": "1582293454",
+        "title_type": "Trafikbrott",
+        "title_location": "Umeå",
+        "lat": 63.6235916,
+        "lng": 19.9083586,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151685,
+        "pubdate_iso8601": "2020-02-21T14:45:34+0100",
+        "pubdate_unix": "1582292734",
+        "title_type": "Trafikkontroll",
+        "title_location": "Piteå",
+        "lat": 65.342949,
+        "lng": 21.3968857,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151684,
+        "pubdate_iso8601": "2020-02-21T14:52:00+0100",
+        "pubdate_unix": "1582293120",
+        "title_type": "Stöld",
+        "title_location": "Luleå",
+        "lat": 65.584819,
+        "lng": 22.1567026,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151683,
+        "pubdate_iso8601": "2020-02-21T14:42:45+0100",
+        "pubdate_unix": "1582292565",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Haparanda",
+        "lat": 65.8017392,
+        "lng": 23.9191321,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151682,
+        "pubdate_iso8601": "2020-02-21T13:58:27+0100",
+        "pubdate_unix": "1582289907",
+        "title_type": "Brand",
+        "title_location": "Säffle",
+        "lat": 59.1390508,
+        "lng": 12.9066679,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151681,
+        "pubdate_iso8601": "2020-02-21T13:49:42+0100",
+        "pubdate_unix": "1582289382",
+        "title_type": "Miljöbrott",
+        "title_location": "Köping",
+        "lat": 59.5327793,
+        "lng": 16.1337584,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151680,
+        "pubdate_iso8601": "2020-02-21T13:39:41+0100",
+        "pubdate_unix": "1582288781",
+        "title_type": "Misshandel",
+        "title_location": "Norrköping",
+        "lat": 58.587745,
+        "lng": 16.192421,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151679,
+        "pubdate_iso8601": "2020-02-21T13:22:01+0100",
+        "pubdate_unix": "1582287721",
+        "title_type": "Inbrott",
+        "title_location": "Sundsvall",
+        "lat": 62.421111,
+        "lng": 17.338056,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151678,
+        "pubdate_iso8601": "2020-02-21T12:58:38+0100",
+        "pubdate_unix": "1582286318",
+        "title_type": "Fjällräddning",
+        "title_location": "Härjedalen",
+        "lat": 62.7028538,
+        "lng": 12.3851855,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151677,
+        "pubdate_iso8601": "2020-02-21T13:01:06+0100",
+        "pubdate_unix": "1582286466",
+        "title_type": "Trafikolycka",
+        "title_location": "Borlänge",
+        "lat": 60.6143751,
+        "lng": 15.6533653,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151676,
+        "pubdate_iso8601": "2020-02-21T12:46:16+0100",
+        "pubdate_unix": "1582285576",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Norrköping",
+        "lat": 58.6224886,
+        "lng": 16.201993,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151675,
+        "pubdate_iso8601": "2020-02-21T12:49:13+0100",
+        "pubdate_unix": "1582285753",
+        "title_type": "Trafikbrott",
+        "title_location": "Tierp",
+        "lat": 60.4729055,
+        "lng": 17.7597029,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151674,
+        "pubdate_iso8601": "2020-02-21T12:37:47+0100",
+        "pubdate_unix": "1582285067",
+        "title_type": "Trafikolycka",
+        "title_location": "Borlänge",
+        "lat": 60.4795892,
+        "lng": 15.4300417,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151673,
+        "pubdate_iso8601": "2020-02-21T12:41:57+0100",
+        "pubdate_unix": "1582285317",
+        "title_type": "Olaga hot",
+        "title_location": "Stockholm",
+        "lat": 59.3293235,
+        "lng": 18.0685808,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151672,
+        "pubdate_iso8601": "2020-02-21T12:24:49+0100",
+        "pubdate_unix": "1582284289",
+        "title_type": "Trafikkontroll",
+        "title_location": "Östersund",
+        "lat": 63.1702049,
+        "lng": 14.6898762,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151671,
+        "pubdate_iso8601": "2020-02-21T12:31:48+0100",
+        "pubdate_unix": "1582284708",
+        "title_type": "Trafikolycka",
+        "title_location": "Katrineholm",
+        "lat": 58.9955511,
+        "lng": 16.2054756,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151670,
+        "pubdate_iso8601": "2020-02-21T12:13:34+0100",
+        "pubdate_unix": "1582283614",
+        "title_type": "Trafikbrott",
+        "title_location": "Sundsvall",
+        "lat": 62.445556,
+        "lng": 17.325833,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151669,
+        "pubdate_iso8601": "2020-02-21T12:17:22+0100",
+        "pubdate_unix": "1582283842",
+        "title_type": "Trafikkontroll",
+        "title_location": "Sundsvall",
+        "lat": 62.3932786,
+        "lng": 17.3082684,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151668,
+        "pubdate_iso8601": "2020-02-21T12:22:01+0100",
+        "pubdate_unix": "1582284121",
+        "title_type": "Trafikkontroll",
+        "title_location": "Piteå",
+        "lat": 65.2805669,
+        "lng": 21.4016667,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151667,
+        "pubdate_iso8601": "2020-02-21T11:35:15+0100",
+        "pubdate_unix": "1582281315",
+        "title_type": "Miljöbrott",
+        "title_location": "Arboga",
+        "lat": 59.3936883,
+        "lng": 15.8381748,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151666,
+        "pubdate_iso8601": "2020-02-21T11:13:41+0100",
+        "pubdate_unix": "1582280021",
+        "title_type": "Trafikkontroll",
+        "title_location": "Boden",
+        "lat": 65.8220206,
+        "lng": 21.6794111,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151665,
+        "pubdate_iso8601": "2020-02-21T11:16:13+0100",
+        "pubdate_unix": "1582280173",
+        "title_type": "Trafikkontroll",
+        "title_location": "Sollefteå",
+        "lat": 63.1684316,
+        "lng": 17.2645275,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151664,
+        "pubdate_iso8601": "2020-02-21T11:22:09+0100",
+        "pubdate_unix": "1582280529",
+        "title_type": "Rattfylleri",
+        "title_location": "Uppsala",
+        "lat": 59.8692919,
+        "lng": 17.6282171,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151663,
+        "pubdate_iso8601": "2020-02-21T11:07:42+0100",
+        "pubdate_unix": "1582279662",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Karlstad",
+        "lat": 59.4021806,
+        "lng": 13.5114978,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151662,
+        "pubdate_iso8601": "2020-02-21T10:56:29+0100",
+        "pubdate_unix": "1582278989",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Hagfors",
+        "lat": 60.172769,
+        "lng": 13.4964549,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151661,
+        "pubdate_iso8601": "2020-02-21T11:02:36+0100",
+        "pubdate_unix": "1582279356",
+        "title_type": "Rattfylleri",
+        "title_location": "Arvika",
+        "lat": 59.6548534,
+        "lng": 12.592136,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151660,
+        "pubdate_iso8601": "2020-02-21T10:49:49+0100",
+        "pubdate_unix": "1582278589",
+        "title_type": "Trafikolycka",
+        "title_location": "Gislaved",
+        "lat": 57.1730641,
+        "lng": 13.5986659,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151659,
+        "pubdate_iso8601": "2020-02-21T10:42:13+0100",
+        "pubdate_unix": "1582278133",
+        "title_type": "Stöld",
+        "title_location": "Sunne",
+        "lat": 59.8365575,
+        "lng": 13.1440464,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151658,
+        "pubdate_iso8601": "2020-02-21T10:31:34+0100",
+        "pubdate_unix": "1582277494",
+        "title_type": "Brand",
+        "title_location": "Karlstad",
+        "lat": 59.4021806,
+        "lng": 13.5114978,
+        "administrative_area_level_1": "Värmlands län"
+    },
+    {
+        "id": 151657,
+        "pubdate_iso8601": "2020-02-21T10:07:14+0100",
+        "pubdate_unix": "1582276034",
+        "title_type": "Misshandel",
+        "title_location": "Örebro",
+        "lat": 59.2752626,
+        "lng": 15.2134105,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151656,
+        "pubdate_iso8601": "2020-02-21T10:07:28+0100",
+        "pubdate_unix": "1582276048",
+        "title_type": "Trafikkontroll",
+        "title_location": "Skellefteå",
+        "lat": 64.7678906,
+        "lng": 21.0211443,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151655,
+        "pubdate_iso8601": "2020-02-21T09:57:52+0100",
+        "pubdate_unix": "1582275472",
+        "title_type": "Olaga hot",
+        "title_location": "Kumla",
+        "lat": 59.1265359,
+        "lng": 15.1401052,
+        "administrative_area_level_1": "Örebro län"
+    },
+    {
+        "id": 151654,
+        "pubdate_iso8601": "2020-02-21T10:02:22+0100",
+        "pubdate_unix": "1582275742",
+        "title_type": "Trafikolycka",
+        "title_location": "Malung-sälen",
+        "lat": 60.9009256,
+        "lng": 13.3226181,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151653,
+        "pubdate_iso8601": "2020-02-21T09:51:36+0100",
+        "pubdate_unix": "1582275096",
+        "title_type": "Trafikolycka",
+        "title_location": "Västerås",
+        "lat": 59.6380612,
+        "lng": 16.5867667,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151652,
+        "pubdate_iso8601": "2020-02-21T08:53:29+0100",
+        "pubdate_unix": "1582271609",
+        "title_type": "Trafikolycka",
+        "title_location": "Borås",
+        "lat": 57.8843832,
+        "lng": 13.0165311,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151651,
+        "pubdate_iso8601": "2020-02-21T08:54:57+0100",
+        "pubdate_unix": "1582271697",
+        "title_type": "Övrigt",
+        "title_location": "Dalarnas län",
+        "lat": 61.0917012,
+        "lng": 14.6663653,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151650,
+        "pubdate_iso8601": "2020-02-21T09:01:47+0100",
+        "pubdate_unix": "1582272107",
+        "title_type": "Arbetsplatsolycka",
+        "title_location": "Falun",
+        "lat": 60.5958046,
+        "lng": 15.6847553,
+        "administrative_area_level_1": "Dalarnas län"
+    },
+    {
+        "id": 151649,
+        "pubdate_iso8601": "2020-02-21T08:45:57+0100",
+        "pubdate_unix": "1582271157",
+        "title_type": "Stöld",
+        "title_location": "Stockholm",
+        "lat": 59.3810033,
+        "lng": 17.8999899,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151648,
+        "pubdate_iso8601": "2020-02-21T08:12:15+0100",
+        "pubdate_unix": "1582269135",
+        "title_type": "Fylleri/LOB",
+        "title_location": "Bollnäs",
+        "lat": 61.2299391,
+        "lng": 16.5635885,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151647,
+        "pubdate_iso8601": "2020-02-21T08:14:27+0100",
+        "pubdate_unix": "1582269267",
+        "title_type": "Trafikolycka",
+        "title_location": "Tibro",
+        "lat": 58.424323,
+        "lng": 14.1616417,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151646,
+        "pubdate_iso8601": "2020-02-21T08:19:17+0100",
+        "pubdate_unix": "1582269557",
+        "title_type": "Trafikolycka",
+        "title_location": "Vänersborg",
+        "lat": 58.3797283,
+        "lng": 12.3248032,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151645,
+        "pubdate_iso8601": "2020-02-21T08:25:51+0100",
+        "pubdate_unix": "1582269951",
+        "title_type": "Trafikolycka,  vilt",
+        "title_location": "Jämtlands län",
+        "lat": 62.7673199,
+        "lng": 14.4347079,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151644,
+        "pubdate_iso8601": "2020-02-21T07:53:26+0100",
+        "pubdate_unix": "1582268006",
+        "title_type": "Trafikolycka",
+        "title_location": "Jönköpings län",
+        "lat": 57.7518521,
+        "lng": 14.1127641,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151643,
+        "pubdate_iso8601": "2020-02-21T07:56:14+0100",
+        "pubdate_unix": "1582268174",
+        "title_type": "Trafikolycka",
+        "title_location": "Ulricehamn",
+        "lat": 57.8220668,
+        "lng": 13.5301681,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151642,
+        "pubdate_iso8601": "2020-02-21T07:45:13+0100",
+        "pubdate_unix": "1582267513",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Norrbottens län",
+        "lat": 67.1379,
+        "lng": 20.6593618,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151641,
+        "pubdate_iso8601": "2020-02-21T07:45:54+0100",
+        "pubdate_unix": "1582267554",
+        "title_type": "Trafikolycka",
+        "title_location": "Trollhättan",
+        "lat": 58.2599088,
+        "lng": 12.298501,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151640,
+        "pubdate_iso8601": "2020-02-21T07:47:57+0100",
+        "pubdate_unix": "1582267677",
+        "title_type": "Trafikolycka",
+        "title_location": "Alingsås",
+        "lat": 58.1201119,
+        "lng": 12.5337439,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151639,
+        "pubdate_iso8601": "2020-02-21T07:49:50+0100",
+        "pubdate_unix": "1582267790",
+        "title_type": "Misshandel",
+        "title_location": "Nacka",
+        "lat": 59.2920641,
+        "lng": 18.2547016,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151638,
+        "pubdate_iso8601": "2020-02-21T07:50:42+0100",
+        "pubdate_unix": "1582267842",
+        "title_type": "Trafikolycka",
+        "title_location": "Ulricehamn",
+        "lat": 57.766667,
+        "lng": 13.666667,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151637,
+        "pubdate_iso8601": "2020-02-21T07:35:38+0100",
+        "pubdate_unix": "1582266938",
+        "title_type": "Trafikolycka",
+        "title_location": "Ulricehamn",
+        "lat": 57.7833333,
+        "lng": 13.25,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151636,
+        "pubdate_iso8601": "2020-02-21T07:37:34+0100",
+        "pubdate_unix": "1582267054",
+        "title_type": "Stöld/inbrott",
+        "title_location": "Solna",
+        "lat": 59.3638177,
+        "lng": 18.0157975,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151635,
+        "pubdate_iso8601": "2020-02-21T07:41:30+0100",
+        "pubdate_unix": "1582267290",
+        "title_type": "Trafikolycka,  personskada",
+        "title_location": "Lidköping",
+        "lat": 58.3819815,
+        "lng": 13.1472286,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151634,
+        "pubdate_iso8601": "2020-02-21T07:41:51+0100",
+        "pubdate_unix": "1582267311",
+        "title_type": "Vapenlagen",
+        "title_location": "Österåker",
+        "lat": 59.4802773,
+        "lng": 18.3107831,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151633,
+        "pubdate_iso8601": "2020-02-21T07:22:00+0100",
+        "pubdate_unix": "1582266120",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västernorrland län",
+        "lat": 62.9284332,
+        "lng": 17.7862946,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151632,
+        "pubdate_iso8601": "2020-02-21T07:23:43+0100",
+        "pubdate_unix": "1582266223",
+        "title_type": "Trafikolycka",
+        "title_location": "Alingsås",
+        "lat": 58.1201119,
+        "lng": 12.5337439,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151631,
+        "pubdate_iso8601": "2020-02-21T07:27:24+0100",
+        "pubdate_unix": "1582266444",
+        "title_type": "Trafikolycka",
+        "title_location": "Falköping",
+        "lat": 58.200034,
+        "lng": 13.360023,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151630,
+        "pubdate_iso8601": "2020-02-21T07:28:27+0100",
+        "pubdate_unix": "1582266507",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jönköpings län",
+        "lat": 57.7505479,
+        "lng": 14.0703472,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151629,
+        "pubdate_iso8601": "2020-02-21T07:28:52+0100",
+        "pubdate_unix": "1582266532",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Södermanlands län",
+        "lat": 59.3466116,
+        "lng": 16.5078467,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151628,
+        "pubdate_iso8601": "2020-02-21T07:29:12+0100",
+        "pubdate_unix": "1582266552",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Östergötlands län",
+        "lat": 58.5813329,
+        "lng": 16.1624808,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151627,
+        "pubdate_iso8601": "2020-02-21T07:30:24+0100",
+        "pubdate_unix": "1582266624",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västerbottens län",
+        "lat": 64.5958098,
+        "lng": 18.6763669,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151626,
+        "pubdate_iso8601": "2020-02-21T07:16:24+0100",
+        "pubdate_unix": "1582265784",
+        "title_type": "Mord/dråp,  försök",
+        "title_location": "Östra göinge",
+        "lat": 56.1934814,
+        "lng": 14.0854131,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151625,
+        "pubdate_iso8601": "2020-02-21T07:05:45+0100",
+        "pubdate_unix": "1582265145",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Jämtlands län",
+        "lat": 63.6705063,
+        "lng": 14.6127545,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151624,
+        "pubdate_iso8601": "2020-02-21T06:56:42+0100",
+        "pubdate_unix": "1582264602",
+        "title_type": "Brand",
+        "title_location": "Uppsala",
+        "lat": 59.8719496,
+        "lng": 17.6954518,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151623,
+        "pubdate_iso8601": "2020-02-21T06:58:36+0100",
+        "pubdate_unix": "1582264716",
+        "title_type": "Brand",
+        "title_location": "Enköping",
+        "lat": 59.6356909,
+        "lng": 17.0778227,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151622,
+        "pubdate_iso8601": "2020-02-21T07:00:57+0100",
+        "pubdate_unix": "1582264857",
+        "title_type": "Brand",
+        "title_location": "Västerås",
+        "lat": 59.6139122,
+        "lng": 16.6023894,
+        "administrative_area_level_1": "Västmanlands län"
+    },
+    {
+        "id": 151621,
+        "pubdate_iso8601": "2020-02-21T06:48:56+0100",
+        "pubdate_unix": "1582264136",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Västra götalands län",
+        "lat": 58.132158,
+        "lng": 12.1241336,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151620,
+        "pubdate_iso8601": "2020-02-21T06:33:41+0100",
+        "pubdate_unix": "1582263221",
+        "title_type": "Sammanfattning natt",
+        "title_location": "Hallands län",
+        "lat": 57.3075992,
+        "lng": 12.5758928,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151619,
+        "pubdate_iso8601": "2020-02-20T22:32:54+0100",
+        "pubdate_unix": "1582234374",
+        "title_type": "Trafikbrott",
+        "title_location": "Gävle",
+        "lat": 60.3475866,
+        "lng": 17.5205087,
+        "administrative_area_level_1": "Uppsala län"
+    },
+    {
+        "id": 151618,
+        "pubdate_iso8601": "2020-02-20T21:38:04+0100",
+        "pubdate_unix": "1582231084",
+        "title_type": "Trafikolycka",
+        "title_location": "Huddinge",
+        "lat": 59.268204,
+        "lng": 17.9118039,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151617,
+        "pubdate_iso8601": "2020-02-20T21:43:42+0100",
+        "pubdate_unix": "1582231422",
+        "title_type": "Övrigt",
+        "title_location": "Södermanlands län",
+        "lat": 59.0336349,
+        "lng": 16.7518899,
+        "administrative_area_level_1": "Södermanlands län"
+    },
+    {
+        "id": 151616,
+        "pubdate_iso8601": "2020-02-20T21:44:04+0100",
+        "pubdate_unix": "1582231444",
+        "title_type": "Övrigt",
+        "title_location": "Östergötlands län",
+        "lat": 58.3453635,
+        "lng": 15.5197844,
+        "administrative_area_level_1": "Östergötlands län"
+    },
+    {
+        "id": 151615,
+        "pubdate_iso8601": "2020-02-20T21:44:33+0100",
+        "pubdate_unix": "1582231473",
+        "title_type": "Övrigt",
+        "title_location": "Jönköpings län",
+        "lat": 57.3708434,
+        "lng": 14.3439174,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151614,
+        "pubdate_iso8601": "2020-02-20T21:44:38+0100",
+        "pubdate_unix": "1582231478",
+        "title_type": "Övrigt",
+        "title_location": "Hallands län",
+        "lat": 56.8966805,
+        "lng": 12.8033993,
+        "administrative_area_level_1": "Hallands län"
+    },
+    {
+        "id": 151613,
+        "pubdate_iso8601": "2020-02-20T21:45:01+0100",
+        "pubdate_unix": "1582231501",
+        "title_type": "Övrigt",
+        "title_location": "Västra götalands län",
+        "lat": 58.2527926,
+        "lng": 13.0596425,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151612,
+        "pubdate_iso8601": "2020-02-20T21:33:14+0100",
+        "pubdate_unix": "1582230794",
+        "title_type": "Trafikolycka,  singel",
+        "title_location": "Norrtälje",
+        "lat": 59.7595841,
+        "lng": 18.7013584,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151611,
+        "pubdate_iso8601": "2020-02-20T21:24:30+0100",
+        "pubdate_unix": "1582230270",
+        "title_type": "Polisinsats/kommendering",
+        "title_location": "Solna",
+        "lat": 59.3803526,
+        "lng": 18.0327096,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151610,
+        "pubdate_iso8601": "2020-02-20T21:08:46+0100",
+        "pubdate_unix": "1582229326",
+        "title_type": "Bråk",
+        "title_location": "Göteborg",
+        "lat": 57.7093079,
+        "lng": 11.9704233,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151609,
+        "pubdate_iso8601": "2020-02-20T21:09:49+0100",
+        "pubdate_unix": "1582229389",
+        "title_type": "Kontroll person/fordon",
+        "title_location": "Värmdö",
+        "lat": 59.3163663,
+        "lng": 18.446572,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151608,
+        "pubdate_iso8601": "2020-02-20T20:26:54+0100",
+        "pubdate_unix": "1582226814",
+        "title_type": "Brand",
+        "title_location": "Stockholm",
+        "lat": 59.3110678,
+        "lng": 18.0781531,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151607,
+        "pubdate_iso8601": "2020-02-20T20:31:49+0100",
+        "pubdate_unix": "1582227109",
+        "title_type": "Övrigt",
+        "title_location": "Hudiksvall",
+        "lat": 61.7273909,
+        "lng": 17.107401,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151606,
+        "pubdate_iso8601": "2020-02-20T20:22:05+0100",
+        "pubdate_unix": "1582226525",
+        "title_type": "Larm Inbrott",
+        "title_location": "Stockholm",
+        "lat": 59.2625195,
+        "lng": 18.0887559,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151605,
+        "pubdate_iso8601": "2020-02-20T20:00:06+0100",
+        "pubdate_unix": "1582225206",
+        "title_type": "Övrigt",
+        "title_location": "Norrbottens län",
+        "lat": 66.8309216,
+        "lng": 20.3991966,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151604,
+        "pubdate_iso8601": "2020-02-20T20:00:38+0100",
+        "pubdate_unix": "1582225238",
+        "title_type": "Övrigt",
+        "title_location": "Västerbottens län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151603,
+        "pubdate_iso8601": "2020-02-20T20:01:13+0100",
+        "pubdate_unix": "1582225273",
+        "title_type": "Övrigt",
+        "title_location": "Västernorrland län",
+        "lat": 63.4276473,
+        "lng": 17.7292444,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151602,
+        "pubdate_iso8601": "2020-02-20T20:01:50+0100",
+        "pubdate_unix": "1582225310",
+        "title_type": "Övrigt",
+        "title_location": "Jämtlands län",
+        "lat": 64.0233599,
+        "lng": 19.9303984,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151601,
+        "pubdate_iso8601": "2020-02-20T19:46:48+0100",
+        "pubdate_unix": "1582224408",
+        "title_type": "Trafikkontroll",
+        "title_location": "Storuman",
+        "lat": 65.3309284,
+        "lng": 16.6269703,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151600,
+        "pubdate_iso8601": "2020-02-20T19:52:05+0100",
+        "pubdate_unix": "1582224725",
+        "title_type": "Narkotikabrott",
+        "title_location": "Vilhelmina",
+        "lat": 64.624471,
+        "lng": 16.655497,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151599,
+        "pubdate_iso8601": "2020-02-20T19:53:33+0100",
+        "pubdate_unix": "1582224813",
+        "title_type": "Misshandel",
+        "title_location": "Stockholm",
+        "lat": 59.3766187,
+        "lng": 17.8153814,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151598,
+        "pubdate_iso8601": "2020-02-20T19:35:30+0100",
+        "pubdate_unix": "1582223730",
+        "title_type": "Trafikkontroll",
+        "title_location": "Lycksele",
+        "lat": 64.5958098,
+        "lng": 18.6763669,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151597,
+        "pubdate_iso8601": "2020-02-20T19:24:51+0100",
+        "pubdate_unix": "1582223091",
+        "title_type": "Trafikolycka",
+        "title_location": "Helsingborg",
+        "lat": 56.0605299,
+        "lng": 12.7069654,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151596,
+        "pubdate_iso8601": "2020-02-20T19:05:55+0100",
+        "pubdate_unix": "1582221955",
+        "title_type": "Brand",
+        "title_location": "Göteborg",
+        "lat": 57.7076149,
+        "lng": 11.9817365,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
+        "id": 151595,
+        "pubdate_iso8601": "2020-02-20T19:13:54+0100",
+        "pubdate_unix": "1582222434",
+        "title_type": "Alkohollagen",
+        "title_location": "Sundsvall",
+        "lat": 62.445556,
+        "lng": 17.325833,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151594,
+        "pubdate_iso8601": "2020-02-20T18:50:14+0100",
+        "pubdate_unix": "1582221014",
+        "title_type": "Narkotikabrott",
+        "title_location": "Sandviken",
+        "lat": 60.622197,
+        "lng": 16.7769891,
+        "administrative_area_level_1": "Gävleborgs län"
+    },
+    {
+        "id": 151593,
+        "pubdate_iso8601": "2020-02-20T18:35:35+0100",
+        "pubdate_unix": "1582220135",
+        "title_type": "Trafikolycka",
+        "title_location": "Östersund",
+        "lat": 63.4344761,
+        "lng": 15.1269652,
+        "administrative_area_level_1": "Jämtlands län"
+    },
+    {
+        "id": 151592,
+        "pubdate_iso8601": "2020-02-20T18:44:06+0100",
+        "pubdate_unix": "1582220646",
+        "title_type": "Trafikolycka",
+        "title_location": "Malå",
+        "lat": 56.2396475,
+        "lng": 13.7086516,
+        "administrative_area_level_1": "Skåne län"
+    },
+    {
+        "id": 151591,
+        "pubdate_iso8601": "2020-02-20T18:27:16+0100",
+        "pubdate_unix": "1582219636",
+        "title_type": "Brand",
+        "title_location": "Gotland",
+        "lat": 57.6212955,
+        "lng": 18.2930648,
+        "administrative_area_level_1": "Gotlands län"
+    },
+    {
+        "id": 151590,
+        "pubdate_iso8601": "2020-02-20T18:19:58+0100",
+        "pubdate_unix": "1582219198",
+        "title_type": "Rån övrigt",
+        "title_location": "Stockholm",
+        "lat": 59.3140412,
+        "lng": 18.0642619,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151589,
+        "pubdate_iso8601": "2020-02-20T17:56:31+0100",
+        "pubdate_unix": "1582217791",
+        "title_type": "Misshandel",
+        "title_location": "Jönköping",
+        "lat": 57.739331,
+        "lng": 14.151762,
+        "administrative_area_level_1": "Jönköpings län"
+    },
+    {
+        "id": 151588,
+        "pubdate_iso8601": "2020-02-20T17:48:33+0100",
+        "pubdate_unix": "1582217313",
+        "title_type": "Rattfylleri",
+        "title_location": "Boden",
+        "lat": 65.8251188,
+        "lng": 21.6887028,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151587,
+        "pubdate_iso8601": "2020-02-20T17:53:49+0100",
+        "pubdate_unix": "1582217629",
+        "title_type": "Trafikolycka",
+        "title_location": "Luleå",
+        "lat": 65.61622,
+        "lng": 22.1316732,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151586,
+        "pubdate_iso8601": "2020-02-20T17:38:55+0100",
+        "pubdate_unix": "1582216735",
+        "title_type": "Trafikkontroll",
+        "title_location": "Sundsvall",
+        "lat": 62.3481572,
+        "lng": 17.0314655,
+        "administrative_area_level_1": "Västernorrlands län"
+    },
+    {
+        "id": 151585,
+        "pubdate_iso8601": "2020-02-20T17:28:21+0100",
+        "pubdate_unix": "1582216101",
+        "title_type": "Fylleri/LOB",
+        "title_location": "Skellefteå",
+        "lat": 64.750244,
+        "lng": 20.950917,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151584,
+        "pubdate_iso8601": "2020-02-20T17:30:28+0100",
+        "pubdate_unix": "1582216228",
+        "title_type": "Skadegörelse",
+        "title_location": "Stockholm",
+        "lat": 59.3077009,
+        "lng": 18.0764996,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151583,
+        "pubdate_iso8601": "2020-02-20T17:31:48+0100",
+        "pubdate_unix": "1582216308",
+        "title_type": "Trafikolycka",
+        "title_location": "Järfälla",
+        "lat": 59.4571329,
+        "lng": 17.8056787,
+        "administrative_area_level_1": "Stockholms län"
+    },
+    {
+        "id": 151582,
+        "pubdate_iso8601": "2020-02-20T17:32:16+0100",
+        "pubdate_unix": "1582216336",
+        "title_type": "Trafikkontroll",
+        "title_location": "Storuman",
+        "lat": 65.0649864,
+        "lng": 17.1598298,
+        "administrative_area_level_1": "Västerbottens län"
+    },
+    {
+        "id": 151581,
+        "pubdate_iso8601": "2020-02-20T17:20:55+0100",
+        "pubdate_unix": "1582215655",
+        "title_type": "Trafikolycka",
+        "title_location": "Övertorneå",
+        "lat": 66.6569387,
+        "lng": 23.8545904,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151580,
+        "pubdate_iso8601": "2020-02-20T17:23:57+0100",
+        "pubdate_unix": "1582215837",
+        "title_type": "Trafikbrott",
+        "title_location": "Boden",
+        "lat": 65.8251188,
+        "lng": 21.6887028,
+        "administrative_area_level_1": "Norrbottens län"
+    },
+    {
+        "id": 151579,
+        "pubdate_iso8601": "2020-02-20T16:50:16+0100",
+        "pubdate_unix": "1582213816",
+        "title_type": "Uppdatering",
+        "title_location": "Borås",
+        "lat": 57.721035,
+        "lng": 12.939819,
+        "administrative_area_level_1": "Västra Götalands län"
+    },
+    {
         "id": 150965,
         "pubdate_iso8601": "2020-02-14T16:00:50+0100",
         "pubdate_unix": "1581692450",

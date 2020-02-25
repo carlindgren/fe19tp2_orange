@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
-import { } from 'date-fns'
 import { Pie, Line } from 'react-chartjs-2';
 import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, pieChartObjects } from './objectFunctions'
-import { lastTwentyfour, lastSeven, lastThirty, pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
+import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
 import Styled from 'styled-components';
 import DateCard from './DateCard'
+import TabContainer from '../Tabs/TabContainer'
 
 const colorSet = ['#b7eb8f', '#871400', '#fadb14', '#5c0011']
+
 const Container = Styled.div`
 display: flex;
 justify-content: space-around;
@@ -63,7 +64,9 @@ class Charts extends Component {
     }
     render() {
         return (
+
             <div>
+                <TabContainer />
                 <Container>
                     <DateCard
                         data={accPastDayCrimes}
@@ -80,7 +83,6 @@ class Charts extends Component {
                         <Line
                             data={
                                 stateLine([...Object.keys(countPerHour)], '24h / h', 'rgba(75, 192, 192, 1)', [...Object.values(countPerHour)])
-
                             }
                             width={50}
                             height={50}
