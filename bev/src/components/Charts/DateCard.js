@@ -2,21 +2,31 @@ import React from 'react';
 import Styled from 'styled-components';
 
 const StyledDiv = Styled.div`
-width: 30%;
+width: 100%;
 height: 150px;
-box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
-border: 1px solid black;
 margin-top: 10px;
 margin-bottom: 10px;
 text-align: center;
 `
+const Container = Styled.div`
+width: 100%;
+    h1 {
+        border-bottom: 2px solid black;
+        margin-left: 10px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+`
 
 const DateCard = (props) => {
     return (
-        <StyledDiv>
-            <h1>Senaste {props.date}: <br /> {props.data}</h1>
-        </StyledDiv >
-
+        <Container>
+            <h1>{props.date}</h1>
+            <StyledDiv>
+                <h2> {props.data} st</h2>
+            </StyledDiv >
+        </Container>
     )
 }
 

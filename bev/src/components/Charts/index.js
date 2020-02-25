@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
-import { Pie, Line } from 'react-chartjs-2';
+import { Line, Doughnut } from 'react-chartjs-2';
 import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, pieChartObjects } from './objectFunctions'
 import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
 import Styled from 'styled-components';
@@ -10,30 +10,36 @@ import TabContainer from '../Tabs/TabContainer'
 const colorSet = ['#b7eb8f', '#871400', '#fadb14', '#5c0011']
 
 const Container = Styled.div`
-display: flex;
-justify-content: space-around;
+display:flex;
 flex-direction: row;
+justify-content: space-around;
+`
+
+const IntervalContainer = Styled.div`
+border: 3px solid rgba(250,250,250,0.8);
+display: flex;
+flex-direction:column;
+
 `
 
 const ChartCard = Styled.div`
-margin-bottom:10px;
+display:flex;
+flex-direction: row;
+margin-bottom:40px;
 width: 400px;
-height:400px;
-box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
-border: 1px solid black;
+height:250px;
+
 `
-/* const myData = groupByType();
-Object.keys(myData).forEach(key => {
-    if (myData[key] <= 2) delete myData[key];
-}); */
+
 const stateLine = (label, interval, bgColor, values) => {
     return {
         labels: label,
         datasets: [
             {
-                label: 'händelser senaste' + interval,
-                fill: false,
-                lineTension: 0.5,
+                label: ''/* 'händelser senaste' + interval */,
+                fill: true,
+                steppedLine: false,
+                lineTension: 0,
                 backgroundColor: bgColor,
                 borderColor: 'rgba(0,0,0,1)',
                 borderWidth: 0,
@@ -42,7 +48,7 @@ const stateLine = (label, interval, bgColor, values) => {
         ]
     }
 }
-const statePie = (label, interval, colorSet, values) => {
+const stateDoghnut = (label, interval, colorSet, values) => {
     return {
         labels: label,
         datasets: [
@@ -64,167 +70,213 @@ class Charts extends Component {
     }
     render() {
         return (
-
-            <div>
-                <TabContainer />
+            <div><TabContainer />
                 <Container>
-                    <DateCard
-                        data={accPastDayCrimes}
-                        date={'24h'} />
-                    <DateCard
-                        data={accPastSevenDaysCrimes}
-                        date={'7 dagarna'} />
-                    <DateCard
-                        data={accPastThirtyDaysCrimes}
-                        date={'30 dagarna'} />
-                </Container>
-                <Container>
-                    <ChartCard>
-                        <Line
-                            data={
-                                stateLine([...Object.keys(countPerHour)], '24h / h', 'rgba(75, 192, 192, 1)', [...Object.values(countPerHour)])
-                            }
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 24h.',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: true,
-                                    position: 'top'
-                                }
-                            }}
-                        />
-                    </ChartCard>
-                    <ChartCard>
-                        <Line
-                            data={
-                                stateLine([...Object.keys(countPerDay)], '7dagarna / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerDay)])
-                            }
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 7dagarna.',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: true,
-                                    position: 'top'
-                                }
-                            }}
-                        />
-                    </ChartCard>
-                    <ChartCard>
-                        <Line
-                            data={
-                                stateLine([...Object.keys(countPerMonth)], 'månaden / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerMonth)])
 
-                            }
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 30dagarna / dag',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: true,
-                                    position: 'top'
+                    <IntervalContainer>
+                        <DateCard
+                            data={accPastDayCrimes}
+                            date={'24h'} />
+                        <ChartCard>
+                            <Line
+                                data={
+                                    stateLine([...Object.keys(countPerHour)], '24h / h', 'rgba(105, 192, 255,1)', [...Object.values(countPerHour)])
                                 }
-                            }}
-                        />
-                    </ChartCard>
-                </Container>
-                <Container>
-                    <ChartCard>
-                        <Pie
-                            data={
-                                statePie(
-                                    pieChartObjectsTwentyFour.map(elem => Object.keys(elem)),
-                                    '24 timmarna',
-                                    colorSet,
-                                    pieChartObjectsTwentyFour.map(elem => Object.values(elem))
-                                )}
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 24h.',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'top'
+                                width={50}
+                                height={50}
+                                options={{
+                                    scales: {
+                                        yAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }],
+                                        xAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }]
+                                    },
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 24h.',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }}
+                            />
+                        </ChartCard>
+                        <ChartCard>
+                            <Doughnut
+                                data={
+                                    stateDoghnut(
+                                        pieChartObjectsTwentyFour.map(elem => Object.keys(elem)),
+                                        '24 timmarna',
+                                        colorSet,
+                                        pieChartObjectsTwentyFour.map(elem => Object.values(elem))
+                                    )}
+                                width={50}
+                                height={50}
+                                options={{
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 24h.',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }} />
+                        </ChartCard>
+                    </IntervalContainer>
+                    {/*lägg in chart och doghnut för 1 dag*/}
+                    <IntervalContainer>
+                        <DateCard
+                            data={accPastSevenDaysCrimes}
+                            date={'7 dagarna'} />
+                        <ChartCard>
+                            <Line
+                                data={
+                                    stateLine([...Object.keys(countPerDay)], '7dagarna / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerDay)])
                                 }
-                            }} />
-                    </ChartCard>
-                    <ChartCard>
-                        <Pie
-                            data={
-                                statePie(
-                                    pieChartObjectsSeven.map(elem => Object.keys(elem)),
-                                    '7 dagarna',
-                                    colorSet,
-                                    pieChartObjectsSeven.map(elem => Object.values(elem))
-                                )}
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 7 dagar.',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'top'
-                                }
-                            }} />
-                    </ChartCard>
-                    <ChartCard>
-                        <Pie
-                            data={
-                                statePie(
-                                    pieChartObjectsThirty.map(elem => Object.keys(elem)),
-                                    '30 dagarna',
-                                    colorSet,
-                                    pieChartObjectsThirty.map(elem => Object.values(elem))
-                                )}
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'Brott senaste 30 dagarna.',
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: false,
-                                    position: 'top'
-                                }
-                            }} />
-                    </ChartCard>
-                </Container>
+                                width={50}
+                                height={50}
+                                options={{
+                                    scales: {
+                                        yAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }],
+                                        xAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }]
+                                    },
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 7dagarna.',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }}
+                            />
+                        </ChartCard>
+                        <ChartCard>
+                            <Doughnut
+                                data={
+                                    stateDoghnut(
+                                        pieChartObjectsSeven.map(elem => Object.keys(elem)),
+                                        '7 dagarna',
+                                        colorSet,
+                                        pieChartObjectsSeven.map(elem => Object.values(elem))
+                                    )}
+                                width={50}
+                                height={50}
+                                options={{
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 7 dagar.',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }} />
+                        </ChartCard>
+                    </IntervalContainer>
+                    {/*lägg in chart och doghnut för a v*/}
+                    <IntervalContainer>
+                        <DateCard
+                            data={accPastThirtyDaysCrimes}
+                            date={'30 dagarna'} />
+                        {/*lägg in chart och doghnut för 30 dagar*/}
+                        <ChartCard>
+                            <Line
+                                data={
+                                    stateLine([...Object.keys(countPerMonth)], 'månaden / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerMonth)])
 
+                                }
+                                width={50}
+                                height={50}
+                                options={{
+                                    scales: {
+                                        yAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }],
+                                        xAxes: [{
+                                            display: false,
+                                            gridLines: {
+                                                color: 'rgba(0,0,0,0)',
+                                            },
+                                        }]
+                                    },
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 30dagarna / dag',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }}
+                            />
+                        </ChartCard>
+                        <ChartCard>
+                            <Doughnut
+                                data={
+                                    stateDoghnut(
+                                        pieChartObjectsThirty.map(elem => Object.keys(elem)),
+                                        '30 dagarna',
+                                        colorSet,
+                                        pieChartObjectsThirty.map(elem => Object.values(elem))
+                                    )}
+                                width={50}
+                                height={50}
+                                options={{
+                                    maintainAspectRatio: false,
+                                    title: {
+                                        display: false,
+                                        text: 'Brott senaste 30 dagarna.',
+                                        fontSize: 20,
+                                        responsive: true,
+                                    },
+                                    legend: {
+                                        display: false,
+                                        position: 'top'
+                                    }
+                                }} />
+                        </ChartCard>
+                    </IntervalContainer>
+
+                </Container>
             </div>
         );
     }
