@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
-
-import { Bar, Line } from 'react-chartjs-2';
-import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerDay, countPerHour, groupByType, responsePerCounty } from './objectFunctions'
+import { Pie, Line } from 'react-chartjs-2';
+import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, pieChartObjects } from './objectFunctions'
+import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
 import Styled from 'styled-components';
 import DateCard from './DateCard'
+import TabContainer from '../Tabs/TabContainer'
 
+const colorSet = ['#b7eb8f', '#871400', '#fadb14', '#5c0011']
 
 const Container = Styled.div`
 display: flex;
 justify-content: space-around;
-flex-direction: row-reverse;
+flex-direction: row;
 `
 
 const ChartCard = Styled.div`
@@ -20,116 +22,68 @@ height:400px;
 box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
 border: 1px solid black;
 `
-
-//***  antal brott / län i sverige.  ***/
-let obj = responsePerCounty.filter(it => {
-    return !(it.numEvents < 5)
-})
-const transferedArray = data =>
-    data.reduce((acc, item) => {
-        acc[item.administrative_area_level_1] = item.numEvents
-        return acc;
-    }, {});
-let transferedObj = transferedArray(obj)
-
-//räknar alla values och returnerar totalen.
-let totalAmountCrimes = Object.values(transferedObj).reduce((acc, cur) => {
-    return acc + cur
-}, 0)
-
-const myData = groupByType();
+/* const myData = groupByType();
 Object.keys(myData).forEach(key => {
     if (myData[key] <= 2) delete myData[key];
-});
-
-const state1 = {
-    labels: Object.keys(transferedObj),
-    datasets: [
-        {
-            label: '',
-            fill: false,
-            lineTension: 0.5,
-            backgroundColor: 'rgba(50,200,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: Object.values(transferedObj)
-        }
-    ]
+}); */
+const stateLine = (label, interval, bgColor, values) => {
+    return {
+        labels: label,
+        datasets: [
+            {
+                label: 'händelser senaste' + interval,
+                fill: false,
+                lineTension: 0.5,
+                backgroundColor: bgColor,
+                borderColor: 'rgba(0,0,0,1)',
+                borderWidth: 0,
+                data: values
+            }
+        ]
+    }
 }
-const stateHour = {
-    labels: [...Object.keys(countPerHour)],
-    datasets: [
-        {
-            label: 'Händelser senaste 24h /h',
-            fill: false,
-            lineTension: 0.5,
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: [...Object.values(countPerHour)]
-        }
-    ]
-}
-const stateDay = {
-    labels: [...Object.keys(countPerDay)],
-    datasets: [
-        {
-            label: 'Händelser senaste 7 dagarna / dag',
-            fill: false,
-            lineTension: 0.5,
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: [...Object.values(countPerDay)]
-        }
-    ]
+const statePie = (label, interval, colorSet, values) => {
+    return {
+        labels: label,
+        datasets: [
+            {
+                label: 'händelser senaste ' + interval,
+                fill: false,
+                lineTension: 0.5,
+                backgroundColor: colorSet,
+                borderWidth: 0,
+                data: values,
+            }
+        ]
+    }
 }
 
 class Charts extends Component {
     constructor(props) {
         super(props);
-        //this.todaysCrimes = todaysCrimes();
-        //this.pastWeeksCrimes = pastWeeksCrimes();
-        //this.pastMonthsCrimes = pastMonthsCrimes()
     }
     render() {
         return (
+
             <div>
+                <TabContainer />
                 <Container>
                     <DateCard
                         data={accPastDayCrimes}
-                        date={'dagen'} />
+                        date={'24h'} />
                     <DateCard
                         data={accPastSevenDaysCrimes}
-                        date={'veckan'} />
+                        date={'7 dagarna'} />
                     <DateCard
                         data={accPastThirtyDaysCrimes}
-                        date={'månaden'} />
+                        date={'30 dagarna'} />
                 </Container>
                 <Container>
                     <ChartCard>
-                        <Bar
-                            data={state1}
-                            width={50}
-                            height={50}
-                            options={{
-                                maintainAspectRatio: false,
-                                title: {
-                                    display: true,
-                                    text: 'antalet brott/län i sverige sedan 2016-10-14, totalt: ' + totalAmountCrimes,
-                                    fontSize: 20,
-                                    responsive: true,
-                                },
-                                legend: {
-                                    display: true,
-                                    position: 'top'
-                                }
-                            }}
-                        />
-                    </ChartCard>
-                    <ChartCard>
                         <Line
-                            data={stateHour}
+                            data={
+                                stateLine([...Object.keys(countPerHour)], '24h / h', 'rgba(75, 192, 192, 1)', [...Object.values(countPerHour)])
+                            }
                             width={50}
                             height={50}
                             options={{
@@ -149,7 +103,9 @@ class Charts extends Component {
                     </ChartCard>
                     <ChartCard>
                         <Line
-                            data={stateDay}
+                            data={
+                                stateLine([...Object.keys(countPerDay)], '7dagarna / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerDay)])
+                            }
                             width={50}
                             height={50}
                             options={{
@@ -166,6 +122,106 @@ class Charts extends Component {
                                 }
                             }}
                         />
+                    </ChartCard>
+                    <ChartCard>
+                        <Line
+                            data={
+                                stateLine([...Object.keys(countPerMonth)], 'månaden / dag', 'rgba(75, 192, 192, 1)', [...Object.values(countPerMonth)])
+
+                            }
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 30dagarna / dag',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                }
+                            }}
+                        />
+                    </ChartCard>
+                </Container>
+                <Container>
+                    <ChartCard>
+                        <Pie
+                            data={
+                                statePie(
+                                    pieChartObjectsTwentyFour.map(elem => Object.keys(elem)),
+                                    '24 timmarna',
+                                    colorSet,
+                                    pieChartObjectsTwentyFour.map(elem => Object.values(elem))
+                                )}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 24h.',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: false,
+                                    position: 'top'
+                                }
+                            }} />
+                    </ChartCard>
+                    <ChartCard>
+                        <Pie
+                            data={
+                                statePie(
+                                    pieChartObjectsSeven.map(elem => Object.keys(elem)),
+                                    '7 dagarna',
+                                    colorSet,
+                                    pieChartObjectsSeven.map(elem => Object.values(elem))
+                                )}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 7 dagar.',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: false,
+                                    position: 'top'
+                                }
+                            }} />
+                    </ChartCard>
+                    <ChartCard>
+                        <Pie
+                            data={
+                                statePie(
+                                    pieChartObjectsThirty.map(elem => Object.keys(elem)),
+                                    '30 dagarna',
+                                    colorSet,
+                                    pieChartObjectsThirty.map(elem => Object.values(elem))
+                                )}
+                            width={50}
+                            height={50}
+                            options={{
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Brott senaste 30 dagarna.',
+                                    fontSize: 20,
+                                    responsive: true,
+                                },
+                                legend: {
+                                    display: false,
+                                    position: 'top'
+                                }
+                            }} />
                     </ChartCard>
                 </Container>
 
