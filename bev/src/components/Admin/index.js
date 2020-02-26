@@ -5,6 +5,22 @@ import { withFirebase } from '../Firebase';
 import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
 
+import Styled from 'styled-components';
+
+const Container = Styled.div`
+overflow-y: scroll;
+overscroll-behavior: smooth;
+margin-left: 10%;
+display: flex;
+
+flex-direction: column;
+justify-content: space-around;
+border: 1px solid black;
+height: 100vh;
+
+    `
+
+
 class AdminPage extends Component {
     constructor(props) {
         super(props);
@@ -52,7 +68,7 @@ class AdminPage extends Component {
         const { users, loading } = this.state;
 
         return (
-            <div>
+            <Container>
                 <h1>Admin</h1>
                 <p>
                     The Admin Page is accessible by every signed in admin user.
@@ -78,7 +94,7 @@ class AdminPage extends Component {
                     ))}
                 </ul>
                 {/* <UserList users={users} /> */}
-            </div>
+            </Container>
         );
     }
 }

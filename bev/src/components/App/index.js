@@ -12,8 +12,12 @@ import AdminPage from "../Admin";
 import Location from "../Location";
 import Charts from "../Charts/index";
 
+import Styled from 'styled-components'
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
+
+
+
 
 const App = () => (
   <Router>

@@ -11,9 +11,12 @@ import TabContainer from '../Tabs/TabContainer'
 const colorSet = ['#fdaf98', '#f3e4ff', '#8ad0d6', '#fafad2', '#fdf0c4']
 
 const Container = Styled.div`
+margin-left: 10%;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
+border: 1px solid black;
+height: 100vh;
 `
 
 const IntervalContainer = Styled.div`
@@ -25,7 +28,7 @@ const ChartCard = Styled.div`
 display:flex;
 flex-direction: row;
 margin-bottom:40px;
-width: 400px;
+width: 420px;
 height:250px;
 border: 3px solid rgba(230,230,230,0.2);
 border-radius: 2%;
@@ -70,7 +73,6 @@ const stateLine = (label, interval, bgColor, values) => {
         labels: label,
         datasets: [
             {
-
                 label: ''/* 'händelser senaste' + interval */,
                 fill: true,
                 steppedLine: false,
@@ -106,7 +108,7 @@ class Charts extends Component {
     }
     render() {
         return (
-            <div><TabContainer />
+            <div>
                 <Container>
 
                     <IntervalContainer>
