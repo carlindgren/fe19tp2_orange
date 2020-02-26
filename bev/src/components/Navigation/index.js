@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icon } from 'antd'
 
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
@@ -7,37 +8,57 @@ import { AuthUserContext } from "../Session";
 import * as ROLES from "../../constants/roles";
 import Styled from "styled-components";
 
-
+// style individual links in position we want??
 const NavList = Styled.ul`
-  position: absolute;
-  width: 10%;
+  padding: 0;
   top: 0;
   left: 0;
+  position: absolute;
+  width: 14%;
+  background: rgb(40, 44, 52);
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  color: black;
-  font-size: 15px;
+  align-items: center;
+  font-size: 20px;
   list-style: none;
   height: 100vh;
   margin-bottom: 0;
-  li {
-    margin-top: 10px;
+  * {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
   }
+    &:hover {
+    color: #aaa;
+  }
+`
+const Li1 = Styled.li`
+position: absolute:
+top: 0;
+padding: 10px;
+display: flex;
+justify-content: space-evenly;
+align-content: center;
+width:100%;
+background: rgb(50, 45, 66);
+`
+const Li2 = Styled.li``
+const Li3 = Styled.li`
+margin-top: 10px;`
+const Li4 = Styled.li`
+margin-top: 10px;`
+const Li5 = Styled.li`
+margin-top: 10px;`
+const Li6 = Styled.li`
+  *{color: black;}
+width: 100%;
+position: absolute;
+bottom: 0;
 `
 const Container = Styled.div`
 width: 100%;
-`
-
-const StyledLink = Styled(Link)`
-  text-decoration: none;
-  color: black;
-  font-family: 'Roboto';
-  font-weight: 700;
-
-  &:hover {
-    color: #aaa;
-  }
+height: 100%;
 `
 
 
@@ -57,36 +78,38 @@ const Navigation = () => (
 
 const NavigationAuth = ({ authUser }) => (
   <NavList>
-    <li>
-      <StyledLink to={ROUTES.LANDING}>Landing</StyledLink>
-    </li>
-    <li>
-      <StyledLink to={ROUTES.HOME}>Home</StyledLink>
-    </li>
-    <li>
-      <StyledLink to={ROUTES.ACCOUNT}>Account</StyledLink>
-    </li>
+    <Li1>
+      <Icon type="smile" /><Link to={ROUTES.ACCOUNT}>{authUser.email}</Link>
+    </Li1>
+    <Li2>
+      {/*  <Link to={ROUTES.LANDING}>Landing</Link> */}
+    </Li2>
+    <Li3>
+      <Link to={ROUTES.HOME}>Home</Link>
+    </Li3>
     {authUser.roles.includes(ROLES.ADMIN) && (
-      <li>
-        <StyledLink to={ROUTES.ADMIN}>Admin</StyledLink>
-      </li>
+      <Li4>
+        <Link to={ROUTES.ADMIN}>Admin</Link>
+      </Li4>
     )}
-    <li>
-      <StyledLink to={ROUTES.CHARTS}>Charts</StyledLink>
-    </li>
-    <li>
-      <SignOutButton />
-    </li>
+    <Li5>
+      <Link to={ROUTES.CHARTS}>Charts</Link>
+    </Li5>
+    <Li6>
+      <SignOutButton id='signout' />
+    </Li6>
   </NavList>
+
+
 );
 
 const NavigationNonAuth = () => (
   <NavList>
     <li>
-      <StyledLink to={ROUTES.LANDING}></StyledLink>
+      <Link to={ROUTES.LANDING}></Link>
     </li>
     <li>
-      <StyledLink to={ROUTES.SIGN_IN}>Logga in</StyledLink>
+      <Link to={ROUTES.SIGN_IN}>Logga in</Link>
     </li>
   </NavList>
 );

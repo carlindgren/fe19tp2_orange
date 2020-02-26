@@ -37,7 +37,6 @@ const App = () => (
       <Route exact path={ROUTES.ADMIN} component={AdminPage} />
       <Route exact path={ROUTES.CHARTS} component={Charts} />
 
-      <Location />
     </div>
   </Router>
 );

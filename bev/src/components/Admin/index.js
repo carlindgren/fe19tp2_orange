@@ -10,15 +10,16 @@ import Styled from 'styled-components';
 const Container = Styled.div`
 overflow-y: scroll;
 overscroll-behavior: smooth;
-margin-left: 10%;
+margin-left: 14%;
 display: flex;
-
 flex-direction: column;
 justify-content: space-around;
 border: 1px solid black;
 height: 100vh;
-
-    `
+    * {
+        margin-left: 10px;
+    }
+`
 
 
 class AdminPage extends Component {

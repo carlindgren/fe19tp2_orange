@@ -6,12 +6,11 @@ import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour 
 import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty } from './objectFunctions'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
-import TabContainer from '../Tabs/TabContainer'
 
 const colorSet = ['#fdaf98', '#f3e4ff', '#8ad0d6', '#fafad2', '#fdf0c4']
 
 const Container = Styled.div`
-margin-left: 10%;
+margin-left: 14%;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
@@ -155,9 +154,9 @@ class Charts extends Component {
                     {/*lägg in chart och doghnut för 1 dag*/}
                     <IntervalContainer>
                         <DateCard
-                            pastdata={crimesPastFourteen}
+                            pastData={crimesPastFourteen}
                             data={accPastSevenDaysCrimes}
-                            date={'7 dagarna'} />
+                            date={'7 dagar'} />
                         <ChartCard>
                             <Line
                                 data={
@@ -199,7 +198,7 @@ class Charts extends Component {
                         <DateCard
                             pastData={crimesPastSixty}
                             data={accPastThirtyDaysCrimes}
-                            date={'30 dagarna'} />
+                            date={'30 dagar'} />
                         {/*lägg in chart och doghnut för 30 dagar*/}
                         <ChartCard>
                             <Line
@@ -217,7 +216,7 @@ class Charts extends Component {
                                 data={
                                     stateDoghnut(
                                         pieChartObjectsThirty.map(elem => Object.keys(elem)),
-                                        '30 dagarna',
+                                        '30 dagar',
                                         colorSet,
                                         pieChartObjectsThirty.map(elem => Object.values(elem))
                                     )}
@@ -227,13 +226,9 @@ class Charts extends Component {
                                     maintainAspectRatio: false,
                                     title: {
                                         display: false,
-                                        text: 'Brott senaste 30 dagarna.',
-                                        fontSize: 20,
-                                        responsive: true,
                                     },
                                     legend: {
                                         display: false,
-                                        position: 'top'
                                     }
                                 }} />
                         </ChartCard>
