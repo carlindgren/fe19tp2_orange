@@ -8,7 +8,7 @@ import Styled from 'styled-components';
 import DateCard from './DateCard'
 import TabContainer from '../Tabs/TabContainer'
 
-const colorSet = ['#b7eb8f', '#871400', '#fadb14', '#5c0011']
+const colorSet = ['#fdaf98', '#f3e4ff', '#8ad0d6', '#fafad2', '#fdf0c4']
 
 const Container = Styled.div`
 display:flex;
