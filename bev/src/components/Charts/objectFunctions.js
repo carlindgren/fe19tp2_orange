@@ -63,8 +63,7 @@ export const crimesTwoDaysAgo = crimesPerInterval(2).length - accPastDayCrimes
 //antal senaste veckan
 export const accPastSevenDaysCrimes = crimesPerInterval(7).length
 export const crimesPastFourteen = crimesPerInterval(14).length - accPastSevenDaysCrimes
-console.log('crimespastfourteen')
-console.log(crimesPastFourteen)
+
 //antal senaste månaden
 export const accPastThirtyDaysCrimes = crimesPerInterval(30).length
 export const crimesPastSixty = crimesPerInterval(60) - accPastThirtyDaysCrimes

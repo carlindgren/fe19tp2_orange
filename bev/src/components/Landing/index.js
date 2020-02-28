@@ -21,9 +21,8 @@ const LandingPage = styled.div`
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow:hidden;
   opacity: 0.7;
-  z-index: -1;
 `;
 
 const Title = styled.h1`
