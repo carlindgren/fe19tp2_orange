@@ -10,6 +10,7 @@ import Styled from "styled-components";
 
 // style individual links in position we want??
 const NavList = Styled.ul`
+  z-index: 1;
   padding: 0;
   top: 0;
   left: 0;
