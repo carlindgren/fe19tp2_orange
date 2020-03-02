@@ -7,20 +7,21 @@ import LocationList from './LocationList';
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
-
-import { arrOfCities } from '../Charts/objectFunctions';
+import { arrOfCities, pieChartObjects } from '../Charts/objectFunctions';
 import { withFirebase } from '../Firebase';
-
-
-// watches: { locations: [], types: [] }
+import CrimeTypeSelect from './CrimeTypeSelect';
+import CrimeTypeList from './CrimeTypeList'
 
 
 class Watches extends Component {
     constructor(props) {
         super(props);
-        this.state = { showDropDown: false, selectedLocation: null, userObject: null }
+        this.state = { showDropDown: false, selectedCrimeType: null, selectedLocation: null, userObject: null }
+        this.crimeTypes = pieChartObjects.map(elem => (Object.keys(elem)))
         this.cities = arrOfCities.slice(0, 10)
         this.toggleShowDropDown = this.toggleShowDropDown.bind(this)
+        this.handleCrimeTypeChange = this.handleCrimeTypeChange.bind(this)
+        this.handleCrimeTypeClick = this.handleCrimeTypeClick.bind(this)
         this.handleLocationChange = this.handleLocationChange.bind(this)
         this.handleLocationClick = this.handleLocationClick.bind(this)
     }
@@ -30,6 +31,7 @@ class Watches extends Component {
         this.props.firebase.user(this.props.authUser.uid).on('value', snapshot => {
             const userObject = snapshot.val();
             console.log(userObject)
+            console.log(this.crimeTypes)
             this.setState({ userObject })
         });
 
@@ -37,6 +39,40 @@ class Watches extends Component {
 
     componentWillUnmount() {
         this.props.firebase.user(this.props.authUser.uid).off();
+    }
+
+    handleCrimeTypeClick(e) {
+        if (e.target.closest('span')) {
+            const crimeTypes = this.state.userObject.crimeTypes;
+            const crimeTypeToRemove = e.target.closest('li').firstChild.textContent;
+
+            const newCrimeTypes = crimeTypes.filter(l => {
+                return (l !== String(crimeTypeToRemove));
+            });
+
+            this.props.firebase.user(this.props.authUser.uid).set({
+                ...this.state.userObject,
+                crimeTypes: newCrimeTypes
+            });
+        }
+    }
+
+    handleCrimeTypeChange(e) {
+        if (this.state.userObject.crimeTypes) {
+            const crimeTypes = this.state.userObject.crimeTypes;
+            crimeTypes.push(e.target.value);
+            let uniqueCrimeTypes = [...new Set(crimeTypes)];
+            this.props.firebase.user(this.props.authUser.uid).set({
+                ...this.state.userObject,
+                crimeTypes: uniqueCrimeTypes
+            });
+        } else {
+            this.props.firebase.user(this.props.authUser.uid).set({
+                ...this.state.userObject,
+                crimeTypes: [e.target.value]
+            });
+        }
+        this.setState({ selectedCrimeType: e.target.value })
     }
 
     handleLocationChange(e) {
@@ -88,6 +124,7 @@ class Watches extends Component {
                     {/*       <Link to={ROUTES.HOME}>behövs denna här?</Link> */}
                     {/*count.map(elem => { <li key={elem}>{elem}</li> }) */}
                     {this.state.showDropDown && <LocationSelect handleLocationChange={this.handleLocationChange} cities={this.cities} />}
+                    {this.state.showDropDown && <CrimeTypeSelect handleCrimeTypeChange={this.handleCrimeTypeChange} crimeTypes={this.crimeTypes} />}
 
                 </Li2>
                 {this.props.authUser.roles.includes(ROLES.ADMIN) && (
@@ -101,6 +138,9 @@ class Watches extends Component {
                 <Li5>
                     {this.state.userObject && <LocationList locations={this.state.userObject.locations} handleLocationClick={this.handleLocationClick} />}
                 </Li5>
+                <li>
+                    {this.state.userObject && <CrimeTypeList crimeTypes={this.state.userObject.crimeTypes} handleCrimeTypeClick={this.handleCrimeTypeClick} />}
+                </li>
                 <Li6>
                     <SignOutButton />
                 </Li6>

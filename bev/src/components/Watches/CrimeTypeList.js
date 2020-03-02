@@ -5,8 +5,8 @@ const CrimeTypeList = (props) => {
         return null;
     }
     return (
-        <ul onClick={(e) => props.handleLocationClick(e)}>
-            {props.crimeTypes.map((crimeType, index) => (<li key={index}>{crimeType}<span> X</span></li>))}
+        <ul onClick={(e) => props.handleCrimeTypeClick(e)}>
+            {props.crimeTypes.map((crimeType, index) => (<li key={index}>{crimeType}<span>X</span></li>))}
         </ul>
     )
 }

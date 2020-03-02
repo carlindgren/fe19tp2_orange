@@ -46,7 +46,7 @@ const INITIAL_STATE = {
     isAdmin: false,
     error: null,
     locations: [],
-    // types: [] 
+    Crimetypes: []
 
 };
 
