@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
 import { withAuthorization } from '../Session'
 import { Line, Doughnut } from 'react-chartjs-2';
-import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, pieChartObjects } from './objectFunctions'
+import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, } from './objectFunctions'
 import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
 import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty } from './objectFunctions'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
-
-const colorSet = ['#fdaf98', '#f3e4ff', '#8ad0d6', '#fafad2', '#fdf0c4']
+import { stateDoghnut, doghnutOptions, stateLine, lineOptions, colorSet } from './options'
 
 const Container = Styled.div`
 margin-left: 14%;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
-border: 1px solid black;
 height: 100vh;
 `
 
 const IntervalContainer = Styled.div`
 display: flex;
 flex-direction:column;
-
 `
+
 const ChartCard = Styled.div`
 display:flex;
 flex-direction: row;
@@ -35,71 +33,6 @@ border-radius: 2%;
         background-color: black;
     }
 `
-const lineOptions = {
-    elements: {
-        point: {
-            radius: 0,
-        },
-    },
-    scales: {
-        yAxes: [{
-            display: false,
-            gridLines: {
-                color: 'rgba(0,0,0,0)',
-            },
-        }],
-        xAxes: [{
-            display: false,
-            gridLines: {
-                color: 'rgba(0,0,0,0)',
-            },
-        }]
-    },
-    maintainAspectRatio: false,
-    title: {
-        display: false,
-        text: 'Brott senaste 24h.',
-        fontSize: 20,
-        responsive: true,
-    },
-    legend: {
-        display: false,
-    }
-}
-
-const stateLine = (label, interval, bgColor, values) => {
-    return {
-        labels: label,
-        datasets: [
-            {
-                label: ''/* 'händelser senaste' + interval */,
-                fill: true,
-                steppedLine: false,
-                lineTension: 0,
-                backgroundColor: bgColor,
-                hoverBackgroundColor: 'rgba(0, 0, 0, 0.5)',
-                borderColor: 'rgba(0,0,0,0)',
-                borderWidth: 0,
-                data: values
-            }
-        ]
-    }
-}
-const stateDoghnut = (label, interval, colorSet, values) => {
-    return {
-        labels: label,
-        datasets: [
-            {
-                label: 'händelser senaste ' + interval,
-                fill: false,
-                lineTension: 0.5,
-                backgroundColor: colorSet,
-                borderWidth: 0,
-                data: values,
-            }
-        ]
-    }
-}
 
 class Charts extends Component {
     constructor(props) {
@@ -136,19 +69,7 @@ class Charts extends Component {
                                     )}
                                 width={50}
                                 height={50}
-                                options={{
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                        text: 'Brott senaste 24h.',
-                                        fontSize: 20,
-                                        responsive: true,
-                                    },
-                                    legend: {
-                                        display: false,
-                                        position: 'top'
-                                    }
-                                }} />
+                                options={doghnutOptions} />
                         </ChartCard>
                     </IntervalContainer>
                     {/*lägg in chart och doghnut för 1 dag*/}
@@ -178,28 +99,15 @@ class Charts extends Component {
                                     )}
                                 width={50}
                                 height={50}
-                                options={{
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                        text: 'Brott senaste 7 dagar.',
-                                        fontSize: 20,
-                                        responsive: true,
-                                    },
-                                    legend: {
-                                        display: false,
-                                        position: 'top'
-                                    }
-                                }} />
+                                options={doghnutOptions} />
                         </ChartCard>
                     </IntervalContainer>
-                    {/*lägg in chart och doghnut för a v*/}
                     <IntervalContainer>
                         <DateCard
                             pastData={crimesPastSixty}
                             data={accPastThirtyDaysCrimes}
                             date={'30 dagar'} />
-                        {/*lägg in chart och doghnut för 30 dagar*/}
+
                         <ChartCard>
                             <Line
                                 data={
@@ -222,18 +130,9 @@ class Charts extends Component {
                                     )}
                                 width={50}
                                 height={50}
-                                options={{
-                                    maintainAspectRatio: false,
-                                    title: {
-                                        display: false,
-                                    },
-                                    legend: {
-                                        display: false,
-                                    }
-                                }} />
+                                options={doghnutOptions} />
                         </ChartCard>
                     </IntervalContainer>
-
                 </Container>
             </div>
         );

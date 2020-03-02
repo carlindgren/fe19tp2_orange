@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Wrapp = styled.form`
 display: flex;
@@ -9,15 +9,10 @@ margin: 30px auto;
 border:3px solid grey;
 width:280px;
 padding: 35px;
-
-
 `
 const StylSign = styled.div`
 margin-bottom: 25px;
 width:100%;
-
-
-
 `
 
 

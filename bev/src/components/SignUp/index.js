@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Wrapp = styled.form`
 text-align: center;
@@ -45,6 +45,9 @@ const INITIAL_STATE = {
     passwordTwo: '',
     isAdmin: false,
     error: null,
+    locations: [],
+    // types: [] 
+
 };
 
 
@@ -61,7 +64,7 @@ class SignUpFormBase extends Component {
     }
 
     onSubmit = event => {
-        const { username, email, passwordOne, isAdmin } = this.state;
+        const { username, email, passwordOne, isAdmin, watches } = this.state;
 
         const roles = [];
         if (isAdmin) {
@@ -80,6 +83,7 @@ class SignUpFormBase extends Component {
                         username,
                         email,
                         roles,
+                        watches
                     })
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });

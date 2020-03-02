@@ -70,7 +70,7 @@ export const crimesPastSixty = crimesPerInterval(60) - accPastThirtyDaysCrimes
 
 let compareStrings = ['falun', 'järfälla', "Borlänge", "ockelbo"]; // lägg till i denna vid sök på ort/ stad?
 
-let arrOfCities = response.map(city => {
+export const arrOfCities = filteredResponse.map(city => {
     return city.title_location
 }) // använd för att visa upp sökresultat i formen.
 
