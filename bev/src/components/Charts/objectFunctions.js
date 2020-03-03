@@ -28,6 +28,36 @@ const crimesPerInterval = (n = 1) => { // n = days
 let filteredResponseTwentyFour = crimesPerInterval(1)
 let filteredResponseSeven = crimesPerInterval(7)
 let filteredResponseThirty = crimesPerInterval(30)
+
+const customCrimesPerInterval = (crimes, n = 1) => { // n = days
+    let date = Date.now()
+    return crimes.sort((a, b) => a.pubdate_unix - b.pubdate_unix).filter(item => {
+        return isWithinInterval(parseInt(item.pubdate_unix + '000'), { start: subDays(date, n), end: date })
+    })
+}
+
+export const customCrimeFilter = (cities, crimes) => { // ["sandv"]
+    console.log("CUSTOM CRIME FILTER REACHED")
+    let sortedCrimes = filteredResponse.sort((a, b) => a.pubdate_unix - b.pubdate_unix)
+    let masterArray = [];
+    let minorArray = [];
+
+    cities.forEach(city => {
+        const tempArray = filteredResponse.filter(crime => crime.title_location == city)
+        minorArray.push(tempArray);
+    })
+    let cityCrimes = minorArray.flat();
+    console.log(cityCrimes)
+    crimes.forEach(crime => {
+        const arr = cityCrimes.filter(filtcrime => filtcrime.title_type.includes(crime))
+        masterArray.push(arr)
+
+    })
+    let allCrimes = masterArray.flat();
+    console.log(allCrimes);
+
+}
+
 //************Group interval by type.*************** */
 //group by type. tar just nu title_type. räknar hur många av respektive title_type som finns i arraye av objekt.
 //returnerar sedan ex [{trafikolycka: 17}, {dråp: 2}] osv.

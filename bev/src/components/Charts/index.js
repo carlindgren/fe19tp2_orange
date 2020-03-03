@@ -3,7 +3,7 @@ import { withAuthorization } from '../Session'
 import { Line, Doughnut } from 'react-chartjs-2';
 import { accPastSevenDaysCrimes, accPastThirtyDaysCrimes, accPastDayCrimes, countPerMonth, countPerDay, countPerHour, } from './objectFunctions'
 import { pieChartObjectsSeven, pieChartObjectsThirty, pieChartObjectsTwentyFour } from './objectFunctions' // visar antal olika brott / tidsperiod.
-import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty } from './objectFunctions'
+import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty, customCrimeFilter } from './objectFunctions'
 import Styled from 'styled-components';
 import DateCard from './DateCard'
 import { stateDoghnut, doghnutOptions, stateLine, lineOptions, colorSet } from './options'
@@ -39,6 +39,7 @@ class Charts extends Component {
         super(props);
     }
     render() {
+        //console.log(customCrimeFilter(['Sandviken', 'Stockholm'], ['Våldsbrott', 'Stöld']))
         return (
             <div>
                 <Container>
