@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { StyledSelect } from './styled'
 const LocationSelect = (props) => (
-    <select onChange={(e) => props.handleLocationChange(e)}>
+    <StyledSelect onChange={(e) => props.handleLocationChange(e)}>
         {props.cities.map((city, index) => (<option key={index}>{city}</option>))}
-    </select>
+    </StyledSelect>
 )
 
 export default LocationSelect;

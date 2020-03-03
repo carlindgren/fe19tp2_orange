@@ -7,7 +7,8 @@ const NavList = Styled.ul`
   left: 0;
   position: absolute;
   width: 14%;
-  background: rgb(40, 44, 52);
+  background: white;
+  border-right:1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,22 +36,26 @@ align-content: center;
 width:100%;
 background: rgb(240, 45, 66);
 `
-const Li3 = Styled.li`
-`
 const Li2 = Styled.li`
+`
+const Li3 = Styled.li`
 width: 100%;
 padding:10px;
-  &:hover {
-      background-color: blue;
-      cursor:pointer;
+color:black;
+background-color:white;
+border-bottom:1px solid black;
       span {
+        color:black;
+        margin-left:10px;
             &:hover {
+                cursor:pointer;
                 color:green;
             }
       }
   }
 `
 const Li4 = Styled.li`
+margin-top:10px;
 background:red;
 width: 100%;
 padding:10px;`

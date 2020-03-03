@@ -1,9 +1,10 @@
 import React from 'react';
+import { StyledSelect } from './styled'
 
 const CrimeTypeSelect = (props) => (
-    <select onChange={(e) => props.handleCrimeTypeChange(e)}>
+    <StyledSelect onChange={(e) => props.handleCrimeTypeChange(e)}>
         {props.crimeTypes.map((crimeType, index) => (<option key={index}>{crimeType}</option>))}
-    </select>
+    </StyledSelect>
 )
 
 export default CrimeTypeSelect;

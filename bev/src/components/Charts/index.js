@@ -7,7 +7,7 @@ import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty } from './objectF
 import Styled from 'styled-components';
 import DateCard from './DateCard'
 import { stateDoghnut, doghnutOptions, stateLine, lineOptions, colorSet } from './options'
-
+import { Icon } from 'antd'
 const Container = Styled.div`
 margin-left: 14%;
 display:flex;
@@ -42,7 +42,6 @@ class Charts extends Component {
         return (
             <div>
                 <Container>
-
                     <IntervalContainer>
                         <DateCard
                             pastData={crimesTwoDaysAgo}
