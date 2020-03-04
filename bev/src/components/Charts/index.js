@@ -8,6 +8,9 @@ import Styled from 'styled-components';
 import DateCard from './DateCard'
 import { stateDoghnut, doghnutOptions, stateLine, lineOptions, colorSet } from './options'
 import { Icon } from 'antd'
+
+import { withFirebase } from '../Firebase';
+
 const Container = Styled.div`
 margin-left: 14%;
 display:flex;
@@ -33,10 +36,15 @@ border-radius: 2%;
         background-color: black;
     }
 `
-
 class Charts extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            userObject: null
+        }
+
+
     }
     render() {
         //console.log(customCrimeFilter(['Sandviken', 'Stockholm'], ['Våldsbrott', 'Stöld']))
@@ -141,4 +149,4 @@ class Charts extends Component {
 
 const condition = AuthUser => AuthUser != null;
 
-export default withAuthorization(condition)(Charts);
+export default withFirebase(withAuthorization(condition)(Charts));

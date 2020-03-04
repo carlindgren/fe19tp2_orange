@@ -36,7 +36,7 @@ const customCrimesPerInterval = (crimes, n = 1) => { // n = days
     })
 }
 
-export const customCrimeFilter = (cities, crimes) => { // ["sandv"]
+export const customCrimeFilter = (cities = ['sandviken'], crimes = ['stöld']) => { // ["sandv"]
     console.log("CUSTOM CRIME FILTER REACHED")
     let sortedCrimes = filteredResponse.sort((a, b) => a.pubdate_unix - b.pubdate_unix)
     let masterArray = [];
@@ -134,21 +134,25 @@ export const pieChartObjects = Object.keys(crimeTypes).map(crimeKey => {
         [crimeKey]: groupRelated(filteredResponse, crimeTypes[crimeKey]).length
     }
 })
+
 export const pieChartObjectsSeven = Object.keys(crimeTypes).map(crimeKey => {
     return {
         [crimeKey]: groupRelated(filteredResponseSeven, crimeTypes[crimeKey]).length
     }
 })
+
 export const pieChartObjectsTwentyFour = Object.keys(crimeTypes).map(crimeKey => {
     return {
         [crimeKey]: groupRelated(filteredResponseTwentyFour, crimeTypes[crimeKey]).length
     }
 })
+
 export const pieChartObjectsThirty = Object.keys(crimeTypes).map(crimeKey => {
     return {
         [crimeKey]: groupRelated(filteredResponseThirty, crimeTypes[crimeKey]).length
     }
 })
+
 console.log(pieChartObjects);
 console.log(pieChartObjectsSeven);
 console.log(Object.values(pieChartObjectsTwentyFour));

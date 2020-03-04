@@ -13,7 +13,7 @@ import { withFirebase } from '../Firebase';
 import CrimeTypeSelect from './CrimeTypeSelect';
 import CrimeTypeList from './CrimeTypeList'
 import ChartFilter from '../ChartFilter/ChartFilter'
-import { AuthUserContext } from "../Session";
+
 
 class Watches extends Component {
     constructor(props) {
@@ -27,7 +27,6 @@ class Watches extends Component {
         this.handleLocationChange = this.handleLocationChange.bind(this)
         this.handleLocationClick = this.handleLocationClick.bind(this)
     }
-    //cities = arrOfCities().slice(0, 10);
 
     componentDidMount() {
         this.props.firebase.user(this.props.authUser.uid).on('value', snapshot => {

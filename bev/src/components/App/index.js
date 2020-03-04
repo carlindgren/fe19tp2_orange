@@ -9,7 +9,6 @@ import PasswordForgetPage from "../PasswordForget";
 import HomePage from "../Home";
 import AccountPage from "../Account";
 import AdminPage from "../Admin";
-import Location from "../Location";
 import Charts from "../Charts/index";
 
 import Styled from 'styled-components'
@@ -36,7 +35,6 @@ const App = () => (
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route exact path={ROUTES.ADMIN} component={AdminPage} />
       <Route exact path={ROUTES.CHARTS} component={Charts} />
-
     </div>
   </Router>
 );
