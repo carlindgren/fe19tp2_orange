@@ -1,8 +1,11 @@
-import Styled from 'styled-components'
+import Styled from "styled-components";
 
 export const StyledSelect = Styled.select`
+height: 50px;
 color: black;
-    * {
-        color: black;
-    }
-`
+
+p{
+    color:black;
+}
+    
+`;
