@@ -195,7 +195,7 @@ class ChartFilter extends Component {
       <FilterContainer>
         <FilterBox>
 
-          <Close onClick={this.props.toggleChartFilter}>x</Close>
+          <Close onClick={this.props.toggleChartFilter}>x</Close> {/* skapade denna för att skicka funktionen. */}
           {/* <CloseButton toggleChartFilter={this.props.toggleChartFilter} /> */}
           <Box1>
             <h3>Välj Brott:</h3>
