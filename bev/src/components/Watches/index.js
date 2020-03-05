@@ -33,6 +33,7 @@ class Watches extends Component {
       selectedLocation: null,
       userObject: null
     };
+
     this.crimeTypes = pieChartObjects.map(elem => Object.keys(elem));
     this.cities = arrOfCities.slice(0, 10);
     this.toggleShowDropDown = this.toggleShowDropDown.bind(this);
@@ -40,6 +41,7 @@ class Watches extends Component {
     this.handleCrimeTypeClick = this.handleCrimeTypeClick.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleLocationClick = this.handleLocationClick.bind(this);
+    this.toggleChartFilter = this.toggleChartFilter.bind(this)
   }
 
   componentDidMount() {
@@ -192,7 +194,7 @@ class Watches extends Component {
           <SignOutButton />
         </Li6>
         {this.state.showChartFilter && (
-          <ChartFilter authUser={this.props.authUser} />
+          <ChartFilter toggleChartFilter={this.toggleChartFilter} authUser={this.props.authUser} />
         )}
       </React.Fragment>
     );

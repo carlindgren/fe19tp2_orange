@@ -15,6 +15,15 @@ import FilterButton from "./FilterButton";
 import CloseButton from "./CloseButton";
 
 //display: ${props => (props.show ? "inline" : "none")};
+const Close = Styled.div`
+position:absolute;
+top:0;
+right:14px;
+font-size:42px;
+transform:rotate(45deg);
+cursor:pointer;
+`;
+
 
 const FilterContainer = Styled.div`
 display: ${props => (props.showDropDown ? "none " : "inline")};
@@ -76,8 +85,8 @@ class ChartFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showChartFilter: false,
-      showDropDown: false,
+      //showChartFilter: false,
+      //showDropDown: false,
       selectedCrimeType: null,
       selectedLocation: null,
       userObject: null,
@@ -90,7 +99,6 @@ class ChartFilter extends Component {
     this.handleCrimeTypeClick = this.handleCrimeTypeClick.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleLocationClick = this.handleLocationClick.bind(this);
-    this.toggleShowDropDown = this.toggleShowDropDown.bind(this);
   }
 
   componentDidMount() {
@@ -140,10 +148,6 @@ class ChartFilter extends Component {
     }
   }
 
-  toggleShowDropDown() {
-    this.setState({ showDropDown: !this.state.showDropDown });
-  }
-
   handleCrimeTypeClick(e) {
     if (e.target.closest("span")) {
       const crimeTypes = this.state.userObject.crimeTypes;
@@ -159,6 +163,7 @@ class ChartFilter extends Component {
       });
     }
   }
+
   handleCrimeTypeChange(e) {
     if (this.state.userObject.crimeTypes) {
       const crimeTypes = this.state.userObject.crimeTypes;
@@ -187,9 +192,11 @@ class ChartFilter extends Component {
       );
     }
     return (
-      <FilterContainer showDropDown={this.state.showDropDown}>
+      <FilterContainer>
         <FilterBox>
-          <CloseButton onClick={() => this.toggleShowDropDown()} />
+
+          <Close onClick={this.props.toggleChartFilter}>x</Close>
+          {/* <CloseButton toggleChartFilter={this.props.toggleChartFilter} /> */}
           <Box1>
             <h3>Välj Brott:</h3>
             <CrimeTypeSelect
