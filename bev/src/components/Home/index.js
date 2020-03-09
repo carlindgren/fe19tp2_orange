@@ -5,6 +5,8 @@ import Styled from 'styled-components'
 import axios from 'axios'
 import { Button, Input } from 'antd'
 import "antd/dist/antd.css";
+import Navigation from "../Navigation";
+
 
 const StyledDiv = Styled.div`
 margin: 0 auto;
@@ -70,9 +72,14 @@ console.log(this.state.result)
     }
 
     render() {
+
+
+
         const { location } = this.state
         return (
+
             <StyledDiv>
+                <Navigation />
                 <StyledForm>
                     <Input value={location} type="text" placeholder="sök på ort" style={style}></Input>
                     <Button type="secondary" style={style}>Alla kategorier</Button>

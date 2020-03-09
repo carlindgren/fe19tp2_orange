@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
 import styled from 'styled-components';
+import Navigation from "../Navigation";
 
 const Wrapp = styled.form`
 display: flex;
@@ -54,6 +55,7 @@ class PasswordChangeForm extends Component {
 
                 <form onSubmit={this.onSubmit}>
                     <StylSign>
+                        <Navigation />
                         <h2 style={{ marginBottom: '30px', fontSize: '28px' }}>Ändra lösenord</h2>
                         <input
                             name="passwordOne"

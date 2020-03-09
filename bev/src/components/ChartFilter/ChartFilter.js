@@ -5,6 +5,7 @@ import CrimeTypeSelect from '../Watches/CrimeTypeSelect'
 import CrimeTypeList from '../Watches/CrimeTypeList'
 import LocationList from '../Watches/LocationList'
 import LocationSelect from '../Watches/LocationSelect'
+
 import { pieChartObjects, arrOfCities, customCrimeFilter } from '../Charts/objectFunctions'
 const FilterContainer = Styled.div`
 display:flex;
@@ -113,6 +114,7 @@ class ChartFilter extends Component {
     }
 
     render() {
+
         if (this.state.userObject) {
             console.log(customCrimeFilter(this.state.userObject.locations, this.state.userObject.crimeTypes))
         }

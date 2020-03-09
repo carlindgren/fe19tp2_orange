@@ -3,11 +3,14 @@ import { AuthUserContext, withAuthorization } from '../Session'
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 
+
+
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
 
             <div>
+
                 <h1 style={{ textAlign: 'center', marginTop: '40px' }}>Account: {authUser.email}</h1>
                 {/* <PasswordForgetForm /> */}
                 <PasswordChangeForm /> */}

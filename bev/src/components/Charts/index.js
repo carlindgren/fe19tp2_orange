@@ -7,7 +7,8 @@ import { crimesTwoDaysAgo, crimesPastFourteen, crimesPastSixty, customCrimeFilte
 import Styled from 'styled-components';
 import DateCard from './DateCard'
 import { stateDoghnut, doghnutOptions, stateLine, lineOptions, colorSet } from './options'
-import { Icon } from 'antd'
+import { Icon } from 'antd';
+
 
 import { withFirebase } from '../Firebase';
 
@@ -51,6 +52,7 @@ class Charts extends Component {
         return (
             <div>
                 <Container>
+
                     <IntervalContainer>
                         <DateCard
                             pastData={crimesTwoDaysAgo}

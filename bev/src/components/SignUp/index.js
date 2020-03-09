@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { SignInLink } from '../SignIn';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import styled from 'styled-components';
+//import logo from "./logo.png"
 
 const Wrapp = styled.form`
 text-align: center;
 display: flex;
 justify-content: center;
+font-size:20px;
 
 `
 const StylSign = styled.div`
-border:3px solid grey;
-width:450px;
-margin: 30px auto;
-padding:18px;
+// border:3px solid black;
+//width:450px;
+//margin: 30px auto;
+//padding:18px;
+
+`
+const Field = styled.input`
+background-color:white;
+width:90%;
+height:40px;
+border:2px solid black;
 
 `
 const Sinput = styled.div`
-margin: 20px auto;
+ margin: 10px auto;
 font-weight:bold;
 font-size:15px;
+
+`
+const Btn = styled.button` 
+margin-bottom:20px;
+width: 50%;
+height:35px;
+ border: 1px solid black;
+ border-radius:25px;
+ box-shadow:none;
+ justify-content: center;
+ font-weight:bold;
+ background-color:#D5D4D3;
+ 
 
 `
 
@@ -30,8 +53,14 @@ const SignUpPage = () => (
     <Wrapp>
         <StylSign>
 
-            <h1>Create Account</h1>
+            {/* <img style={{ width: '100px' }}
+                src={logo}
+                k alt="logo" /> */}
+
+            <h1 style={{ marginTop: '20px' }}>SKAPA KONTO</h1>
             <SignUpForm />
+            <SignInLink />
+
 
         </StylSign>
     </Wrapp>
@@ -76,6 +105,7 @@ class SignUpFormBase extends Component {
         this.props.firebase
             .doCreateUserWithEmailAndPassword(email, passwordOne)
             .then(authUser => {
+                console.log(authUser);
                 // Create a user in your Firebase realtime database
                 this.props.firebase
                     .user(authUser.user.uid)
@@ -83,7 +113,6 @@ class SignUpFormBase extends Component {
                         username,
                         email,
                         roles,
-                        watches
                     })
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
@@ -91,10 +120,12 @@ class SignUpFormBase extends Component {
                     })
                     .catch(error => {
                         this.setState({ error });
+                        console.log(error);
                     });
             })
             .catch(error => {
                 this.setState({ error });
+                console.log(error);
             });
 
         event.preventDefault();
@@ -129,61 +160,65 @@ class SignUpFormBase extends Component {
                 <form onSubmit={this.onSubmit}>
                     <Sinput>
                         <label>
-                            Full Name:
-                            <br></br>
-                            <input
+                            <i class='material-icons'>person</i>
+                            Användarnamn:
+
+                            <Field
                                 name="username"
                                 value={username}
                                 onChange={this.onChange}
                                 type="text"
-                                placeholder="Full Name"
+                                placeholder="användarnamn"
                             />
                         </label >
                     </Sinput>
                     <Sinput>
                         <label>
-                            Email Adress:
-                           <br></br>
+                            <i class='material-icons'>mail</i>
+                            E-post:
 
 
-                            <input
+
+                            <Field
                                 name="email"
                                 value={email}
                                 onChange={this.onChange}
                                 type="text"
-                                placeholder="Email Address"
+                                placeholder="E-post"
                             />
                         </label >
                     </Sinput>
                     <Sinput>
                         <label>
-                            Password:
-                            <br></br>
-                            <input
+                            <i class='material-icons'>lock</i>
+                            Lösenord:
+
+                            <Field
                                 name="passwordOne"
                                 value={passwordOne}
                                 onChange={this.onChange}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Lösenord"
                             />
                         </label >
                     </Sinput>
                     <Sinput>
                         <label>
-                            Confirm Password:
-                            <br></br>
-                            <input
+                            <i class='material-icons'>lock</i>
+                            Upprepa lösernord:
+
+                            <Field
                                 name="passwordTwo"
                                 value={passwordTwo}
                                 onChange={this.onChange}
                                 type="password"
-                                placeholder="Confirm Password"
+                                placeholder="Upprepa lösernord"
                             />
                         </label >
                     </Sinput >
                     <Sinput>
 
-                        <input
+                        <Field
                             name="isAdmin"
                             type="checkbox"
                             checked={isAdmin}
@@ -193,9 +228,9 @@ class SignUpFormBase extends Component {
                             Admin
                         </label >
                     </Sinput>
-                    <button disabled={isInvalid} type="submit">
-                        Sign Up
-        </button>
+                    <Btn disabled={isInvalid} type="submit">
+                        Skapa konto
+        </Btn>
                     {error && <p>{error.message}</p>}
                 </form >
             </Wrapp >
@@ -206,7 +241,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
     <p>
-        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+        Don't have an account? <Link to={ROUTES.SIGN_UP}>Skapa konto</Link>
     </p>
 );
 
