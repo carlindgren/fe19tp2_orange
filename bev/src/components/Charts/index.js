@@ -34,28 +34,63 @@ import { Icon } from "antd";
 import { withFirebase } from "../Firebase";
 
 const Container = Styled.div`
-margin-left: 14%;
+position:absolute;
+margin-left: 250px;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
 height: 100vh;
+
+@media (max-width: 991.98px) {
+  margin-left:210px;
+ }
+
+@media (max-width: 767.98px) { 
+  margin-left:210px;
+}
+
+@media (max-width: 575.98px) {
+  margin-left:10px;
+  margin-top: 400px;
+}
+
 `;
 
 const IntervalContainer = Styled.div`
 display: flex;
 flex-direction:column;
+
+
 `;
 
 const ChartCard = Styled.div`
 display:flex;
 flex-direction: row;
 margin-bottom:40px;
-width: 420px;
+width: 300px;
 height:250px;
-border: 3px solid rgba(230,230,230,0.2);
-border-radius: 2%;
+border: 3px solid #65A5ED;
+margin: 5px;
+margin-top:20px;
+padding: 3px;
+
     &hover: {
         background-color: black;
+    }
+    @media (max-width: 991.98px) {
+      width: 250px;
+      height:250px;
+     }
+
+    @media (max-width: 767.98px) { 
+      width: 200px;
+      height:200px;
+    }
+    
+    @media (max-width: 575.98px) {
+      width: 150px;
+      height: 150px;
+    
     }
 `;
 class Charts extends Component {

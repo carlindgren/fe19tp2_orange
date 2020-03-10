@@ -12,27 +12,25 @@ import {
 } from "../Charts/objectFunctions";
 
 import FilterButton from "./FilterButton";
-import CloseButton from "./CloseButton";
 
 //display: ${props => (props.show ? "inline" : "none")};
 const Close = Styled.div`
 position:absolute;
 top:0;
 right:14px;
-font-size:42px;
+font-size:30px;
 transform:rotate(45deg);
 cursor:pointer;
 `;
-
 
 const FilterContainer = Styled.div`
 display: ${props => (props.showDropDown ? "none " : "inline")};
 border-radius: 3px;
 position: absolute;
 background-color:#eee;
-border: 5px solid #65A5ED;
-margin-left: 375px;
-width: 450px;
+border: 1px solid black;
+margin-left: 280px;
+width: 360px;
 
     p{
         color:black;
@@ -41,7 +39,7 @@ width: 450px;
 
 const FilterBox = Styled.div`
 position: relative;
-height: 130px;
+height: 110px;
 color: black;
 display flex;
 flex-direction: row;
@@ -55,6 +53,7 @@ h1{
 
 const Box1 = Styled.div`
 padding:7px;
+
 
 `;
 
@@ -73,12 +72,13 @@ display:inline-block;
 `;
 
 const Box4 = Styled.div`
-border-top: 3px solid #65A5ED;
+border-top: 1px solid #65A5ED;
 border-bottom: 1px solid #65A5ED;
-p{color: black;}
 position: relative;
 overflow: hidden;
 padding:15px;
+font-size: 15px;
+
 `;
 
 class ChartFilter extends Component {
@@ -194,18 +194,18 @@ class ChartFilter extends Component {
     return (
       <FilterContainer>
         <FilterBox>
-
-          <Close onClick={this.props.toggleChartFilter}>x</Close> {/* skapade denna för att skicka funktionen. */}
+          <Close onClick={this.props.toggleChartFilter}>+</Close>{" "}
+          {/* skapade denna för att skicka funktionen. */}
           {/* <CloseButton toggleChartFilter={this.props.toggleChartFilter} /> */}
           <Box1>
-            <h3>Välj Brott:</h3>
+            <h4>Välj Brott:</h4>
             <CrimeTypeSelect
               handleCrimeTypeChange={this.handleCrimeTypeChange}
               crimeTypes={this.crimeTypes}
             />
           </Box1>
           <Box2>
-            <h3>Välj Ort:</h3>
+            <h4>Välj Ort:</h4>
             <LocationSelect
               handleLocationChange={this.handleLocationChange}
               cities={this.cities}

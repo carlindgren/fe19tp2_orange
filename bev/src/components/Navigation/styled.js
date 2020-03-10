@@ -6,7 +6,7 @@ const NavList = Styled.ul`
   top: 0;
   left: 0;
   position: absolute;
-  width: 300px;
+  width: 200px;
   background: white;
   border-right:1px solid black;
   display: flex;
@@ -20,10 +20,21 @@ const NavList = Styled.ul`
     text-decoration: none;
     color: black;
     font-family: 'Roboto';
-    font-weight: 700;
+    font-size: 17px;
+   
   }
     &:hover {
     color: #aaa;
+  }
+  @media (max-width: 575.98px) {
+   
+    height: 50%;
+    width:100%;
+    border-right:none;
+    
+    box-shadow: 4px 4px 10px #595959;
+
+  
   }
 `;
 const Li1 = Styled.li`
@@ -34,7 +45,9 @@ display: flex;
 justify-content: space-evenly;
 align-content: center;
 width:100%;
-background: rgb(240, 45, 66);
+background: #65A5ED;
+border-bottom: 1px solid black;
+
 `;
 const Li2 = Styled.li`
 `;
@@ -58,16 +71,34 @@ const Li4 = Styled.li`
 margin-top:10px;
 background:#65A5ED;
 width: 100%;
-padding:10px;`;
+padding:10px;
+
+@media (max-width: 575.98px) {
+  
+
+}
+`;
 const Li5 = Styled.li`
 background:#80B2ED;
 width: 100%;
-padding:10px;`;
+padding:10px;
+
+@media (max-width: 575.98px) {
+  
+
+}
+`;
+
 const Li6 = Styled.li`
   *{color: black;}
 width: 100%;
 position: absolute;
 bottom: 0;
+
+@media (max-width: 575.98px) {
+ display:none;
+
+}
 `;
 const Container = Styled.div`
 width: 100%;
