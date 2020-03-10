@@ -176,7 +176,7 @@ class Charts extends Component {
           </IntervalContainer>
           <IntervalContainer>
             <DateCard
-              pastData={crimesPastSixty}
+              pastData={2980}
               data={accPastThirtyDaysCrimes}
               date={"30 dagar"}
             />
