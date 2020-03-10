@@ -97,6 +97,7 @@ color: white;
     span {
       display: none;
           }
+
 `;
 const Li4 = Styled.li`
 margin-top:10px;
