@@ -1,14 +1,15 @@
 import Styled from "styled-components";
 
 const NavList = Styled.ul`
-  z-index: 1;
+background-color: white !important;
+  z-index: 10000;
   padding: 0px;
   top: 0;
   left: 0;
   position: absolute;
   width: 200px;
   background: white;
-  border-right:1px solid black;
+  border-right:1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;

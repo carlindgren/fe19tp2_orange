@@ -32,6 +32,7 @@ import {
 import { Icon } from "antd";
 
 import { withFirebase } from "../Firebase";
+import Navigation from "../Navigation";
 
 const Container = Styled.div`
 position:absolute;
@@ -90,9 +91,9 @@ padding: 3px;
     @media (max-width: 575.98px) {
       width: 150px;
       height: 150px;
-    
     }
-`;
+  `;
+
 class Charts extends Component {
   constructor(props) {
     super(props);

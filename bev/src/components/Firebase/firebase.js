@@ -13,6 +13,16 @@ const config = {
   measurementId: "G-0NFNB1W8R1"
 };
 
+/* const config = {
+    apiKey: "AIzaSyBTdNsICKaOWEmUC63WeDq_0pRQhyzjERo",
+    authDomain: "fir-7343c.firebaseapp.com",
+    databaseURL: "https://fir-7343c.firebaseio.com",
+    projectId: "fir-7343c",
+    storageBucket: "fir-7343c.appspot.com",
+    messagingSenderId: "362370720597",
+    appId: "1:362370720597:web:5c186abede3ff0e5e445dc",
+    measurementId: "G-2GH2LMECDB"
+}; */
 class Firebase {
   constructor() {
     app.initializeApp(config);
@@ -43,6 +53,7 @@ class Firebase {
           .then(snapshot => {
             const dbUser = snapshot.val();
             // default empty roles
+
             if (!dbUser.roles) {
               dbUser.roles = [];
             }

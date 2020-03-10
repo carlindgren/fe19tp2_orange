@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { compose } from 'recompose'
+import React, { Component } from "react";
+import { compose } from "recompose";
 
-import { withFirebase } from '../Firebase';
-import { withAuthorization } from '../Session';
-import * as ROLES from '../../constants/roles';
+import { withFirebase } from "../Firebase";
+import { withAuthorization } from "../Session";
+import * as ROLES from "../../constants/roles";
+import Navigation from "../Navigation";
 
-import Styled from 'styled-components';
+import Styled from "styled-components";
 
 const Container = Styled.div`
 overflow-y: scroll;
@@ -19,90 +20,137 @@ height: 100vh;
     * {
         margin-left: 10px;
     }
-`
-
+`;
 
 class AdminPage extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            loading: false,
-            users: [],
+    this.state = {
+      loading: false,
+      users: []
+    };
+    this.handleAddClick = this.handleAddClick.bind(this);
+    this.handleRemoveClick = this.handleRemoveClick.bind(this);
+  }
 
-        };
-        this.handleClick = this.handleClick.bind(this)
+  componentDidMount() {
+    this.setState({ loading: true });
+
+    this.props.firebase.users().on("value", snapshot => {
+      const usersObject = snapshot.val();
+
+      const usersList = Object.keys(usersObject).map(key => ({
+        ...usersObject[key],
+        uid: key
+      }));
+
+      this.setState({
+        users: usersList,
+        loading: false
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.props.firebase.users().off();
+  }
+  handleRemoveClick(uid) {
+    if (!uid) {
+      console.log("No user specified");
+      return;
     }
 
-    componentDidMount() {
-        this.setState({ loading: true });
+    const { users } = this.state;
+    let currentUser = users.find(user => user.uid === uid);
+    currentUser.uid = null;
+    if (currentUser.roles) {
+      // user has roles already, probably admin.
+      currentUser.roles = currentUser.roles.filter(
+        role => role !== ROLES.ACCESS
+      ); // ["ADMIN", "ACCESS"]
+    }
+    console.log(currentUser);
+    this.props.firebase.user(uid).set({
+      ...currentUser
+    });
+  }
 
-
-        this.props.firebase.users().on('value', snapshot => {
-            const usersObject = snapshot.val();
-
-            const usersList = Object.keys(usersObject).map(key => ({
-                ...usersObject[key],
-                uid: key,
-            }));
-
-            this.setState({
-                users: usersList,
-                loading: false,
-            });
-        });
-
+  handleAddClick(uid) {
+    if (!uid) {
+      console.log("No user specified");
+      return;
     }
 
-
-    componentWillUnmount() {
-        this.props.firebase.users().off();
+    const { users } = this.state;
+    let currentUser = users.find(user => user.uid === uid);
+    currentUser.uid = null;
+    if (currentUser.roles) {
+      // user has roles already, probably admin.
+      currentUser.roles.push(ROLES.ACCESS); // ["ADMIN", "ACCESS"]
+    } else {
+      currentUser.roles = [ROLES.ACCESS];
     }
 
-    handleClick() {
-        const { users } = this.state
-        console.log(users)
-        console.log(ROLES.ACCESS)
-        //users.roles.push(ROLES.ACCESS)
-    }
-    render() {
-        const { users, loading } = this.state;
+    this.props.firebase.user(uid).set({
+      ...currentUser
+    });
+  }
+  render() {
+    const { users, loading } = this.state;
 
-        return (
-            <Container>
-                <h1>Admin</h1>
-                <p>
-                    The Admin Page is accessible by every signed in admin user.
-                </p>
-                {loading && <div>Loading ...</div>}
-                <ul>
-                    {users.map(user => (
-                        <li key={user.uid}>
-                            <span>
-                                <strong> ID: </strong> {user.uid}
-                            </span>
-                            <span>
-                                <strong> E-Mail: </strong> {user.email}
-                            </span>
-                            <span>
-                                <strong> Username: </strong> {user.username}
-                            </span>
-                            <span>
-                                <strong> Roll: </strong> {user.roles ? user.roles : <button onClick={this.handleClick}>tillåt</button>}
-                            </span>
-                            <hr />
-                        </li>
-                    ))}
-                </ul>
-                {/* <UserList users={users} /> */}
-            </Container>
-        );
-    }
+    return (
+      <Container>
+        <h1>Admin</h1>
+
+        <p>
+          The Admin Page is accessible by every signed in admin user.
+          <Navigation />
+        </p>
+
+        {loading && <div>Loading ...</div>}
+        <ul>
+          {/* {"email":"lisliesse@yahoo.se","roles":["ADMIN"],"username":"liesse","uid":"DbsGSsXSOZRowyBjIjwnDhXade83"} */}
+          {users.map(user => (
+            <li key={user.uid}>
+              <span>
+                <strong> ID: </strong> {user.uid}
+              </span>
+              <span>
+                <strong> E-Mail: </strong> {user.email}
+              </span>
+              <span>
+                <strong> Username: </strong> {user.username}
+              </span>
+              <span>
+                <strong> Roll: </strong>{" "}
+                {user.roles ? (
+                  !user.roles.includes(ROLES.ACCESS) ? (
+                    <button onClick={() => this.handleAddClick(user.uid)}>
+                      tillåt
+                    </button>
+                  ) : (
+                    <button onClick={() => this.handleRemoveClick(user.uid)}>
+                      blockera
+                    </button>
+                  )
+                ) : (
+                  <button onClick={() => this.handleAddClick(user.uid)}>
+                    tillåt
+                  </button>
+                )}
+              </span>
+              <hr />
+            </li>
+          ))}
+        </ul>
+        {/* <UserList users={users} /> */}
+      </Container>
+    );
+  }
 }
 
-
 /* const UserList = ({ users }) => (
-
     <ul>
         {users.map(user => (
             <li key={user.uid}>
@@ -124,11 +172,6 @@ class AdminPage extends Component {
     </ul>
 ); */
 
+const condition = authUser => authUser && authUser.roles.includes(ROLES.ADMIN);
 
-const condition = authUser =>
-    authUser && authUser.roles.includes(ROLES.ADMIN);
-
-export default compose(
-    withAuthorization(condition),
-    withFirebase
-)(AdminPage);
+export default compose(withAuthorization(condition), withFirebase)(AdminPage);

@@ -1,45 +1,75 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom';
+import { withRouter,Link } from 'react-router-dom';
 import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget'
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import styled from 'styled-components'
+import { withAuthentication } from '../Session';
+// import logo from "./logo.png";
 
 const Form = styled.div`
 
 display: flex;
-text-align: center;
+ text-align: center;
 justify-content: center;
+font-size:20px;
 
 
 `
 const StylSign = styled.div`
-border: 3px solid grey;
-width: 450px;
-padding:25px 0;
-margin: 30px auto;
+
+//width: 450px;
+//padding:25px 0;
+// margin: 69px auto;
 
 `
 const Sinput = styled.div`
 margin: 30px auto;
 height: 35px;
-width:100%;
-padding-bottom:50px;
+padding-bottom:70px;
 font-weight:bold;
 font-size:15px;
 
-`
 
+`
+const Field = styled.input`
+background-color:white;
+width:100%;
+height:40px;
+border:2px solid black;
+
+`
+const Btn = styled.button` 
+margin-bottom:20px;
+width: 50%;
+height:35px;
+ border: 1px solid black;
+ border-radius:25px;
+ box-shadow:none;
+ justify-content: center;
+ font-weight:bold;
+ f
+ 
+
+`
 const SignInPage = () => (
 
     <div>
 
         <Form>
-            <StylSign>
+            
 
-                <h1>Sign In</h1>
+            <StylSign>
+                {/*<img style={{ height: '100px' }}
+                    src={logo}
+                    k alt="logo" /> */}
+
+
+
+                <h1 style={{ marginTop: '60px' }}
+                >Logga In</h1>
 
                 <SignInForm />
                 <PasswordForgetLink />
@@ -48,7 +78,7 @@ const SignInPage = () => (
             </StylSign>
         </Form>
 
-    </div>
+    </div >
 
 );
 
@@ -61,7 +91,10 @@ const INITIAL_STATE = {
 class SignInFormBase extends Component {
     constructor(props) {
         super(props);
+        //state points to a new obj in memory which has the values of initialState
+
         this.state = { ...INITIAL_STATE };
+
     }
 
     onSubmit = event => {
@@ -92,42 +125,53 @@ class SignInFormBase extends Component {
             <Form>
 
                 <form onSubmit={this.onSubmit}>
-                        <Sinput>
-                            <label>Email Adress:<br></br>
-                                <input
-                                    name="email"
-                                    value={email}
-                                    onChange={this.onChange}
-                                    type="text"
-                                    placeholder="Enter Email"
+                    <Sinput>
+                        <label>
+                            <i class='material-icons'>perm_identity</i>
+                            E-post:
+                        
 
-                                />
+                            <Field
+                                name="email"
+                                value={email}
+                                onChange={this.onChange}
+                                type="text"
+                                placeholder="E-post"
+
+                            />
                             </label>
-                        </Sinput>
+                    </Sinput>
 
 
                         <Sinput>
-                            <label>Enter Password: <br></br>
-                                <input
+                            <label>
+                            <i class='material-icons'>lock</i>
+                            Ange lösernord: 
+
+                                <Field
+
                                     name="password"
                                     value={password}
                                     onChange={this.onChange}
                                     type="password"
-                                    placeholder="Enter Password"
+                                    placeholder="Lösenord"
+
                                 />
+
+
                             </label>
                         </Sinput>
-                        <button style={{ marginBottom: '20px' }}
+                        <Btn
                             disabled={isInvalid}
                             type="submit">
-                            Sign In
+                            Logga in
     
-             </button>
+             </Btn>
 
-                        {error && <p>{error.message}</p>}
+                        {error && <p>{'Inloggningen misslyckades'}</p>}
 
                 </form>
-            </Form>
+            </Form >
                 );
             }
         }
@@ -135,7 +179,13 @@ class SignInFormBase extends Component {
             withRouter,
             withFirebase,
         )(SignInFormBase)
+
+const SignInLink = () => (
+    <p>
+        <Link to={ROUTES.SIGN_IN} >Logga in</Link>
+    </p>
+);
         
         export default SignInPage;
         
-export {SignInForm}
+export {SignInForm,SignInLink}
