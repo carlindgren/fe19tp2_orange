@@ -14,12 +14,8 @@ overscroll-behavior: smooth;
 margin-left: 14%;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
 border: 1px solid black;
 height: 100vh;
-    * {
-        margin-left: 10px;
-    }
 `;
 
 class AdminPage extends Component {
@@ -130,15 +126,15 @@ class AdminPage extends Component {
                       tillåt
                     </button>
                   ) : (
-                    <button onClick={() => this.handleRemoveClick(user.uid)}>
-                      blockera
-                    </button>
-                  )
+                      <button onClick={() => this.handleRemoveClick(user.uid)}>
+                        blockera
+                      </button>
+                    )
                 ) : (
-                  <button onClick={() => this.handleAddClick(user.uid)}>
-                    tillåt
-                  </button>
-                )}
+                    <button onClick={() => this.handleAddClick(user.uid)}>
+                      tillåt
+                    </button>
+                  )}
               </span>
               <hr />
             </li>
