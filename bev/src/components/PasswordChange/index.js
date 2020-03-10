@@ -106,7 +106,8 @@ class PasswordChangeForm extends Component {
                     <Btn
                         disabled={isInvalid}
                         type="submit">
-                        Update Password
+                        Uppdatera lösenord
+
         </Btn>
                     {/* {error && <p>{error.message}</p>} */}
                 </form >
