@@ -8,7 +8,7 @@ width: 100%;
 height: 150px;
 margin-top: 10px;
 text-align: center;
-border: 3px solid #65A5ED;
+border: 3px solid rgba(230,230,230,0.2);
 
 @media (max-width: 575.98px) {
     width: 150px;

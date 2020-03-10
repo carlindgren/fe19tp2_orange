@@ -14,12 +14,12 @@ const Burger = Styled.div`
   cursor: pointer;
   padding: 0;
   z-index: 10;
-`
+`;
 
 const NavList = Styled.ul`
   /* z-index: 10000; */
   transition: ease-in-out ;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   padding: 0px;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@ const NavList = Styled.ul`
   margin-bottom: 0;
   * {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Roboto';
     font-size: 17px;
   }
@@ -58,23 +58,26 @@ display: flex;
 justify-content: space-evenly;
 align-content: center;
 width:100%;
-background: #65A5ED;
+background: rgb(68, 94, 116);
 border-bottom: 1px solid black;
+
 
 `;
 const Li2 = Styled.li`
-background:#65a5ed;
+background:rgb(78, 107, 131);
 width:100%;
+
 
 `;
 const Li3 = Styled.li`
 width: 100%;
 padding:10px;
 color:black;
-background-color:#80B2ED;
+background-color:rgb(68, 94, 116);
 border-bottom:1px solid black;
+color: white;
       span {
-        color:black;
+        color: white;;
         margin-left:10px;
             &:hover {
                 cursor:pointer;
@@ -85,7 +88,7 @@ border-bottom:1px solid black;
 `;
 const Li4 = Styled.li`
 margin-top:10px;
-background:#65A5ED;
+background: rgb(68, 94, 116);
 width: 100%;
 padding:10px;
 
@@ -95,7 +98,7 @@ padding:10px;
 }
 `;
 const Li5 = Styled.li`
-background:#80B2ED;
+background:rgb(78, 107, 131);
 width: 100%;
 padding:10px;
 

@@ -71,7 +71,7 @@ flex-direction: row;
 margin-bottom:40px;
 width: 300px;
 height:250px;
-border: 3px solid #65A5ED;
+border: 3px solid rgba(230,230,230,0.2);
 margin: 5px;
 margin-top:20px;
 padding: 3px;
