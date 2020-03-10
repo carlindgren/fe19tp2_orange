@@ -14,8 +14,11 @@ overscroll-behavior: smooth;
 margin-left: 14%;
 display: flex;
 flex-direction: column;
-border: 1px solid black;
 height: 100vh;
+    @media (max-width: 768px) {
+    margin-top:50%;
+    flex-direction: column;
+  }
 `;
 
 class AdminPage extends Component {

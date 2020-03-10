@@ -13,7 +13,7 @@ const AccountPage = () => (
 
                 <h1 style={{ textAlign: 'center', marginTop: '40px' }}>Account: {authUser.email}</h1>
                 {/* <PasswordForgetForm /> */}
-                <PasswordChangeForm /> */}
+                <PasswordChangeForm />
             </div>
         )}
 

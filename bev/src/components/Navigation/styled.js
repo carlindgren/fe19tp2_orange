@@ -1,7 +1,24 @@
 import Styled from "styled-components";
 
+const Burger = Styled.div`
+  position: absolute;
+  top: 5%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+`
+
 const NavList = Styled.ul`
-  z-index: 10000;
+  /* z-index: 10000; */
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   padding: 0px;
   top: 0;
   left: 0;
@@ -103,4 +120,4 @@ width: 100%;
 height: 100%;
 `;
 
-export { Container, Li1, Li2, Li3, Li4, Li5, Li6, NavList };
+export { Container, Burger, Li1, Li2, Li3, Li4, Li5, Li6, NavList };
