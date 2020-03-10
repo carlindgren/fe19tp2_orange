@@ -17,16 +17,16 @@ const Burger = Styled.div`
 `;
 
 const NavList = Styled.ul`
-  /* z-index: 10000; */
+  z-index: 9;
   transition: ease-in-out ;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   padding: 0px;
   top: 0;
   left: 0;
   position: absolute;
-  width: 200px;
+  width: 210px;
  /*  background: white; */
-  border-right:1px solid white;
+  border-right:1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,12 +60,17 @@ align-content: center;
 width:100%;
 background: rgb(68, 94, 116);
 border-bottom: 1px solid black;
+border-right: 1px solid black;
 
 
 `;
 const Li2 = Styled.li`
 background:rgb(78, 107, 131);
 width:100%;
+border-right: 1px solid black;
+display: flex;
+justify-content: center;
+ align-items: center; 
 
 
 `;
@@ -75,37 +80,40 @@ padding:10px;
 color:black;
 background-color:rgb(68, 94, 116);
 border-bottom:1px solid black;
+border-right: 1px solid black;
 color: white;
+
+
       span {
-        color: white;;
-        margin-left:10px;
-            &:hover {
-                cursor:pointer;
-                color:green;
-            }
-      }
-  }
+        color: white;
+      margin-left:10px;
+      padding: 2px;
+          &:hover {
+              cursor:pointer;
+              color:green;
+          }
+    }
+  @media (min-width: 575.98px) {
+    span {
+      display: none;
+          }
 `;
 const Li4 = Styled.li`
 margin-top:10px;
 background: rgb(68, 94, 116);
 width: 100%;
 padding:10px;
+border-right: 1px solid black;
 
-@media (max-width: 575.98px) {
-  
-
-}
 `;
 const Li5 = Styled.li`
 background:rgb(78, 107, 131);
 width: 100%;
 padding:10px;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
 
-@media (max-width: 575.98px) {
-  
 
-}
 `;
 
 const Li6 = Styled.li`

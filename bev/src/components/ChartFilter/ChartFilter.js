@@ -29,13 +29,10 @@ border-radius: 3px;
 position: absolute;
 background-color:rgb(78, 107, 131);
 border: 1px solid black;
-margin-left: 200px;
+margin-left: 290px;
 width: 360px;
 z-index: 10000;
 
-    p{
-        color:black;
-    }
 `;
 
 const FilterBox = Styled.div`
@@ -73,8 +70,8 @@ display:inline-block;
 `;
 
 const Box4 = Styled.div`
-border-top: 1px solid #65A5ED;
-border-bottom: 1px solid #65A5ED;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
 position: relative;
 overflow: hidden;
 padding:15px;

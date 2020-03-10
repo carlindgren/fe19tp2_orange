@@ -12,3 +12,17 @@ p{
 }
     
 `;
+const IconBox = Styled.div`
+float:right;
+
+
+
+@media (max-width: 575.98px) {
+  display:none;
+
+}
+
+
+`;
+
+export { IconBox };
