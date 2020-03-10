@@ -1,15 +1,32 @@
 import Styled from "styled-components";
 
+const Burger = Styled.div`
+  position: absolute;
+  top: 5%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+`;
+
 const NavList = Styled.ul`
-background-color: white !important;
-  z-index: 10000;
+  /* z-index: 10000; */
+  transition: ease-in-out ;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   padding: 0px;
   top: 0;
   left: 0;
   position: absolute;
   width: 200px;
-  background: white;
-  border-right:1px solid black;
+ /*  background: white; */
+  border-right:1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,23 +36,18 @@ background-color: white !important;
   margin-bottom: 0;
   * {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Roboto';
     font-size: 17px;
-   
   }
-    &:hover {
-    color: #aaa;
+      &:hover {
+        color: white;
   }
   @media (max-width: 575.98px) {
-   
     height: 50%;
     width:100%;
     border-right:none;
-    
     box-shadow: 4px 4px 10px #595959;
-
-  
   }
 `;
 const Li1 = Styled.li`
@@ -46,20 +58,26 @@ display: flex;
 justify-content: space-evenly;
 align-content: center;
 width:100%;
-background: #65A5ED;
+background: rgb(68, 94, 116);
 border-bottom: 1px solid black;
+
 
 `;
 const Li2 = Styled.li`
+background:rgb(78, 107, 131);
+width:100%;
+
+
 `;
 const Li3 = Styled.li`
 width: 100%;
 padding:10px;
 color:black;
-background-color:#80B2ED;
+background-color:rgb(68, 94, 116);
 border-bottom:1px solid black;
+color: white;
       span {
-        color:black;
+        color: white;;
         margin-left:10px;
             &:hover {
                 cursor:pointer;
@@ -70,7 +88,7 @@ border-bottom:1px solid black;
 `;
 const Li4 = Styled.li`
 margin-top:10px;
-background:#65A5ED;
+background: rgb(68, 94, 116);
 width: 100%;
 padding:10px;
 
@@ -80,7 +98,7 @@ padding:10px;
 }
 `;
 const Li5 = Styled.li`
-background:#80B2ED;
+background:rgb(78, 107, 131);
 width: 100%;
 padding:10px;
 
@@ -106,4 +124,4 @@ width: 100%;
 height: 100%;
 `;
 
-export { Container, Li1, Li2, Li3, Li4, Li5, Li6, NavList };
+export { Container, Burger, Li1, Li2, Li3, Li4, Li5, Li6, NavList };

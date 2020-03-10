@@ -42,34 +42,34 @@ class HomePage extends Component {
 
     }
 
-    componentDidMount() {
-        /*  const CORS = 'https://cors-anywhere.herokuapp.com/'
-         const PATH_BASE = 'https://brottsplatskartan.se/'
-         //fetch all data from brottplatskartan - save to local storage.
-         axios({
-             method: 'get',
-             url: 'https://cors-anywhere.herokuapp.com/https://brottsplatskartan.se/api/events/?&page=1&limit=50000app=orange'
-             //url: '${CORS}${PATH_BASE}'
-         })
-             .then(res => {
-                 //förändrar arrayen med objekt till vår fördel, inte lika mycket data.
-                 let result = res.data.data.map(elem => ({
-                     id: elem.id,
-                     pubdate_iso8601: elem.pubdate_iso8601,
-                     pubdate_unix: elem.pubdate_unix, // fixa  pubdate_unix.length === 13 ? pubdate_unix : pubdate_unix + '000';
-                     title_type: elem.title_type,
-                     title_location: elem.title_location,
-                     /* lat: elem.lat,
-                     lng: elem.lng, 
-                     administrative_area_level_1: elem.administrative_area_level_1,
-    }))
-                this.setState({ result: result })
-console.log(this.state.result)
+    /*     componentDidMount() {
+            const CORS = 'https://cors-anywhere.herokuapp.com/'
+            const PATH_BASE = 'https://brottsplatskartan.se/'
+            //fetch all data from brottplatskartan - save to local storage.
+            axios({
+                method: 'get',
+                url: 'https://cors-anywhere.herokuapp.com/https://brottsplatskartan.se/api/events/?&page=9&limit=50000app=orange'
+                //url: '${CORS}${PATH_BASE}'
             })
-            .catch (err => {
-    console.log(err)
-}) */
-    }
+                .then(res => {
+                    //förändrar arrayen med objekt till vår fördel, inte lika mycket data.
+                    let result = res.data.data.map(elem => ({
+                        id: elem.id,
+                        pubdate_iso8601: elem.pubdate_iso8601,
+                        pubdate_unix: elem.pubdate_unix, // fixa  pubdate_unix.length === 13 ? pubdate_unix : pubdate_unix + '000';
+                        title_type: elem.title_type,
+                        title_location: elem.title_location,
+                        lat: elem.lat,
+                        lng: elem.lng,
+                        administrative_area_level_1: elem.administrative_area_level_1,
+                    }))
+                    this.setState({ result: result })
+                    console.log(this.state.result)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        } */
 
     render() {
 
@@ -87,8 +87,8 @@ console.log(this.state.result)
                     <Button type="secondary" style={style}>Narkotikarelaterade brott</Button>
                     <Button type="secondary" style={style}>Trafikrelaterade brott</Button>
                     <Button type="primary" style={style}>Skapa ny statistik</Button>
-                    {/* // onsubmit, skapa en ny sida för att visa dashboarden */}
-                    {/* När man klickar på knapparna ska man lägga till en query i sökfältet, knapp tryckt byt färg lägg till query och tvärtom. */}
+                      onsubmit, skapa en ny sida för att visa dashboarden
+                     När man klickar på knapparna ska man lägga till en query i sökfältet, knapp tryckt byt färg lägg till query och tvärtom.
                 </StyledForm>
             </StyledDiv>
         )

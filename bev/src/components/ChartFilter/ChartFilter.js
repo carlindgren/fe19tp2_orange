@@ -27,10 +27,11 @@ const FilterContainer = Styled.div`
 display: ${props => (props.showDropDown ? "none " : "inline")};
 border-radius: 3px;
 position: absolute;
-background-color:#eee;
+background-color:rgb(78, 107, 131);
 border: 1px solid black;
-margin-left: 280px;
+margin-left: 200px;
 width: 360px;
+z-index: 10000;
 
     p{
         color:black;
