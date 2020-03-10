@@ -1,14 +1,13 @@
 import Styled from "styled-components";
 
 const NavList = Styled.ul`
-background-color: white !important;
   z-index: 10000;
   padding: 0px;
   top: 0;
   left: 0;
   position: absolute;
   width: 200px;
-  background: white;
+ /*  background: white; */
   border-right:1px solid white;
   display: flex;
   flex-direction: column;
@@ -22,20 +21,15 @@ background-color: white !important;
     color: black;
     font-family: 'Roboto';
     font-size: 17px;
-   
   }
-    &:hover {
-    color: #aaa;
+      &:hover {
+        color: white;
   }
   @media (max-width: 575.98px) {
-   
     height: 50%;
     width:100%;
     border-right:none;
-    
     box-shadow: 4px 4px 10px #595959;
-
-  
   }
 `;
 const Li1 = Styled.li`
@@ -51,6 +45,9 @@ border-bottom: 1px solid black;
 
 `;
 const Li2 = Styled.li`
+background:#65a5ed;
+width:100%;
+
 `;
 const Li3 = Styled.li`
 width: 100%;

@@ -101,7 +101,7 @@ class AdminPage extends Component {
 
         <p>
           The Admin Page is accessible by every signed in admin user.
-          <Navigation />
+         {/*  <Navigation /> */}
         </p>
 
         {loading && <div>Loading ...</div>}
