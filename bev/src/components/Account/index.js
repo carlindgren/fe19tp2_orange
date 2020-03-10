@@ -10,8 +10,11 @@ const AccountPage = () => (
         {authUser => (
 
             <div>
+                <h1 style={{ textAlign: 'center', marginTop: '40px', textDecoration: 'underline' }}>
+                    <i class='material-icons' id='face'> sentiment_satisfied_alt </i>
 
-                <h1 style={{ textAlign: 'center', marginTop: '40px' }}>Account: {authUser.email}</h1>
+
+                    Hej: {authUser.username}</h1>
                 {/* <PasswordForgetForm /> */}
                 <PasswordChangeForm />
             </div>

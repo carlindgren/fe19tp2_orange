@@ -27,85 +27,93 @@ class AdminPage extends Component {
 
     this.state = {
       loading: false,
-      users: []
+      users: [],
+
     };
-    this.handleAddClick = this.handleAddClick.bind(this);
-    this.handleRemoveClick = this.handleRemoveClick.bind(this);
+    this.handleAddClick = this.handleAddClick.bind(this)
+    this.handleRemoveClick = this.handleRemoveClick.bind(this)
+
   }
 
   componentDidMount() {
     this.setState({ loading: true });
 
-    this.props.firebase.users().on("value", snapshot => {
+
+    this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
       const usersList = Object.keys(usersObject).map(key => ({
         ...usersObject[key],
-        uid: key
+        uid: key,
       }));
 
       this.setState({
         users: usersList,
-        loading: false
+        loading: false,
       });
     });
+
   }
+
 
   componentWillUnmount() {
     this.props.firebase.users().off();
   }
   handleRemoveClick(uid) {
     if (!uid) {
-      console.log("No user specified");
+      console.log("No user specified")
       return;
     }
 
-    const { users } = this.state;
-    let currentUser = users.find(user => user.uid === uid);
+    const { users } = this.state
+    let currentUser = users.find(user => user.uid === uid)
     currentUser.uid = null;
-    if (currentUser.roles) {
-      // user has roles already, probably admin.
-      currentUser.roles = currentUser.roles.filter(
-        role => role !== ROLES.ACCESS
-      ); // ["ADMIN", "ACCESS"]
+    if (currentUser.roles) { // user has roles already, probably admin.
+      currentUser.roles = currentUser.roles.filter(role => role !== ROLES.ACCESS) // ["ADMIN", "ACCESS"]
     }
-    console.log(currentUser);
+    console.log(currentUser)
     this.props.firebase.user(uid).set({
       ...currentUser
     });
+
   }
 
   handleAddClick(uid) {
     if (!uid) {
-      console.log("No user specified");
+      console.log("No user specified")
       return;
     }
 
-    const { users } = this.state;
-    let currentUser = users.find(user => user.uid === uid);
+    const { users } = this.state
+    let currentUser = users.find(user => user.uid === uid)
     currentUser.uid = null;
-    if (currentUser.roles) {
-      // user has roles already, probably admin.
-      currentUser.roles.push(ROLES.ACCESS); // ["ADMIN", "ACCESS"]
+    if (currentUser.roles) { // user has roles already, probably admin.
+      currentUser.roles.push(ROLES.ACCESS) // ["ADMIN", "ACCESS"]
     } else {
-      currentUser.roles = [ROLES.ACCESS];
+      currentUser.roles = [ROLES.ACCESS]
     }
 
     this.props.firebase.user(uid).set({
       ...currentUser
     });
+
   }
   render() {
     const { users, loading } = this.state;
 
     return (
-      <Container>
-        <h1>Admin</h1>
 
-        <p>
+      <Container>
+
+        <h1 style={{
+          textAlign: 'center', marginTop: '20px'
+        }} >ADMIN</h1>
+
+        <h4 style={{ textAlign: 'center', marginBottom: '50px' }}>
+
           The Admin Page is accessible by every signed in admin user.
-         {/*  <Navigation /> */}
-        </p>
+                <Navigation />
+        </h4 >
 
         {loading && <div>Loading ...</div>}
         <ul>
@@ -121,23 +129,12 @@ class AdminPage extends Component {
               <span>
                 <strong> Username: </strong> {user.username}
               </span>
-              <span>
-                <strong> Roll: </strong>{" "}
-                {user.roles ? (
-                  !user.roles.includes(ROLES.ACCESS) ? (
-                    <button onClick={() => this.handleAddClick(user.uid)}>
-                      tillåt
-                    </button>
-                  ) : (
-                      <button onClick={() => this.handleRemoveClick(user.uid)}>
-                        blockera
-                      </button>
-                    )
-                ) : (
-                    <button onClick={() => this.handleAddClick(user.uid)}>
-                      tillåt
-                    </button>
-                  )}
+              <span style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '70px' }}>
+                <strong> {/*Roll:*/} </strong> {user.roles ? !user.roles.includes(ROLES.ACCESS)
+                  ? (<button onClick={() => this.handleAddClick(user.uid)}>blockera</button>)
+                  : (<button onClick={() => this.handleRemoveClick(user.uid)}>tillåt</button>)
+                  : (<button onClick={() => this.handleAddClick(user.uid)}>blockera</button>)
+                }
               </span>
               <hr />
             </li>
@@ -148,6 +145,7 @@ class AdminPage extends Component {
     );
   }
 }
+
 
 /* const UserList = ({ users }) => (
     <ul>
@@ -171,6 +169,11 @@ class AdminPage extends Component {
     </ul>
 ); */
 
-const condition = authUser => authUser && authUser.roles.includes(ROLES.ADMIN);
 
-export default compose(withAuthorization(condition), withFirebase)(AdminPage);
+const condition = authUser =>
+  authUser && authUser.roles.includes(ROLES.ADMIN);
+
+export default compose(
+  withAuthorization(condition),
+  withFirebase
+)(AdminPage);

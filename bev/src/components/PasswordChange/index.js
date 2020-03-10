@@ -5,15 +5,31 @@ import Navigation from "../Navigation";
 
 const Wrapp = styled.form`
 display: flex;
-justify-content: center;
+//justify-content: center;
 margin: 30px auto;
-border:3px solid grey;
 width:280px;
 padding: 35px;
 `
 const StylSign = styled.div`
 margin-bottom: 25px;
 width:100%;
+`
+const Field = styled.input`
+background-color:white;
+width:150%;
+height:40px;
+border:2px solid black;
+`
+const Btn = styled.button` 
+margin-bottom:20px;
+width: 100%;
+height:35px;
+ border: 1px solid black;
+ border-radius:25px;
+ box-shadow:none;
+ justify-content: center;
+ font-weight:bold;
+ background-color:#D5D4D3;
 `
 
 
@@ -55,29 +71,44 @@ class PasswordChangeForm extends Component {
 
                 <form onSubmit={this.onSubmit}>
                     <StylSign>
+
                         <Navigation />
+
                         <h2 style={{ marginBottom: '30px', fontSize: '28px' }}>Ändra lösenord</h2>
-                        <input
-                            name="passwordOne"
-                            value={passwordOne}
-                            onChange={this.onChange}
-                            type="password"
-                            placeholder="New Password"
-                        /></StylSign>
+
+
+                        <label>
+
+                            Nytt lösenord
+                        <Field
+
+                                name="passwordOne"
+                                value={passwordOne}
+                                onChange={this.onChange}
+                                type="password"
+                            // placeholder="New Password"
+                            />
+                        </label>
+                    </StylSign>
                     <StylSign>
-                        <input
-                            name="passwordTwo"
-                            value={passwordTwo}
-                            onChange={this.onChange}
-                            type="password"
-                            placeholder="Confirm New Password"
-                        /></StylSign>
-                    <button style={{ width: '85%' }}
+                        <label>
+
+                            Bekräfta nytt lösenord
+                        <Field
+                                name="passwordTwo"
+                                value={passwordTwo}
+                                onChange={this.onChange}
+                                type="password"
+                            //placeholder="Confirm New Password"
+                            />
+                        </label>
+                    </StylSign>
+                    <Btn
                         disabled={isInvalid}
                         type="submit">
                         Update Password
-        </button>
-                    {error && <p>{error.message}</p>}
+        </Btn>
+                    {/* {error && <p>{error.message}</p>} */}
                 </form >
             </Wrapp>
         );

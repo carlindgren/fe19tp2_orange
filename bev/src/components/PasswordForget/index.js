@@ -123,7 +123,7 @@ const PasswordForgetLink = () => (
 );
 const SignUpLink = () => (
     <p>
-        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+        Har du inte ett konto? <Link to={ROUTES.SIGN_UP}>Skapa konto</Link>
     </p>
 );
 export default PasswordForgetPage;

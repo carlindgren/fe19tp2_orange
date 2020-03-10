@@ -19,7 +19,7 @@ import { withAuthentication } from "../Session";
 const App = () => (
   <Router>
     <div>
-      <Navigation />
+      {/* <Navigation /> */}
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />

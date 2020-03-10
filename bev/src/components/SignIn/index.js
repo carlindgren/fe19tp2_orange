@@ -10,20 +10,15 @@ import { withAuthentication } from '../Session';
 // import logo from "./logo.png";
 
 const Form = styled.div`
-
 display: flex;
  text-align: center;
 justify-content: center;
 font-size:20px;
-
-
 `
 const StylSign = styled.div`
-
 //width: 450px;
 //padding:25px 0;
 // margin: 69px auto;
-
 `
 const Sinput = styled.div`
 margin: 30px auto;
@@ -31,15 +26,12 @@ height: 35px;
 padding-bottom:70px;
 font-weight:bold;
 font-size:15px;
-
-
 `
 const Field = styled.input`
 background-color:white;
 width:100%;
 height:40px;
 border:2px solid black;
-
 `
 const Btn = styled.button` 
 margin-bottom:20px;
@@ -52,7 +44,6 @@ height:35px;
  font-weight:bold;
  f
  
-
 `
 const SignInPage = () => (
 
@@ -103,7 +94,7 @@ class SignInFormBase extends Component {
         this.props.firebase.doSignInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({ ...INITIAL_STATE });
-                this.props.history.push(ROUTES.CHARTS);
+                this.props.history.push(ROUTES.HOME);
             })
             .catch(error => {
                 this.setState({ error });
