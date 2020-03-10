@@ -4,7 +4,7 @@ export const StyledBurger = styled.button`
   outline-style: none;
   position: absolute;
   top: 1%;
-  color:black;
+  color:${({ open }) => open ? 'black' : 'white'};
   left: 0.4rem;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ export const StyledBurger = styled.button`
   span {
     width: 2rem;
     height: 0.25rem;
-    background: black;
+    background-color: ${({ open }) => open ? 'black' : 'white'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
