@@ -45,7 +45,6 @@ height:35px;
  justify-content: center;
  font-weight:bold;
  background-color:#D5D4D3;
- 
 
 `
 
@@ -231,7 +230,8 @@ class SignUpFormBase extends Component {
                     <Btn disabled={isInvalid} type="submit">
                         Skapa konto
         </Btn>
-                    {error && <p>{error.message}</p>}
+                    {error && <p>{
+                        'E - postadressen används redan av ett annat konto.'}</p>}
                 </form >
             </Wrapp >
         );

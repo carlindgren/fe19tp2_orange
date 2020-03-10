@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Button, Input } from 'antd'
 import "antd/dist/antd.css";
 import Navigation from "../Navigation";
-
+import * as ROLES from '../../constants/roles';
 
 const StyledDiv = Styled.div`
 margin: 0 auto;
@@ -94,6 +94,8 @@ console.log(this.state.result)
         )
     }
 }
-const condition = AuthUser => AuthUser != null;
+// const condition = AuthUser => AuthUser != null;
+const condition = authUser =>
+    authUser && authUser.roles.includes(ROLES.ACCESS);
 
 export default withAuthorization(condition)(HomePage);

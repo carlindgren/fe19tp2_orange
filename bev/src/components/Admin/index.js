@@ -10,18 +10,22 @@ import Navigation from "../Navigation";
 import Styled from 'styled-components';
 
 const Container = Styled.div`
-overflow-y: scroll;
-overscroll-behavior: smooth;
-margin-left: 14%;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
-border: 1px solid black;
-height: 100vh;
-    * {
-        margin-left: 10px;
-    }
+//justify-content: center;
+//overflow-y: scroll;
+
+//overscroll-behavior: smooth;
+margin-left: 14%;
+
+//border: 1px solid black;
+
+//  height: 45vh;
+//     * {
+//        margin-left: 10px;
+//     }
 `
+
 
 
 class AdminPage extends Component {
@@ -108,12 +112,13 @@ class AdminPage extends Component {
 
             <Container>
 
-                <h1>Admin</h1>
+                <h1 style={{ textAlign: 'center' }} >ADMIN</h1>
 
-                <p>
+                <p style={{ textAlign: 'center' }}>
 
                     The Admin Page is accessible by every signed in admin user.
-                <Navigation /></p>
+                <Navigation />
+                </p>
 
                 {loading && <div>Loading ...</div>}
                 <ul>
@@ -129,11 +134,12 @@ class AdminPage extends Component {
                             <span>
                                 <strong> Username: </strong> {user.username}
                             </span>
-                            <span>
-                                <strong> Roll: </strong> {user.roles ? !user.roles.includes(ROLES.ACCESS)
-                                    ? (<button onClick={() => this.handleAddClick(user.uid)}>tillåt</button>)
-                                    : (<button onClick={() => this.handleRemoveClick(user.uid)}>blockera</button>)
-                                    : (<button onClick={() => this.handleAddClick(user.uid)}>tillåt</button>)}
+                            <span style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '70px' }}>
+                                <strong> {/*Roll:*/} </strong> {user.roles ? !user.roles.includes(ROLES.ACCESS)
+                                    ? (<button onClick={() => this.handleAddClick(user.uid)}>blockera</button>)
+                                    : (<button onClick={() => this.handleRemoveClick(user.uid)}>tillåt</button>)
+                                    : (<button onClick={() => this.handleAddClick(user.uid)}>blockera</button>)
+                                }
                             </span>
                             <hr />
                         </li>

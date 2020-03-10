@@ -11,9 +11,12 @@ const AccountPage = () => (
 
             <div>
 
-                <h1 style={{ textAlign: 'center', marginTop: '40px' }}>Account: {authUser.email}</h1>
+                <h1 style={{ textAlign: 'center', marginTop: '40px', textDecoration: 'underline' }}>
+                    <i class='material-icons'> perm_identity </i>
+
+                    Hej: {authUser.username}</h1>
                 {/* <PasswordForgetForm /> */}
-                <PasswordChangeForm /> */}
+                <PasswordChangeForm />
             </div>
         )}
 

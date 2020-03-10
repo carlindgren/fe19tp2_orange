@@ -13,9 +13,9 @@ import { Icon } from 'antd';
 import { withFirebase } from '../Firebase';
 
 const Container = Styled.div`
-margin-left: 14%;
+//margin-left: 14%;
 display:flex;
-flex-direction: row;
+flex-direction:row;
 justify-content: space-around;
 height: 100vh;
 `
