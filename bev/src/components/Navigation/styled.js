@@ -18,6 +18,7 @@ const Burger = Styled.div`
 
 const NavList = Styled.ul`
   /* z-index: 10000; */
+  transition: ease-in-out ;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   padding: 0px;
   top: 0;

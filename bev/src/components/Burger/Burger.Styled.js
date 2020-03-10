@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
+  outline-style: none;
   position: absolute;
   top: 1%;
   color:black;
