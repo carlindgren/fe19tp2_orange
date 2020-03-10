@@ -9,7 +9,7 @@ background-color: white !important;
   position: absolute;
   width: 200px;
   background: white;
-  border-right:1px solid white;
+  border-right:1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
