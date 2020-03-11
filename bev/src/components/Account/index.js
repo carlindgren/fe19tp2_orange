@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withFirebase } from "../Firebase";
 import styled from "styled-components";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/index";
 import SignOutButton from "../SignOut";
 import { Li6 } from "../Navigation/styled";
 
@@ -73,42 +73,45 @@ class PasswordChangeForm extends Component {
     const { passwordOne, passwordTwo, error } = this.state;
     const isInvalid = passwordOne !== passwordTwo || passwordOne === "";
     return (
-      <Wrapp>
-        <form onSubmit={this.onSubmit}>
-          <StylSign>
-            <h2 style={{ marginBottom: "30px", fontSize: "28px" }}>
-              Ändra lösenord
-            </h2>
+      <div>
+        <Navigation />
+        <Wrapp>
+          <form onSubmit={this.onSubmit}>
+            <StylSign>
+              <h2 style={{ marginBottom: "30px", fontSize: "28px" }}>
+                Ändra lösenord
+              </h2>
 
-            <label>
-              Nytt lösenord
-              <Field
-                name="passwordOne"
-                value={passwordOne}
-                onChange={this.onChange}
-                type="password"
-                // placeholder="New Password"
-              />
-            </label>
-          </StylSign>
-          <StylSign>
-            <label>
-              Bekräfta nytt lösenord
-              <Field
-                name="passwordTwo"
-                value={passwordTwo}
-                onChange={this.onChange}
-                type="password"
-                //placeholder="Confirm New Password"
-              />
-            </label>
-          </StylSign>
-          <Btn disabled={isInvalid} type="submit">
-            Update Password
-          </Btn>
-          {error && <p>{error.message}</p>}
-        </form>
-      </Wrapp>
+              <label>
+                Nytt lösenord
+                <Field
+                  name="passwordOne"
+                  value={passwordOne}
+                  onChange={this.onChange}
+                  type="password"
+                  // placeholder="New Password"
+                />
+              </label>
+            </StylSign>
+            <StylSign>
+              <label>
+                Bekräfta nytt lösenord
+                <Field
+                  name="passwordTwo"
+                  value={passwordTwo}
+                  onChange={this.onChange}
+                  type="password"
+                  //placeholder="Confirm New Password"
+                />
+              </label>
+            </StylSign>
+            <Btn disabled={isInvalid} type="submit">
+              Update Password
+            </Btn>
+            {error && <p>{error.message}</p>}
+          </form>
+        </Wrapp>
+      </div>
     );
   }
 }

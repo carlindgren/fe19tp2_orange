@@ -32,7 +32,7 @@ import {
 import { Icon } from "antd";
 
 import { withFirebase } from "../Firebase";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/index";
 
 const Container = Styled.div`
 position:absolute;
@@ -106,6 +106,7 @@ class Charts extends Component {
     //console.log(customCrimeFilter(['Sandviken', 'Stockholm'], ['Våldsbrott', 'Stöld']))
     return (
       <div>
+        <Navigation />
         <Container>
           <IntervalContainer>
             <DateCard

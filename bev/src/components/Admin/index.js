@@ -4,7 +4,7 @@ import { compose } from "recompose";
 import { withFirebase } from "../Firebase";
 import { withAuthorization } from "../Session";
 import * as ROLES from "../../constants/roles";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/index";
 
 import Styled from "styled-components";
 
@@ -100,64 +100,67 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
 
     return (
-      <Container>
-        <h1
-          style={{
-            textAlign: "center",
-            marginTop: "20px"
-          }}
-        >
-          ADMIN
-        </h1>
+      <div>
+        <Navigation />
+        <Container>
+          <h1
+            style={{
+              textAlign: "center",
+              marginTop: "20px"
+            }}
+          >
+            ADMIN
+          </h1>
 
-        <h4 style={{ textAlign: "center", marginBottom: "50px" }}>
-          The Admin Page is accessible by every signed in admin user.
-        </h4>
+          <h4 style={{ textAlign: "center", marginBottom: "50px" }}>
+            The Admin Page is accessible by every signed in admin user.
+          </h4>
 
-        {loading && <div>Loading ...</div>}
-        <ul>
-          {/* {"email":"lisliesse@yahoo.se","roles":["ADMIN"],"username":"liesse","uid":"DbsGSsXSOZRowyBjIjwnDhXade83"} */}
-          {users.map(user => (
-            <li key={user.uid}>
-              <span>
-                <strong> ID: </strong> {user.uid}
-              </span>
-              <span>
-                <strong> E-Mail: </strong> {user.email}
-              </span>
-              <span>
-                <strong> Username: </strong> {user.username}
-              </span>
-              <span
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  marginRight: "70px"
-                }}
-              >
-                <strong> {/*Roll:*/} </strong>{" "}
-                {user.roles ? (
-                  !user.roles.includes(ROLES.ACCESS) ? (
+          {loading && <div>Loading ...</div>}
+          <ul>
+            {/* {"email":"lisliesse@yahoo.se","roles":["ADMIN"],"username":"liesse","uid":"DbsGSsXSOZRowyBjIjwnDhXade83"} */}
+            {users.map(user => (
+              <li key={user.uid}>
+                <span>
+                  <strong> ID: </strong> {user.uid}
+                </span>
+                <span>
+                  <strong> E-Mail: </strong> {user.email}
+                </span>
+                <span>
+                  <strong> Username: </strong> {user.username}
+                </span>
+                <span
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    marginRight: "70px"
+                  }}
+                >
+                  <strong> {/*Roll:*/} </strong>{" "}
+                  {user.roles ? (
+                    !user.roles.includes(ROLES.ACCESS) ? (
+                      <button onClick={() => this.handleAddClick(user.uid)}>
+                        blockera
+                      </button>
+                    ) : (
+                      <button onClick={() => this.handleRemoveClick(user.uid)}>
+                        tillåt
+                      </button>
+                    )
+                  ) : (
                     <button onClick={() => this.handleAddClick(user.uid)}>
                       blockera
                     </button>
-                  ) : (
-                    <button onClick={() => this.handleRemoveClick(user.uid)}>
-                      tillåt
-                    </button>
-                  )
-                ) : (
-                  <button onClick={() => this.handleAddClick(user.uid)}>
-                    blockera
-                  </button>
-                )}
-              </span>
-              <hr />
-            </li>
-          ))}
-        </ul>
-        {/* <UserList users={users} /> */}
-      </Container>
+                  )}
+                </span>
+                <hr />
+              </li>
+            ))}
+          </ul>
+          {/* <UserList users={users} /> */}
+        </Container>
+      </div>
     );
   }
 }

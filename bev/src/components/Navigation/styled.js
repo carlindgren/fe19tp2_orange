@@ -77,7 +77,8 @@ width:100%;
 border-right: 1px solid black;
 display: flex;
 justify-content: center;
- align-items: center; 
+ align-items: center;
+ padding: 10px; 
 
 
 `;
@@ -121,11 +122,6 @@ padding:10px;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 
-
-`;
-
-const UlBtn = Styled.ul`
-list-style:none;
 
 `;
 

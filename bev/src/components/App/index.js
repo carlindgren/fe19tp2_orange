@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from "../Navigation";
+// import Navigation from "../Navigation/index";
 import LandingPage from "../Landing";
 import SignUpPage from "../SignUp";
 import SignInPage from "../SignIn";
@@ -21,10 +21,10 @@ import { Li6 } from "../Navigation/styled";
 const App = () => (
   <Router>
     <div>
-      <Navigation />
-      <Li6>
+      {/* <Navigation /> */}
+      {/* <Li6>
         <SignOutButton />
-      </Li6>
+      </Li6> */}
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />

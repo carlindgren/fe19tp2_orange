@@ -22,6 +22,17 @@ import { withFirebase } from "../Firebase";
 import CrimeTypeSelect from "./CrimeTypeSelect";
 import CrimeTypeList from "./CrimeTypeList";
 import ChartFilter from "../ChartFilter/ChartFilter";
+import afton_logga from "../img/afton_logga.png";
+import Styled from "styled-components";
+import Brå from "../img/bra.jpg";
+
+const LogoImg = Styled.img`
+width: 50px;
+height: 45px;
+margin-right:20px;
+border: 2px solid rgb(68, 94, 116);
+border-radius:50%;
+`;
 
 class Watches extends Component {
   constructor(props) {
@@ -149,6 +160,7 @@ class Watches extends Component {
         </Li1>
         {this.props.authUser.roles.includes(ROLES.ADMIN) && (
           <Li2>
+            <LogoImg alt="Aftonbladet Logo" src={Brå}></LogoImg>
             <Link to={ROUTES.ADMIN}>Admin</Link>
           </Li2>
         )}
