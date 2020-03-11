@@ -1,11 +1,13 @@
 import Styled from "styled-components";
 
 export const StyledSelect = Styled.select`
-height: 35px;
-width: 160px;
+background-color: white;
+height: 30px;
+width: 140px;
 color: black;
 font-size: 15px;
 outline: none;
+margin-left: 10px;
 
 p{
     color:black;

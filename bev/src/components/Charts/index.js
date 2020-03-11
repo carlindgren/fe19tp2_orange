@@ -51,7 +51,7 @@ height: 100vh;
 }
 
 @media (max-width: 575.98px) {
-  margin-left:10px;
+  margin-left:5px;
   margin-top: 400px;
 }
 
@@ -89,8 +89,8 @@ padding: 3px;
     }
     
     @media (max-width: 575.98px) {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
   `;
 

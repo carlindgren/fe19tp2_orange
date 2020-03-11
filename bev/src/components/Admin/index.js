@@ -11,12 +11,13 @@ import Styled from "styled-components";
 const Container = Styled.div`
 overflow-y: scroll;
 overscroll-behavior: smooth;
-margin-left: 14%;
+margin-left: 200px;
 display: flex;
 flex-direction: column;
 height: 100vh;
     @media (max-width: 768px) {
     margin-top:50%;
+    margin-left:10px;
     flex-direction: column;
   }
 `;
@@ -100,12 +101,18 @@ class AdminPage extends Component {
 
     return (
       <Container>
-        <h1>Admin</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            marginTop: "20px"
+          }}
+        >
+          ADMIN
+        </h1>
 
-        <p>
+        <h4 style={{ textAlign: "center", marginBottom: "50px" }}>
           The Admin Page is accessible by every signed in admin user.
-         {/*  <Navigation /> */}
-        </p>
+        </h4>
 
         {loading && <div>Loading ...</div>}
         <ul>
@@ -121,23 +128,29 @@ class AdminPage extends Component {
               <span>
                 <strong> Username: </strong> {user.username}
               </span>
-              <span>
-                <strong> Roll: </strong>{" "}
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginRight: "70px"
+                }}
+              >
+                <strong> {/*Roll:*/} </strong>{" "}
                 {user.roles ? (
                   !user.roles.includes(ROLES.ACCESS) ? (
                     <button onClick={() => this.handleAddClick(user.uid)}>
-                      tillåt
+                      blockera
                     </button>
                   ) : (
-                      <button onClick={() => this.handleRemoveClick(user.uid)}>
-                        blockera
-                      </button>
-                    )
-                ) : (
-                    <button onClick={() => this.handleAddClick(user.uid)}>
+                    <button onClick={() => this.handleRemoveClick(user.uid)}>
                       tillåt
                     </button>
-                  )}
+                  )
+                ) : (
+                  <button onClick={() => this.handleAddClick(user.uid)}>
+                    blockera
+                  </button>
+                )}
               </span>
               <hr />
             </li>

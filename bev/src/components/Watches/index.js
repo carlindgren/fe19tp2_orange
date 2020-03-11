@@ -128,10 +128,22 @@ class Watches extends Component {
   toggleShowDropDown(e) {
     this.setState({ showDropDown: !this.state.showDropDown });
   }
+  //   <li
+  //   style={{
+  //     fontSize: "20px",
+  //     fontWeight: "bold",
+  //     color: "#ffa17f",
+  //     backgroundColor: "rgb(68, 94, 116)",
+  //     width: "210px"
+  //   }}
+  // >
 
+  //   Brottskollen
+  // </li>
   render() {
     return (
       <React.Fragment>
+        {/* <Li7>Brottskollen</Li7> */}
         <Li1>
           <Link to={ROUTES.ACCOUNT}>{this.props.authUser.email}</Link>
         </Li1>
@@ -183,6 +195,9 @@ class Watches extends Component {
             />
           )}
         </Li5>
+        <Li6>
+          <SignOutButton />
+        </Li6>
         <li>
           {this.state.userObject && (
             <CrimeTypeList
@@ -191,9 +206,6 @@ class Watches extends Component {
             />
           )}
         </li>
-        <Li6>
-          <SignOutButton />
-        </Li6>
         {this.state.showChartFilter && (
           <ChartFilter
             toggleChartFilter={this.toggleChartFilter}

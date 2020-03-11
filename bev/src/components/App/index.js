@@ -15,11 +15,16 @@ import Charts from "../Charts/index";
 import Styled from "styled-components";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
+import SignOutButton from "../SignOut";
+import { Li6 } from "../Navigation/styled";
 
 const App = () => (
   <Router>
     <div>
       <Navigation />
+      <Li6>
+        <SignOutButton />
+      </Li6>
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
